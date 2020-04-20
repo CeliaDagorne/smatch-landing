@@ -1,0 +1,17 @@
+{
+  "plugins": [
+    "stylelint-order"
+  ],
+  "rules": {
+    "order/order": [
+      "custom-properties",
+      "declarations"
+    ],
+    "order/properties-order": [
+      ["composes"], {
+        "unspecified": "bottomAlphabetical"
+      }
+    ],
+    "number-leading-zero": "never"
+  }
+}
