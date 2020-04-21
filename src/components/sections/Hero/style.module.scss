@@ -27,11 +27,25 @@
 .stickers {
 
   .sticker {
+    height: 115px;
     position: absolute;
 
     &:first-child {
-      left: 0;
-      top: 0;
+      left: -60px;
+      top: -30px;
+    }
+    &:nth-child(2) {
+      right: -20px;
+      top: -20px;
+    }
+    &:nth-child(3) {
+      height: 70px;
+      left: 80px;
+      top: 260px;
+    }
+    &:nth-child(4) {
+      right: 80px;
+      top: 260px;
     }
   }
 }

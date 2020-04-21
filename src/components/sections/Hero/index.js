@@ -8,9 +8,9 @@ import styles from './style.module.scss'
 import typography from '../../../styles/imports/typography.module.scss'
 
 // stickers
-import cursor from '../../../assets/images/stickers/cursor.svg'
+import cursor from '../../../assets/images/stickers/cursor-pink.svg'
 import globe from '../../../assets/images/stickers/globe.svg'
-import smiley from '../../../assets/images/stickers/smiley.svg'
+import smiley from '../../../assets/images/stickers/smiley-yellow.svg'
 import validate from '../../../assets/images/stickers/validate.svg'
 
 const Hero = () => {
