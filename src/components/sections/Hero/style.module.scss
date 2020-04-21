@@ -1,0 +1,37 @@
+@import '../../../styles/imports/index.scss';
+
+.section {
+  align-items: center;
+  background-color: $color-blue;
+  color: $color-white;
+  display: flex;
+  height: 100vh;
+}
+
+.wrapper {
+  display: block;
+  margin: auto;
+  max-width: 950px;
+  position: relative;
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 4vh;
+}
+
+.subtitle {
+  margin: 4vh 0 7vh;
+}
+
+.stickers {
+
+  .sticker {
+    position: absolute;
+
+    &:first-child {
+      left: 0;
+      top: 0;
+    }
+  }
+}

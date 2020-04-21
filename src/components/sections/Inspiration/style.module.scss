@@ -1,0 +1,48 @@
+@import '../../../styles/imports/index.scss';
+
+.section {
+  background: $color-blue;
+  color: $color-white;
+  padding: 25vh 0;
+}
+
+.title {
+  margin-bottom: 21vh;
+  max-width: 400px;
+}
+
+.content {
+  border-top: 1px solid $color-white;
+  position: relative;
+}
+
+.line {
+  border-bottom: 1px solid $color-white;
+  cursor: pointer;
+  padding: 40px 0;
+}
+
+.gifContainer {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  transition: opacity .3s ease-in-out;
+
+  &.isVisible {
+    opacity: 1;
+  }
+}
+
+.gifWrapper{
+  position: relative;
+}
+
+.gif {
+  max-height: 300px;
+  opacity: 0;
+  position: absolute;
+
+  &.isVisible {
+    opacity: 1;
+  }
+}
