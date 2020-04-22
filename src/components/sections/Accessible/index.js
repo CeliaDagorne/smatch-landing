@@ -14,7 +14,12 @@ const Accessible = () => {
     <section className={styles.section}>
       <Container>
         <div>
-          <h2 className={titleClass}>
+          <h2
+            className={titleClass}
+            data-scroll
+            data-scroll-delay="0.06"
+            data-scroll-speed="3"
+          >
             Gratuit et accessible à tous.tes
           </h2>
         </div>

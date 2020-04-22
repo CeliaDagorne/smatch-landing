@@ -8,6 +8,7 @@ import typography from '../../../styles/imports/typography.module.scss'
 
 const Inspiration = () => {
   const titleClass = classNames(styles.title, typography.h2)
+  const section = useRef(null)
   const gifContainer = useRef(null)
   const gifWrapper = useRef(null)
   const content = useRef(null)
@@ -37,8 +38,9 @@ const Inspiration = () => {
 
 
   const getCoordinate = e => {
+    const sectionOffsetY = section.current.offsetTop
     setX(e.clientX)
-    setY(e.pageY - content.current.offsetTop)
+    setY(e.clientY + sectionOffsetY)
   }
 
   const showGif = () => {
@@ -75,7 +77,7 @@ const Inspiration = () => {
   }, [activeGif])
 
   return (
-    <section className={styles.section}>
+    <section ref={section} className={styles.section}>
       <Container>
         <h2 className={titleClass}>De quoi t’inspirer</h2>
         <div ref={content} className={styles.content}>

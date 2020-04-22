@@ -32,10 +32,38 @@ const Hero = () => {
           </h3>
           <Button to="/">Je m'oriente</Button>
           <div className={styles.stickers}>
-            <img className={styles.sticker} src={validate} alt=""/>
-            <img className={styles.sticker} src={globe} alt=""/>
-            <img className={styles.sticker} src={cursor} alt=""/>
-            <img className={styles.sticker} src={smiley} alt=""/>
+            <img
+              className={styles.sticker}
+              data-scroll
+              data-scroll-direction="vertical"
+              data-scroll-speed="1.5"
+              src={validate}
+              alt=""
+            />
+            <img
+              className={styles.sticker}
+              data-scroll
+              data-scroll-direction="vertical"
+              data-scroll-speed="-1.5"
+              src={globe}
+              alt=""
+            />
+            <img
+              className={styles.sticker}
+              data-scroll
+              data-scroll-direction="vertical"
+              data-scroll-speed="-1.5"
+              src={cursor}
+              alt=""
+            />
+            <img
+              className={styles.sticker}
+              data-scroll
+              data-scroll-direction="vertical"
+              data-scroll-speed="1.5"
+              src={smiley}
+              alt=""
+            />
           </div>
         </div>
       </Container>
