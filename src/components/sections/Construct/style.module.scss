@@ -1,0 +1,14 @@
+@import '../../../styles/imports/index.scss';
+
+.section {
+  background: $color-blue;
+  color: $color-white;
+  padding: 22vh 0;
+  position: relative;
+  text-align: center;
+}
+
+.title {
+  font-size: 80px;
+  margin-bottom: 60px;
+}

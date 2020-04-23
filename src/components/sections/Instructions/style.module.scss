@@ -19,15 +19,49 @@
   max-width: 520px;
 }
 
-.accordionPanel {
-
-}
-
 .accordionText {
   font-size: 36px;
   line-height: 1.2;
   max-width: 470px;
   padding-bottom: 100px
+}
+
+.accordionTitle {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 60px;
+}
+
+.cross {
+  height: 40px;
+  position: relative;
+  transition: transform .1s ease-in-out;
+  width: 40px;
+
+  > div {
+    background-color: $color-white;
+    margin: auto;
+    position: absolute;
+
+    &:first-child {
+      bottom: 0;
+      height: 4px;
+      top: 0;
+      width: 100%;
+    }
+    &:last-child {
+      bottom: 0;
+      height: 100%;
+      left: 0;
+      right: 0;
+      top: 0;
+      width: 4px;
+    }
+  }
+
+  &.activeCross {
+    transform: rotate(45deg);
+  }
 }
 
 .footer {

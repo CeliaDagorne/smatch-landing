@@ -15,7 +15,7 @@ const Instructions = () => {
   const titleClass = classNames(styles.title, typography.h2)
   const subtitleClass = classNames(styles.subtitle, typography.h4)
   const footerLabelClass = classNames(styles.footerLabel, typography.h3)
-  const accordionTitleClass = classNames('title', typography.cta)
+  const accordionTitleClass = classNames('title', styles.accordionTitle, typography.cta)
   const accordionPanelClass = classNames('panel', styles.accordionPanel)
 
   const content = [
@@ -37,8 +37,19 @@ const Instructions = () => {
     },
   ]
 
-  const toggleAccordion = index => {
-    accordion.current.children[index].classList.toggle('active')
+  const toggleAccordion = (index, e) => {
+    const line = accordion.current.children[index]
+
+    // if (accordion.current.querySelector('.active')) {
+    //   accordion.current.querySelector('.active').classList.remove('active')
+    // }
+    // if (accordion.current.querySelector(`.${styles.cross}`)) {
+    //   accordion.current.querySelector(`.${styles.cross}`).classList.remove(`.${styles.cross}`)
+    //   console.log(accordion.current.querySelector(`.${styles.cross}`))
+    // }
+
+    line.classList.toggle('active')
+    line.querySelector(`.${styles.cross}`).classList.toggle(styles.activeCross)
   }
 
   return (
@@ -56,8 +67,12 @@ const Instructions = () => {
           <div ref={accordion} className="accordion">
             {content.map( (item, index) => (
               <div className="accordion-item" key={item.title}>
-                <div className={accordionTitleClass} onClick={() => toggleAccordion(index)}>
+                <div className={accordionTitleClass} onClick={e => toggleAccordion(index, e)}>
                   <p>{item.title}</p>
+                  <div className={styles.cross}>
+                    <div/>
+                    <div/>
+                  </div>
                 </div>
                 <div className={accordionPanelClass}>
                   <div className={styles.accordionText}>

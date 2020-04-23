@@ -1,0 +1,24 @@
+@import '../../../styles/imports/index.scss';
+
+.section {
+  background: $color-white;
+  color: $color-black;
+  padding: 22vh 0;
+}
+
+.title {
+  margin-bottom: 18vh;
+  margin-left: auto;
+  max-width: 500px;
+}
+
+.grid {
+  display: grid;
+  grid-gap: 80px 10%;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.gridItem {
+  background: $color-blue;
+  padding-bottom: 100%;
+}

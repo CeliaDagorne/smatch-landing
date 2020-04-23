@@ -8,6 +8,12 @@ import Hero from './components/sections/Hero'
 import Accessible from './components/sections/Accessible'
 import Inspiration from './components/sections/Inspiration'
 import Instructions from './components/sections/Instructions'
+import Platform from './components/sections/Platform'
+import Difference from './components/sections/Difference'
+import Trust from './components/sections/Trust'
+import Testimonial from './components/sections/Testimonial'
+import Press from './components/sections/Press'
+import Construct from './components/sections/Construct'
 
 function App() {
   const scrollRef = React.createRef();
@@ -26,6 +32,12 @@ function App() {
         <Accessible />
         <Inspiration />
         <Instructions />
+        <Platform />
+        <Difference />
+        <Trust />
+        <Testimonial />
+        <Press />
+        <Construct />
       </div>
     </div>
   )
