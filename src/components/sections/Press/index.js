@@ -6,6 +6,8 @@ import Container from '../../elements/Container'
 import styles from './style.module.scss'
 import typography from '../../../styles/imports/typography.module.scss'
 
+import brut from '../../../assets/images/logos/brut.svg'
+
 const Press = () => {
   const titleClass = classNames(styles.title, typography.h2)
 
@@ -46,7 +48,7 @@ const Press = () => {
           {content && (
             content.map(item => (
               <div key={item.img} className={styles.gridItem}>
-
+                <img src={brut} alt=""/>
               </div>
             ))
           )}

@@ -7,12 +7,15 @@ import styles from './style.module.scss'
 import typography from '../../../styles/imports/typography.module.scss'
 
 const Testimonial = () => {
-  const titleClass = classNames(styles.title, typography.h2)
+  const textClass = classNames(styles.text, typography.h3)
 
   return (
     <section className={styles.section}>
       <Container>
-        <h2 className={titleClass}>La plateforme unique pour ton futur</h2>
+        <p className={textClass}>
+          “Je pensais avoir tout vu et que rien ne me correspondait. Smatch m'a ouvert de nombreuses pistes auquel je n'avais pas pensé et m’a aidé à me connaître.”
+        </p>
+        <p className={typography.h4}>Adama, Lycéen en Terminale S</p>
       </Container>
     </section>
   )

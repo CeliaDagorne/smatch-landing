@@ -5,3 +5,41 @@
   color: $color-white;
   padding: 22vh 0;
 }
+
+.title {
+  margin-bottom: 190px;
+}
+
+.wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content {
+  max-width: 530px;
+}
+
+.textBody {
+  margin: 45px 0 60px;
+}
+
+.line {
+  background-color: $color-white;
+  height: 1px;
+  width: 100%;
+}
+
+.testimonial {
+  margin: 60px 0;
+}
+
+.label {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 30px;
+
+  span {
+    font-weight: 600;
+  }
+}

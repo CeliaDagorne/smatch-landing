@@ -9,3 +9,66 @@
 .title {
   max-width: 580px;
 }
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.conversation {
+  width: 506px;
+}
+
+.bulle {
+  background-color: $color-black;
+  border-radius: 100px;
+  margin-bottom: 80px;
+  max-width: 400px;
+  padding: 20px 60px;
+  position: relative;
+
+  &:nth-child(even) {
+    background-color: $color-pink;
+    margin-left: auto;
+    max-width: 320px;
+
+    .peak {
+      bottom: -9px;
+      left: unset;
+      right: -11px;
+    }
+
+    .emoji {
+      bottom: -35px;
+      left: -43px;
+      right: unset;
+      width: 84px;
+    }
+  }
+
+  &:nth-child(4) {
+    max-width: 360px;
+  }
+
+  p {
+    font-size: 24px;
+    line-height: 29px;
+    max-width: 280px;
+  }
+
+  img {
+    position: absolute;
+    width: 40px;
+  }
+
+  .peak {
+    bottom: 0;
+    left: 0;
+  }
+
+  .emoji {
+    bottom: -30px;
+    right: -5px;
+    width: 104px;
+  }
+}

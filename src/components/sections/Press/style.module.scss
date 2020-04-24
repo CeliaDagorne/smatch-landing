@@ -21,4 +21,15 @@
 .gridItem {
   background: $color-blue;
   padding-bottom: 100%;
+  position: relative;
+
+  img {
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    max-width: 112px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
 }

@@ -35,7 +35,6 @@ const Hero = () => {
             <img
               className={styles.sticker}
               data-scroll
-              data-scroll-direction="vertical"
               data-scroll-speed="1.5"
               src={validate}
               alt=""
