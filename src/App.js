@@ -15,6 +15,10 @@ import Testimonial from './components/sections/Testimonial'
 import Press from './components/sections/Press'
 import Construct from './components/sections/Construct'
 
+// Elements
+import Menu from './components/elements/Menu'
+import Footer from './components/elements/Footer'
+
 function App() {
   const scrollRef = React.createRef();
 
@@ -28,6 +32,7 @@ function App() {
   return (
     <div className="App">
       <div ref={scrollRef}>
+        <Menu />
         <Hero />
         <Accessible />
         <Inspiration />
@@ -38,6 +43,7 @@ function App() {
         <Testimonial />
         <Press />
         <Construct />
+        <Footer />
       </div>
     </div>
   )

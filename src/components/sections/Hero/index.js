@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 import Container from '../../elements/Container'
-import Button from '../../elements/Button'
+import Link from '../../elements/Link'
 
 // styles
 import styles from './style.module.scss'
@@ -30,7 +30,7 @@ const Hero = () => {
           <h3 className={subtitleClass}>
             Nous utilisons des tests inspirés de méthodes de coaching reconnus et une approche personnalisée pour vous accompagner dans votre orientation.
           </h3>
-          <Button to="/">Je m'oriente</Button>
+          <Link to="/" button>Je m'oriente</Link>
           <div className={styles.stickers}>
             <img
               className={styles.sticker}

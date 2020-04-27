@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import classNames from 'classnames'
 import Container from '../../elements/Container'
-import Button from '../../elements/Button'
+import Link from '../../elements/Link'
 
 // Accordion
 import './accordion.scss';
@@ -89,7 +89,7 @@ const Instructions = () => {
             <h3 className={footerLabelClass}>
               Explore tes possibilités avec  Smatch dès aujourd’hui
             </h3>
-            <Button to="/">Je me lance</Button>
+            <Link to="/" button>Je me lance</Link>
           </div>
         </div>
       </Container>

@@ -5,9 +5,8 @@ import classNames from 'classnames'
 import styles from './style.module.scss'
 import typography from '../../../styles/imports/typography.module.scss'
 
-const Button = ({ to, innerRef, children }) => {
-
-  const style = classNames(styles.button, typography.button)
+const Link = ({ button, to, innerRef, children, dark }) => {
+  const style = classNames({ [styles.button]: button }, typography.button, { [styles.dark]: dark })
 
   const handleKeypress = event => {
     if (event.key === 'Enter') {
@@ -36,4 +35,4 @@ const Button = ({ to, innerRef, children }) => {
   )
 }
 
-export default Button
+export default Link

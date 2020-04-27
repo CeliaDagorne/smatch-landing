@@ -1,0 +1,19 @@
+@import '../../../styles/imports/index.scss';
+
+.menu {
+  color: $color-white;
+  position: absolute;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+}
+
+.wrapper {
+  > * {
+    margin-left: 80px;
+  }
+}

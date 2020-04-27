@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 import Container from '../../elements/Container'
-import Button from '../../elements/Button'
+import Link from '../../elements/Link'
 
 // styles
 import styles from './style.module.scss'
@@ -37,7 +37,7 @@ const Platform = () => {
               </p>
               <p className={styles.label}><span>Marjorie F,</span> Product Owner</p>
             </div>
-            <Button to="/">Faire le test</Button>
+            <Link to="/" button>Faire le test</Link>
           </div>
         </div>
       </Container>

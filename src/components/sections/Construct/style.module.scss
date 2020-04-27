@@ -12,3 +12,14 @@
   font-size: 80px;
   margin-bottom: 60px;
 }
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 60px auto 0;
+  max-width: 360px;
+
+  span {
+    margin-right: 15px;
+  }
+}

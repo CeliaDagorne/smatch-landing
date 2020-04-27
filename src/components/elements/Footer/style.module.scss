@@ -1,0 +1,76 @@
+@import '../../../styles/imports/index.scss';
+
+.footer {
+  padding: 70px 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.row {
+
+  &:last-child {
+    max-width: 340px;
+
+    p {
+      line-height: 1.5;
+    }
+  }
+}
+
+.line {
+
+  a {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+
+.lineTitle {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 36px;
+}
+
+.input {
+  display: flex;
+  margin-top: 36px;
+
+  input {
+    border: 2px solid $color-black;
+    height: 66px;
+  }
+
+  input[type='text'] {
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    padding-left: 17px;
+    width: 220px;
+
+    &::placeholder {
+      color: $color-grey;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+
+  input[type='submit'] {
+    background: $color-blue;
+    border-bottom-right-radius: 8px;
+    border-left: none;
+    border-top-right-radius: 8px;
+    color: $color-white;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0 35px;
+  }
+}

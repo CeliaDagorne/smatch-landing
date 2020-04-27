@@ -7,4 +7,10 @@
   color: $color-black;
   cursor: pointer;
   padding: 12px 55px;
+
+  &.dark {
+    background: $color-black;
+    border: 2px solid $color-black;
+    color: $color-white;
+  }
 }

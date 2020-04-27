@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 import Container from '../../elements/Container'
-import Button from '../../elements/Button'
+import Link from '../../elements/Link'
 
 // styles
 import styles from './style.module.scss'
@@ -31,7 +31,7 @@ const Accessible = () => {
             <p className={styles.textBody}>
               Parce que s'orienter n'est pas une chance mais un droit. Notre mission est d’offrir des outils gratuit afin que tu puisses trouver ta voie et croire en toi.
             </p>
-            <Button to="/">Découvrir</Button>
+            <Link to="/" button>Découvrir</Link>
           </div>
         </div>
       </Container>

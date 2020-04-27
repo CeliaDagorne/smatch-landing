@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 import Container from '../../elements/Container'
-import Button from '../../elements/Button'
+import Link from '../../elements/Link'
 
 // styles
 import styles from './style.module.scss'
@@ -16,7 +16,17 @@ const Construct = () => {
         <h2 className={titleClass}>
           Prêt.e à construire ton futur ?
         </h2>
-        <Button to="/">C’est parti !</Button>
+        <Link to="/" button>C’est parti !</Link>
+        <div className={styles.footer}>
+          <p>
+            <span><img src="/images/validate.svg" alt=""/></span>
+            100% gratuit
+          </p>
+          <p>
+            <span><img src="/images/validate.svg" alt=""/></span>
+            Garantie sans stress
+          </p>
+        </div>
       </Container>
     </section>
   )
