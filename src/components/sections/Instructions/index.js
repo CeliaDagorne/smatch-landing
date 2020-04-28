@@ -37,17 +37,8 @@ const Instructions = () => {
     },
   ]
 
-  const toggleAccordion = (index, e) => {
+  const toggleAccordion = index => {
     const line = accordion.current.children[index]
-
-    // if (accordion.current.querySelector('.active')) {
-    //   accordion.current.querySelector('.active').classList.remove('active')
-    // }
-    // if (accordion.current.querySelector(`.${styles.cross}`)) {
-    //   accordion.current.querySelector(`.${styles.cross}`).classList.remove(`.${styles.cross}`)
-    //   console.log(accordion.current.querySelector(`.${styles.cross}`))
-    // }
-
     line.classList.toggle('active')
     line.querySelector(`.${styles.cross}`).classList.toggle(styles.activeCross)
   }
@@ -67,7 +58,7 @@ const Instructions = () => {
           <div ref={accordion} className="accordion">
             {content.map( (item, index) => (
               <div className="accordion-item" key={item.title}>
-                <div className={accordionTitleClass} onClick={e => toggleAccordion(index, e)}>
+                <div className={accordionTitleClass} onClick={() => toggleAccordion(index)}>
                   <p>{item.title}</p>
                   <div className={styles.cross}>
                     <div/>
@@ -77,6 +68,57 @@ const Instructions = () => {
                 <div className={accordionPanelClass}>
                   <div className={styles.accordionText}>
                     {item.text}
+                  </div>
+                  <div className={styles.accordionContent}>
+                    <img
+                      data-scroll
+                      data-scroll-speed="1"
+                      className={styles.big}
+                      src="/images/stickers/sticker-smatch.svg"
+                      alt="Smatch sticker"
+                    />
+                    <img
+                      data-scroll
+                      data-scroll-speed="2"
+                      className={styles.smiley}
+                      src="/images/stickers/smiley-orange.svg"
+                      alt="Smiley orange"
+                    />
+                    <img
+                      data-scroll
+                      data-scroll-speed="2"
+                      className={styles.smiley}
+                      src="/images/stickers/smiley-yellow.svg"
+                      alt="Smiley jaune"
+                    />
+                    <img
+                      data-scroll
+                      data-scroll-speed="1.5"
+                      className={styles.smiley}
+                      src="/images/stickers/smiley-blue.svg"
+                      alt="Smiley bleu"
+                    />
+                    <img
+                      data-scroll
+                      data-scroll-speed="-1.5"
+                      className={styles.free}
+                      src="/images/stickers/sticker-free.svg"
+                      alt="Free sticker"
+                    />
+                    <img
+                      data-scroll
+                      data-scroll-speed="2"
+                      className={styles.start}
+                      src="/images/stickers/sticker-start.svg"
+                      alt="Start sticker"
+                    />
+                    <img
+                      data-scroll
+                      data-scroll-speed="-2"
+                      className={styles.try}
+                      src="/images/stickers/try.svg"
+                      alt="Try sticker"
+                    />
                   </div>
                 </div>
               </div>

@@ -35,13 +35,14 @@
 .cross {
   height: 40px;
   position: relative;
-  transition: transform .1s ease-in-out;
   width: 40px;
 
   > div {
     background-color: $color-white;
     margin: auto;
+    opacity: 1;
     position: absolute;
+    transition: opacity .3s ease-in-out;
 
     &:first-child {
       bottom: 0;
@@ -60,7 +61,68 @@
   }
 
   &.activeCross {
-    transform: rotate(45deg);
+    div:last-child {
+      opacity: 0;
+    }
+  }
+}
+
+.accordionContent {
+  height: 43vw;
+  margin-bottom: 50px;
+  position: relative;
+  width: calc(100% - 540px);
+
+  img {
+    max-width: 500px;
+    position: absolute;
+  }
+
+  .smiley {
+    width: 20%;
+    z-index: 1;
+
+    &:nth-child(2) {
+      left: 45%;
+      top: 24%;
+    }
+    &:nth-child(3) {
+      right: 15%;
+      top: 64%;
+    }
+    &:nth-child(4) {
+      left: 6%;
+      top: 50%;
+    }
+  }
+
+  .big {
+    left: 0;
+    margin: auto;
+    right: 0;
+    top: 32%;
+    width: 69%;
+  }
+
+  .try,
+  .start {
+    width: 53%;
+  }
+
+  .try {
+    left: 0;
+    top: 0;
+  }
+
+  .start {
+    bottom: 0;
+    left: 5%;
+  }
+
+  .free {
+    right: 0;
+    top: 14%;
+    width: 43%;
   }
 }
 

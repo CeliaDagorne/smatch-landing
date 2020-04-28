@@ -19,14 +19,18 @@
 
     .panel {
       color: $color-white;
+      display: flex;
+      justify-content: space-between;
       max-height: 0;
       overflow: hidden;
       transition: max-height .15s ease-out;
     }
 
     &.active {
+
       .panel {
         max-height: 1000px;
+        overflow: visible;
         transition: max-height .25s ease-in;
       }
     }
