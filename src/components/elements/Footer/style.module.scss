@@ -89,7 +89,9 @@
   margin-top: 36px;
 
   input {
+    -webkit-appearance: none;
     border: 2px solid $color-black;
+    font-family: inherit;
     height: 66px;
   }
 
@@ -109,6 +111,7 @@
   }
 
   input[type='submit'] {
+    border-radius: 0;
     background: $color-blue;
     border-bottom-right-radius: 8px;
     border-left: none;
@@ -117,5 +120,10 @@
     font-size: 14px;
     font-weight: 500;
     padding: 0 35px;
+    position: relative;
+
+    @include respond-to(mobile) {
+      left: -8px;
+    }
   }
 }

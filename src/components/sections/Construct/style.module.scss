@@ -6,10 +6,18 @@
   padding: 22vh 0;
   position: relative;
   text-align: center;
+
+  @include respond-to(mobile) {
+    padding: 18vh 0;
+  }
 }
 
 .title {
   margin-bottom: 60px;
+
+  @include respond-to(mobile) {
+    margin-bottom: 80px;
+  }
 
   @include respond-to(above-mobile) {
     font-size: 80px;
