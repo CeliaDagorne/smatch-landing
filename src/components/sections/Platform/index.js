@@ -21,23 +21,9 @@ const Platform = () => {
         <div className={styles.wrapper}>
           <div className={styles.visual}>
             <img src={window} alt=""/>
-            <div
-              data-scroll
-              data-scroll-speed="1"
-              className={styles.circle}
-            />
-            <div
-              data-scroll
-              data-scroll-speed="1"
-              data-scroll-delay="0.6"
-              className={styles.triangle}
-            />
-            <div
-              data-scroll
-              data-scroll-speed="1"
-              data-scroll-delay="0.8"
-              className={styles.rectangle}
-            />
+            <div className={styles.circle}/>
+            <div className={styles.triangle}/>
+            <div className={styles.rectangle}/>
           </div>
           <div className={styles.content}>
             <h3 className={typography.h3}>

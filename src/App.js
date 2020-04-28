@@ -20,31 +20,28 @@ import Menu from './components/elements/Menu'
 import Footer from './components/elements/Footer'
 
 function App() {
-  const scrollRef = React.createRef();
 
-  useEffect(() => {
-    const scroll = new locomotiveScroll({
-      el: scrollRef.current,
-      smooth: true
-    })
-  })
+  // useEffect(() => {
+  //   const scroll = new locomotiveScroll({
+  //     el: document.querySelector('.App'),
+  //     smooth: true
+  //   })
+  // })
 
   return (
     <div className="App">
-      <div ref={scrollRef}>
-        <Menu />
-        <Hero />
-        <Accessible />
-        <Inspiration />
-        <Instructions />
-        <Platform />
-        <Difference />
-        <Trust />
-        <Testimonial />
-        <Press />
-        <Construct />
-        <Footer />
-      </div>
+      <Menu />
+      <Hero/>
+      <Accessible />
+      <Inspiration />
+      <Instructions />
+      <Platform />
+      <Difference />
+      <Trust />
+      <Testimonial />
+      <Press />
+      <Construct />
+      <Footer />
     </div>
   )
 }

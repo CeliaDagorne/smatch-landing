@@ -34,32 +34,21 @@ const Hero = () => {
           <div className={styles.stickers}>
             <img
               className={styles.sticker}
-              data-scroll
-              data-scroll-speed="1.5"
               src={validate}
               alt=""
             />
             <img
               className={styles.sticker}
-              data-scroll
-              data-scroll-direction="vertical"
-              data-scroll-speed="-1.5"
               src={globe}
               alt=""
             />
             <img
               className={styles.sticker}
-              data-scroll
-              data-scroll-direction="vertical"
-              data-scroll-speed="-1.5"
               src={cursor}
               alt=""
             />
             <img
               className={styles.sticker}
-              data-scroll
-              data-scroll-direction="vertical"
-              data-scroll-speed="1.5"
               src={smiley}
               alt=""
             />

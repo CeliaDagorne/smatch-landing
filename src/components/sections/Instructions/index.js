@@ -71,50 +71,36 @@ const Instructions = () => {
                   </div>
                   <div className={styles.accordionContent}>
                     <img
-                      data-scroll
-                      data-scroll-speed="1"
                       className={styles.big}
                       src="/images/stickers/sticker-smatch.svg"
                       alt="Smatch sticker"
                     />
                     <img
-                      data-scroll
-                      data-scroll-speed="2"
                       className={styles.smiley}
                       src="/images/stickers/smiley-orange.svg"
                       alt="Smiley orange"
                     />
                     <img
-                      data-scroll
-                      data-scroll-speed="2"
                       className={styles.smiley}
                       src="/images/stickers/smiley-yellow.svg"
                       alt="Smiley jaune"
                     />
                     <img
-                      data-scroll
-                      data-scroll-speed="1.5"
                       className={styles.smiley}
                       src="/images/stickers/smiley-blue.svg"
                       alt="Smiley bleu"
                     />
                     <img
-                      data-scroll
-                      data-scroll-speed="-1.5"
                       className={styles.free}
                       src="/images/stickers/sticker-free.svg"
                       alt="Free sticker"
                     />
                     <img
-                      data-scroll
-                      data-scroll-speed="2"
                       className={styles.start}
                       src="/images/stickers/sticker-start.svg"
                       alt="Start sticker"
                     />
                     <img
-                      data-scroll
-                      data-scroll-speed="-2"
                       className={styles.try}
                       src="/images/stickers/try.svg"
                       alt="Try sticker"

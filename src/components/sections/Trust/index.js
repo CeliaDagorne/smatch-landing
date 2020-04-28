@@ -23,7 +23,7 @@ const Trust = () => {
           <h2 className={titleClass}>
             Ecoles et étudiant.es. Ils nous font confiance.
           </h2>
-          <div data-scroll className={styles.conversation}>
+          <div className={styles.conversation}>
             <div className={styles.line}>
               <div className={styles.bulle}>
                 <p>
