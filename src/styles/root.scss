@@ -10,6 +10,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   height: 100%;
+  overflow-x: hidden;
   overscroll-behavior: none;
   -ms-scroll-chaining: none;
 }

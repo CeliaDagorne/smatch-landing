@@ -9,8 +9,11 @@
 }
 
 .title {
-  font-size: 80px;
   margin-bottom: 60px;
+
+  @include respond-to(above-mobile) {
+    font-size: 80px;
+  }
 }
 
 .footer {

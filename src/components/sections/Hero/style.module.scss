@@ -6,6 +6,11 @@
   color: $color-white;
   display: flex;
   height: 100vh;
+
+  @include respond-to(mobile) {
+    height: unset;
+    padding: 20px 0 100px;
+  }
 }
 
 .wrapper {
@@ -18,10 +23,18 @@
 
 .title {
   margin-bottom: 4vh;
+
+  @include respond-to(mobile) {
+    margin-bottom: 90px;
+  }
 }
 
 .subtitle {
   margin: 4vh 0 7vh;
+
+  @include respond-to(mobile) {
+    margin: 40px 0 7vh;
+  }
 }
 
 .stickers {
@@ -33,19 +46,36 @@
     &:first-child {
       left: -60px;
       top: -10px;
+
+      @include respond-to(mobile) {
+        left: -10px;
+      }
     }
     &:nth-child(2) {
       right: -20px;
       top: -30px;
+
+      @include respond-to(mobile) {
+        top: 20px;
+      }
     }
     &:nth-child(3) {
       height: 70px;
       left: 80px;
       top: 280px;
+
+      @include respond-to(mobile) {
+        left: -20px;
+        top: 340px;
+      }
     }
     &:nth-child(4) {
       right: 80px;
       top: 270px;
+
+      @include respond-to(mobile) {
+        right: -70px;
+      }
     }
   }
 }

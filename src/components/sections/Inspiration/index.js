@@ -38,9 +38,8 @@ const Inspiration = () => {
 
 
   const getCoordinate = e => {
-    const sectionOffsetY = section.current.offsetTop
     setX(e.clientX)
-    setY(e.clientY + sectionOffsetY)
+    setY(e.clientY)
   }
 
   const showGif = () => {

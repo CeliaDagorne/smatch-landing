@@ -136,8 +136,16 @@
   justify-content: space-between;
   margin: auto;
   max-width: 920px;
+
+  @include respond-to(mobile) {
+    display: block;
+  }
 }
 
 .footerLabel {
   max-width: 570px;
+
+  @include respond-to(mobile) {
+    margin-bottom: 80px;
+  }
 }

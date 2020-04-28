@@ -8,29 +8,73 @@
 
 .title {
   max-width: 580px;
+
+  @include respond-to(mobile) {
+    margin-bottom: 100px;
+  }
 }
 
 .wrapper {
-  display: flex;
-  justify-content: space-between;
+  @include respond-to(above-mobile) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .conversation {
   width: 506px;
+
+  @include respond-to(mobile) {
+    width: 100%;
+  }
 }
 
 .bulle {
-  background-color: $color-black;
-  border-radius: 100px;
   margin-bottom: 80px;
-  max-width: 400px;
-  padding: 20px 60px;
   position: relative;
 
+  &:first-child {
+    width: 360px;
+
+    @include respond-to(mobile) {
+      width: 290px;
+    }
+
+    p {
+      width: 360px;
+
+      @include respond-to(mobile) {
+        width: 290px;
+      }
+    }
+  }
+
+  p {
+    background-color: $color-black;
+    border-radius: 100px;
+    padding: 20px 60px;
+
+    @include respond-to(mobile) {
+      padding: 20px 40px;
+    }
+  }
+
   &:nth-child(even) {
-    background-color: $color-pink;
     margin-left: auto;
-    max-width: 320px;
+    width: 320px;
+
+    @include respond-to(mobile) {
+      width: 250px;
+    }
+
+    p {
+      background-color: $color-pink;
+      width: 320px;
+
+      @include respond-to(mobile) {
+        width: 250px;
+      }
+    }
 
     .peak {
       bottom: -9px;
@@ -46,14 +90,41 @@
     }
   }
 
+  &:nth-child(3) {
+    width: 370px;
+
+    @include respond-to(mobile) {
+      width: 290px;
+    }
+
+    p {
+      width: 370px;
+
+      @include respond-to(mobile) {
+        width: 290px;
+      }
+    }
+  }
+
   &:nth-child(4) {
-    max-width: 360px;
+    width: 360px;
+
+    @include respond-to(mobile) {
+      width: 280px;
+    }
+
+    p {
+      width: 360px;
+
+      @include respond-to(mobile) {
+        width: 280px;
+      }
+    }
   }
 
   p {
-    font-size: 24px;
-    line-height: 29px;
-    max-width: 280px;
+    font-size: 20px;
+    line-height: 24px;
   }
 
   img {
@@ -70,5 +141,10 @@
     bottom: -30px;
     right: -5px;
     width: 104px;
+
+    @include respond-to(mobile) {
+      right: -25px;
+      width: 80px;
+    }
   }
 }

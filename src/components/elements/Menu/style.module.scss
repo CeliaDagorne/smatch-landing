@@ -4,6 +4,10 @@
   color: $color-white;
   position: absolute;
   width: 100%;
+
+  @include respond-to(mobile) {
+    display: none;
+  }
 }
 
 .container {

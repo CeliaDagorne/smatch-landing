@@ -10,12 +10,22 @@
   margin-bottom: 18vh;
   margin-left: auto;
   max-width: 500px;
+  text-align: right;
+
+  @include respond-to(mobile) {
+    margin-bottom: 80px;
+  }
 }
 
 .grid {
   display: grid;
   grid-gap: 80px 10%;
   grid-template-columns: repeat(3, 1fr);
+
+  @include respond-to(mobile) {
+    grid-gap: 50px 10%;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .gridItem {

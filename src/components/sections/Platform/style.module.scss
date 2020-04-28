@@ -8,16 +8,28 @@
 
 .title {
   margin-bottom: 190px;
+
+  @include respond-to(mobile) {
+    margin-bottom: 80px;
+  }
 }
 
 .wrapper {
   align-items: center;
   display: flex;
   justify-content: space-between;
+
+  @include respond-to(mobile) {
+    display: block;
+  }
 }
 
 .content {
   max-width: 530px;
+
+  @include respond-to(mobile) {
+    margin-top: 90px;
+  }
 }
 
 .textBody {
@@ -32,6 +44,12 @@
 
 .visual {
   position: relative;
+
+  > img {
+    @include respond-to(mobile) {
+      width: 100%;
+    }
+  }
 
   div {
     position: absolute;

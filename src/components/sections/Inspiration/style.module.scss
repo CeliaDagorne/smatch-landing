@@ -9,6 +9,10 @@
 .title {
   margin-bottom: 21vh;
   max-width: 400px;
+
+  @include respond-to(mobile) {
+    margin-bottom: 80px;
+  }
 }
 
 .content {

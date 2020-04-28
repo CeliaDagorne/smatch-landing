@@ -1,4 +1,5 @@
 import React from 'react'
+import classNames from 'classnames'
 import Container from '../../elements/Container'
 import Link from '../../elements/Link'
 
@@ -11,35 +12,35 @@ const Footer = () => (
     <Container>
       <h3 className={typography.h3}>Smatch</h3>
       <div className={styles.container}>
-        <div className={styles.row}>
+        <div className={classNames(styles.row, styles.social)}>
           <div className={styles.line}>
             <Link to="/">
-              <span><img src="" alt=""/></span>
-              Instagram
+              <span><img src="/images/RS/instagram.svg" alt=""/></span>
+              <span>Instagram</span>
             </Link>
           </div>
           <div className={styles.line}>
             <Link to="/">
-              <span><img src="" alt=""/></span>
-              Snapchat
+              <span><img src="/images/RS/snapchat.svg" alt=""/></span>
+              <span>Snapchat</span>
             </Link>
           </div>
           <div className={styles.line}>
             <Link to="/">
-              <span><img src="" alt=""/></span>
-              Twitter
+              <span><img src="/images/RS/twitter.svg" alt=""/></span>
+              <span>Twitter</span>
             </Link>
           </div>
           <div className={styles.line}>
             <Link to="/">
-              <span><img src="" alt=""/></span>
-              TikTok
+              <span><img src="/images/RS/tiktok.svg" alt=""/></span>
+              <span>TikTok</span>
             </Link>
           </div>
           <div className={styles.line}>
             <Link to="/">
-              <span><img src="" alt=""/></span>
-              Youtube
+              <span><img src="/images/RS/youtube.svg" alt=""/></span>
+              <span>Youtube</span>
             </Link>
           </div>
         </div>
