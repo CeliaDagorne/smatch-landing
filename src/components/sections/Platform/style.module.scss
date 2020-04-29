@@ -15,7 +15,6 @@
 }
 
 .wrapper {
-  align-items: center;
   display: flex;
   justify-content: space-between;
 
@@ -43,16 +42,24 @@
 }
 
 .visual {
+  // height: 680px;
+  height: 37px;
+  overflow: hidden;
   position: relative;
+  transition: height .5s ease-in-out .4s;
+  width: 530px;
 
   > img {
-    @include respond-to(mobile) {
-      width: 100%;
-    }
+    height: 680px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 530px;
   }
 
   div {
     position: absolute;
+    transform: scale(0);
   }
 }
 
@@ -63,24 +70,26 @@
   height: 140px;
   left: 8%;
   top: 12%;
+  transition: transform .4s ease-in-out 1.1s;
   width: 140px;
 }
 .rectangle {
-  // animation: float 3s linear infinite;
   background: #4ABC86;
   bottom: 5%;
   height: 186px;
   left: 10%;
+  transition: transform .4s ease-in-out 1.3s;
   width: 186px;
+
 }
 .triangle {
-  // animation: float 3s linear infinite;
   border-bottom: 140px solid transparent;
   border-left: 240px solid $color-pink;
   border-top: 140px solid transparent;
   height: 0;
   right: 8%;
   top: 20%;
+  transition: transform .4s ease-in-out 1.2s;
   width: 0;
 }
 

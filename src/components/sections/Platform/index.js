@@ -4,6 +4,7 @@ import Container from '../../elements/Container'
 import Link from '../../elements/Link'
 
 // styles
+import './appear.scss'
 import styles from './style.module.scss'
 import typography from '../../../styles/imports/typography.module.scss'
 
@@ -19,7 +20,7 @@ const Platform = () => {
       <Container>
         <h2 className={titleClass}>La plateforme unique pour ton futur</h2>
         <div className={styles.wrapper}>
-          <div className={styles.visual}>
+          <div  data-appear="visual" className={styles.visual}>
             <img src={window} alt=""/>
             <div className={styles.circle}/>
             <div className={styles.triangle}/>

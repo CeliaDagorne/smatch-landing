@@ -12,11 +12,13 @@ const Inspiration = () => {
   const gifContainer = useRef(null)
   const gifWrapper = useRef(null)
   const content = useRef(null)
+
   const [gifVisibility, setGifVisibility] = useState(false)
   const [activeGif, setActiveGif] = useState(0)
-  const gifContainerClass = classNames(styles.gifContainer, { [styles.isVisible]: gifVisibility })
   const [x, setX] = useState(0)
   const [y, setY] = useState(0)
+
+  const gifContainerClass = classNames(styles.gifContainer, { [styles.isVisible]: gifVisibility })
 
   const gifs = [
     'https://media.giphy.com/media/q2zZLjAbVzyZq/giphy.gif',
@@ -35,7 +37,6 @@ const Inspiration = () => {
     'Guide',
     'Quizzes & Tests',
   ]
-
 
   const getCoordinate = e => {
     setX(e.clientX)

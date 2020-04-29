@@ -25,10 +25,13 @@
 }
 
 .item {
+  cursor: none;
   max-width: 320px;
   position: relative;
 
   .image {
+    pointer-events: none;
+
     @include respond-to(mobile) {
       opacity: 1;
     }
@@ -53,7 +56,7 @@
 
 .image {
   opacity: 0;
-  position: absolute;
+  position: fixed;
   right: 23px;
   top: -55px;
   transition: opacity .3s ease-in-out;
@@ -64,6 +67,7 @@
 .itemTitle {
   display: inline-block;
   margin-bottom: 30px;
+  pointer-events: none;
   position: relative;
 
   &:after {
@@ -79,5 +83,6 @@
 }
 
 .bodyText {
+  pointer-events: none;
   position: relative;
 }

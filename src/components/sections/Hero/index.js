@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import classNames from 'classnames'
 import Container from '../../elements/Container'
 import Link from '../../elements/Link'
+import Menu from '../../elements/Menu'
+
 
 // styles
 import styles from './style.module.scss'
@@ -14,23 +16,43 @@ import smiley from '../../../assets/images/stickers/smiley-yellow.svg'
 import validate from '../../../assets/images/stickers/validate.svg'
 
 const Hero = () => {
+  const section = useRef(null)
+
   const titleClass = classNames(styles.title, typography.title)
+  const headlineClass = classNames(styles.headline, typography.h2)
   const subtitleClass = classNames(styles.subtitle, typography.h4)
 
+  useEffect(() => {
+    document.querySelector('[data-menu]').style.top = 0
+    document.querySelector('[data-menu]').style.opacity = 1
+    section.current.classList.add(styles.appeared)
+  })
+
   return (
-    <section className={styles.section}>
+    <section ref={section} className={styles.section}>
+      <h1 data-title className={titleClass}>Smatch</h1>
       <Container>
+        <Menu />
         <div className={styles.wrapper}>
-          <h1 className={titleClass}>Smatch</h1>
-          <h2 className={typography.h2}>
-            Match. Explore.
-            Construis un avenir
-            épanoui.
-          </h2>
+          <div className={headlineClass}>
+            <div>
+              <h2>Match. Explore.</h2>
+            </div>
+            <div>
+              <h2>Construis un avenir</h2>
+            </div>
+            <div>
+              <h2>épanoui.</h2>
+            </div>
+          </div>
           <h3 className={subtitleClass}>
-            Nous utilisons des tests inspirés de méthodes de coaching reconnus et une approche personnalisée pour vous accompagner dans votre orientation.
+            <span>
+              Nous utilisons des tests inspirés de méthodes de coaching reconnus et une approche personnalisée pour vous accompagner dans votre orientation.
+            </span>
           </h3>
-          <Link to="/" button>Je m'oriente</Link>
+          <div className={styles.button}>
+            <Link to="/" button>Je m'oriente</Link>
+          </div>
           <div className={styles.stickers}>
             <img
               className={styles.sticker}

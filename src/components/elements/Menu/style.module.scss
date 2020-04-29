@@ -2,8 +2,12 @@
 
 .menu {
   color: $color-white;
+  left: 0;
   position: absolute;
+  top: -80px;
+  transition: top .6s ease-out 2.7s, opacity .6s ease-out 2.7s;
   width: 100%;
+  z-index: 90;
 
   @include respond-to(mobile) {
     display: none;
@@ -14,10 +18,20 @@
   display: flex;
   justify-content: space-between;
   padding-top: 40px;
+
+  a:nth-child(2) {
+    margin-right: 200px;
+  }
 }
 
-.wrapper {
-  > * {
-    margin-left: 80px;
+.fixedButton {
+  margin: 0 auto;
+  max-width: 1200px;
+  position: fixed;
+  text-align: right;
+  width: 90%;
+
+  a {
+    padding: 12px 30px;
   }
 }

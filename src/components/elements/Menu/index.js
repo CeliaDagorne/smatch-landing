@@ -8,17 +8,17 @@ import styles from './style.module.scss'
 import typography from '../../../styles/imports/typography.module.scss'
 
 const Menu = () => (
-  <section className={classNames(styles.menu, typography.body)}>
+  <div data-menu className={classNames(styles.menu, typography.body)}>
     <Container>
       <div className={styles.container}>
         <Link to="/">S'inscrire</Link>
-        <div className={styles.wrapper}>
-          <Link to="/">Se connecter</Link>
+        <Link to="/">Se connecter</Link>
+        <div className={styles.fixedButton}>
           <Link to="/" button dark>S’inscrire</Link>
         </div>
       </div>
     </Container>
-  </section>
+  </div>
 )
 
 export default Menu

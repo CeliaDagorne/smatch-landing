@@ -1,0 +1,11 @@
+[data-appear="visual"] {
+
+
+  &.is-visible {
+    height: 680px;
+
+    div {
+      transform: scale(1);
+    }
+  }
+}

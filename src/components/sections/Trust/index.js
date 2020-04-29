@@ -3,6 +3,7 @@ import classNames from 'classnames'
 import Container from '../../elements/Container'
 
 // styles
+import './appear.scss'
 import styles from './style.module.scss'
 import typography from '../../../styles/imports/typography.module.scss'
 
@@ -23,35 +24,33 @@ const Trust = () => {
           <h2 className={titleClass}>
             Ecoles et étudiant.es. Ils nous font confiance.
           </h2>
-          <div className={styles.conversation}>
-            <div className={styles.line}>
-              <div className={styles.bulle}>
-                <p>
-                  Plus de 1 150 métiers répertoriés et 12 000 formations proposées
-                </p>
-                <img className={styles.peak} src={blackPeak} alt=""/>
-                <img className={styles.emoji} src={shook} alt=""/>
-              </div>
-              <div className={styles.bulle}>
-                <p>
-                  LA MOULAGA !!!!
-                </p>
-                <img className={styles.peak} src={pinkPeak} alt=""/>
-                <img className={styles.emoji} src={money} alt=""/>
-              </div>
-              <div className={styles.bulle}>
-                <p>
-                  1 200 étudiants qui utilisent la plateforme
-                </p>
-                <img className={styles.peak} src={blackPeak} alt=""/>
-                <img className={styles.emoji} src={heart} alt=""/>
-              </div>
-              <div className={styles.bulle}>
-                <p>
-                  Ok je m’inscris direct
-                </p>
-                <img className={styles.peak} src={pinkPeak} alt=""/>
-              </div>
+          <div data-appear="conversation" className={styles.conversation}>
+            <div className={styles.bulle}>
+              <p>
+                Plus de 1 150 métiers répertoriés et 12 000 formations proposées
+              </p>
+              <img className={styles.peak} src={blackPeak} alt=""/>
+              <img className={styles.emoji} src={shook} alt=""/>
+            </div>
+            <div className={styles.bulle}>
+              <p>
+                LA MOULAGA !!!!
+              </p>
+              <img className={styles.peak} src={pinkPeak} alt=""/>
+              <img className={styles.emoji} src={money} alt=""/>
+            </div>
+            <div className={styles.bulle}>
+              <p>
+                1 200 étudiants qui utilisent la plateforme
+              </p>
+              <img className={styles.peak} src={blackPeak} alt=""/>
+              <img className={styles.emoji} src={heart} alt=""/>
+            </div>
+            <div className={styles.bulle}>
+              <p>
+                Ok je m’inscris direct
+              </p>
+              <img className={styles.peak} src={pinkPeak} alt=""/>
             </div>
           </div>
         </div>
