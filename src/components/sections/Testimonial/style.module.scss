@@ -15,4 +15,8 @@
   color: $color-blue--light;
   margin: 0 auto 50px;
   max-width: 710px;
+
+  @include respond-to(mobile) {
+    font-size: 30px;
+  }
 }

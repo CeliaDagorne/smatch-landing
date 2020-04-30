@@ -49,12 +49,20 @@
   transition: height .5s ease-in-out .4s;
   width: 530px;
 
+  @include respond-to(mobile) {
+    width: 100%;
+  }
+
   > img {
     height: 680px;
     left: 0;
     position: absolute;
     top: 0;
     width: 530px;
+
+    @include respond-to(mobile) {
+      width: 100%;
+    }
   }
 
   div {

@@ -5,6 +5,7 @@ import Container from '../../elements/Container'
 // styles
 import styles from './style.module.scss'
 import typography from '../../../styles/imports/typography.module.scss'
+import './appear.scss'
 
 import brut from '../../../assets/images/logos/brut.svg'
 
@@ -44,7 +45,7 @@ const Press = () => {
         <h2 className={titleClass}>
           Ils parlent de nous
         </h2>
-        <div className={styles.grid}>
+        <div data-appear="logos" className={styles.grid}>
           {content && (
             content.map(item => (
               <div key={item.img} className={styles.gridItem}>

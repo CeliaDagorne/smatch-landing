@@ -27,8 +27,11 @@
 .fixedButton {
   margin: 0 auto;
   max-width: 1200px;
+  padding-top: 40px;
   position: fixed;
   text-align: right;
+  top: -80px;
+  transition: top .6s ease-out 2.7s, opacity .6s ease-out 2.7s;
   width: 90%;
 
   a {

@@ -30,8 +30,16 @@
 
 .gridItem {
   background: $color-blue;
+  opacity: 0;
   padding-bottom: 100%;
   position: relative;
+  transform: translateY(50px);
+
+  @for $i from 1 through 6 {
+    &:nth-child(#{$i}) {
+      transition: transform .6s ease-in-out .2s * $i, opacity .6s ease-in-out .2s * $i;
+    }
+  }
 
   img {
     bottom: 0;
@@ -41,5 +49,9 @@
     position: absolute;
     right: 0;
     top: 0;
+
+    @include respond-to(mobile) {
+      max-width: 65%;
+    }
   }
 }

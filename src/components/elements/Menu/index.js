@@ -13,7 +13,7 @@ const Menu = () => (
       <div className={styles.container}>
         <Link to="/">S'inscrire</Link>
         <Link to="/">Se connecter</Link>
-        <div className={styles.fixedButton}>
+        <div data-subscribe className={styles.fixedButton}>
           <Link to="/" button dark>S’inscrire</Link>
         </div>
       </div>

@@ -23,8 +23,6 @@ const Hero = () => {
   const subtitleClass = classNames(styles.subtitle, typography.h4)
 
   useEffect(() => {
-    document.querySelector('[data-menu]').style.top = 0
-    document.querySelector('[data-menu]').style.opacity = 1
     section.current.classList.add(styles.appeared)
   })
 

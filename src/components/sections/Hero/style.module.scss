@@ -9,7 +9,6 @@
   position: relative;
 
   @include respond-to(mobile) {
-    height: unset;
     padding: 20px 0 100px;
   }
 }
@@ -23,6 +22,10 @@
   right: 0;
   text-align: center;
   top: 230px;
+
+  @include respond-to(mobile) {
+    top: 200px;
+  }
 }
 
 .title {
@@ -34,14 +37,26 @@
   text-align: center;
   top: 30vh;
   transition: font-size 1s ease-in-out 2s, transform 1s ease-in-out 2s;
+
+  @include respond-to(mobile) {
+    margin-bottom: 0;
+  }
 }
 
 .headline {
+
+  @include respond-to(mobile) {
+    font-size: 35px;
+  }
 
   > div {
     height: 96px;
     overflow: hidden;
     width: 100%;
+
+    @include respond-to(mobile) {
+      height: 40px;
+    }
 
     h2 {
       position: relative;
@@ -60,7 +75,9 @@
   overflow: hidden;
 
   @include respond-to(mobile) {
-    margin: 40px 0 7vh;
+    font-size: 16px;
+    height: 104px;
+    margin: 8vh 25px 11vh;
   }
 
   span {
@@ -85,6 +102,10 @@
     top: 30%;
     transition: top 1s ease-in-out 3.6s, left 1s ease-in-out 3.6s, right 1s ease-in-out 3.6s, opacity .6s ease-in-out 3.8s;
 
+    @include respond-to(mobile) {
+      height: 98px;
+    }
+
     &:first-child,
     &:nth-child(3) {
       left: 45%;
@@ -97,6 +118,12 @@
 }
 
 .appeared {
+
+  [data-menu],
+  [ data-subscribe] {
+    opacity: 1;
+    top: 0;
+  }
 
   .title {
     font-size: 24px;
@@ -121,7 +148,8 @@
       top: -60px;
 
       @include respond-to(mobile) {
-        left: -10px;
+        left: 14px;
+        top: -140px;
       }
     }
     &:nth-child(2) {
@@ -129,7 +157,8 @@
       top: -30px;
 
       @include respond-to(mobile) {
-        top: 20px;
+        right: 12px;
+        top: -140px;
       }
     }
     &:nth-child(3) {
@@ -138,8 +167,8 @@
       top: 220px;
 
       @include respond-to(mobile) {
-        left: -20px;
-        top: 340px;
+        left: 3px;
+        top: 100px;
       }
     }
     &:nth-child(4) {
@@ -147,7 +176,8 @@
       top: 200px;
 
       @include respond-to(mobile) {
-        right: -70px;
+        right: -30px;
+        top: 244px;
       }
     }
   }

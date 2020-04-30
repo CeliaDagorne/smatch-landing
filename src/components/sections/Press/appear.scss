@@ -1,0 +1,7 @@
+[data-appear='logos'].is-visible {
+
+  > div {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

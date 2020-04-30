@@ -1,8 +1,7 @@
 html {
   box-sizing: border-box;
   height: 100%;
-  overflow-x: hidden;
-  width: 100vw;
+
 }
 
 body {
@@ -10,9 +9,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   height: 100%;
+
+}
+
+html,
+body,
+section {
   overflow-x: hidden;
   overscroll-behavior: none;
   -ms-scroll-chaining: none;
+  width: 100vw;
 }
 
 .App {
