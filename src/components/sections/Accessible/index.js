@@ -14,12 +14,12 @@ const Accessible = () => {
     <section className={styles.section}>
       <Container>
         <div>
-          <h2 className={titleClass}>
+          <h2 data-appear="single-left" className={titleClass}>
             Gratuit et accessible à tous.tes
           </h2>
         </div>
         <div>
-          <div className={styles.wrapper}>
+          <div data-appear="slide-left" className={styles.wrapper}>
             <h2 className={typography.h3}>
               L’équipe de Smart est fière d’offrir un outil gratuit et accessible afin de bâtir le futur de l’orientation.
             </h2>

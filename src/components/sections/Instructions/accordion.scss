@@ -1,11 +1,11 @@
 @import '../../../styles/imports/index.scss';
 
 .accordion {
-  border-top: 1px solid $color-white;
+  border-bottom: 1px solid $color-white;
   color: $color-white;
 
   .accordion-item {
-    border-bottom: 1px solid $color-white;
+    border-top: 1px solid $color-white;
 
     .title {
       background: none;

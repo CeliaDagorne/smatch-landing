@@ -1,0 +1,91 @@
+[data-appear='logos'].is-visible {
+  > div {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+[data-appear='conversation'].is-visible {
+  > div {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+[data-appear="visual"].is-visible {
+  height: 680px;
+
+  div {
+    transform: scale(1);
+  }
+}
+
+[data-appear="slide-left"] {
+  > * {
+    opacity: 0;
+    transform: translateX(-50px);
+
+    @for $i from 1 through 6 {
+      &:nth-child(#{$i}) {
+        transition: transform .5s ease-in-out .3s + .1s * $i, opacity .5s ease-in-out .3s + .1s * $i;
+      }
+    }
+  }
+
+  a {
+    display: inline-block;
+  }
+
+  &.is-visible {
+    > * {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
+[data-appear="slide-up"] {
+  > * {
+    opacity: 0;
+    transform: translateY(50px);
+
+    @for $i from 1 through 6 {
+      &:nth-child(#{$i}) {
+        transition: transform .5s ease-in-out .3s + .1s * $i, opacity .5s ease-in-out .3s + .1s * $i;
+      }
+    }
+  }
+
+  a {
+    display: inline-block;
+  }
+
+  &.is-visible {
+    > * {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
+[data-appear="single-left"] {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: transform .5s ease-in-out .2s, opacity .5s ease-in-out .2s;
+
+  &.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+[data-appear="single-right"] {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: transform .5s ease-in-out .2s, opacity .5s ease-in-out .2s;
+
+  &.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

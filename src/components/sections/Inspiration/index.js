@@ -79,19 +79,19 @@ const Inspiration = () => {
   return (
     <section ref={section} className={styles.section}>
       <Container>
-        <h2 className={titleClass}>De quoi t’inspirer</h2>
-        <div ref={content} className={styles.content}>
+        <h2 data-appear="single-left" className={titleClass}>De quoi t’inspirer</h2>
+        <div data-appear="slide-up" ref={content} className={styles.content}>
           {types.map((type, index) =>
             <div key={type} onMouseEnter={() => setActiveGif(index)} className={styles.line}>
               <h4 className={typography.cta}>{type}</h4>
             </div>
           )}
-          <div ref={gifContainer} className={gifContainerClass}>
-            <div ref={gifWrapper} className={styles.gifWrapper}>
-              {gifs.map(gif =>
-                <img key={gif} className={styles.gif} src={gif} alt=""/>
-              )}
-            </div>
+        </div>
+        <div ref={gifContainer} className={gifContainerClass}>
+          <div ref={gifWrapper} className={styles.gifWrapper}>
+            {gifs.map(gif =>
+              <img key={gif} className={styles.gif} src={gif} alt=""/>
+            )}
           </div>
         </div>
       </Container>

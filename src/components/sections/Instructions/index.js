@@ -46,7 +46,7 @@ const Instructions = () => {
   return (
     <section className={styles.section}>
       <Container>
-        <div className={styles.header}>
+        <div data-appear="slide-left" className={styles.header}>
           <p className={typography.eyebrow}>Comment ça marche ?</p>
           <h2 className={titleClass}>L'orientation à portée<br/>de mains</h2>
           <h4 className={subtitleClass}>
@@ -55,7 +55,7 @@ const Instructions = () => {
         </div>
 
         {content && (
-          <div ref={accordion} className="accordion">
+          <div data-appear="slide-left" ref={accordion} className="accordion">
             {content.map( (item, index) => (
               <div className="accordion-item" key={item.title}>
                 <div className={accordionTitleClass} onClick={() => toggleAccordion(index)}>
@@ -113,7 +113,7 @@ const Instructions = () => {
         )}
 
         <div className={styles.footer}>
-          <div className={styles.footerContainer}>
+          <div data-appear="slide-up" className={styles.footerContainer}>
             <h3 className={footerLabelClass}>
               Explore tes possibilités avec  Smatch dès aujourd’hui
             </h3>

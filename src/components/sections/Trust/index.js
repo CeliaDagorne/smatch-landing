@@ -3,7 +3,6 @@ import classNames from 'classnames'
 import Container from '../../elements/Container'
 
 // styles
-import './appear.scss'
 import styles from './style.module.scss'
 import typography from '../../../styles/imports/typography.module.scss'
 
@@ -21,7 +20,7 @@ const Trust = () => {
     <section className={styles.section}>
       <Container>
         <div className={styles.wrapper}>
-          <h2 className={titleClass}>
+          <h2 data-appear="single-left" className={titleClass}>
             Ecoles et étudiant.es. Ils nous font confiance.
           </h2>
           <div data-appear="conversation" className={styles.conversation}>

@@ -13,19 +13,23 @@ const Construct = () => {
   return (
     <section className={styles.section}>
       <Container>
-        <h2 className={titleClass}>
-          Prêt.e à construire ton futur ?
-        </h2>
-        <Link to="/" button>C’est parti !</Link>
-        <div className={styles.footer}>
-          <p>
-            <span><img src="/images/validate.svg" alt=""/></span>
-            100% gratuit
-          </p>
-          <p>
-            <span><img src="/images/validate.svg" alt=""/></span>
-            Garantie sans stress
-          </p>
+        <div>
+          <div className={styles.wrapper} data-appear="slide-up-LEPROBLEME">
+            <h2 className={titleClass}>
+              Prêt.e à construire ton futur ?
+            </h2>
+            <Link to="/" button>C’est parti !</Link>
+            <div className={styles.footer}>
+              <p>
+                <span><img src="/images/validate.svg" alt=""/></span>
+                100% gratuit
+              </p>
+              <p>
+                <span><img src="/images/validate.svg" alt=""/></span>
+                Garantie sans stress
+              </p>
+            </div>
+          </div>
         </div>
       </Container>
     </section>

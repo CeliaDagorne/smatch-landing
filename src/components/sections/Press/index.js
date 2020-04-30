@@ -5,7 +5,6 @@ import Container from '../../elements/Container'
 // styles
 import styles from './style.module.scss'
 import typography from '../../../styles/imports/typography.module.scss'
-import './appear.scss'
 
 import brut from '../../../assets/images/logos/brut.svg'
 
@@ -42,7 +41,7 @@ const Press = () => {
   return (
     <section className={styles.section}>
       <Container>
-        <h2 className={titleClass}>
+        <h2 data-appear="single-right" className={titleClass}>
           Ils parlent de nous
         </h2>
         <div data-appear="logos" className={styles.grid}>

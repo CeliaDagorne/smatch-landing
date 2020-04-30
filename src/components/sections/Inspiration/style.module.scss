@@ -20,12 +20,12 @@
 }
 
 .content {
-  border-top: 1px solid $color-white;
+  border-bottom: 1px solid $color-white;
   position: relative;
 }
 
 .line {
-  border-bottom: 1px solid $color-white;
+  border-top: 1px solid $color-white;
   cursor: pointer;
   padding: 40px 0;
 }

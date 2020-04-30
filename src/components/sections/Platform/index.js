@@ -4,7 +4,6 @@ import Container from '../../elements/Container'
 import Link from '../../elements/Link'
 
 // styles
-import './appear.scss'
 import styles from './style.module.scss'
 import typography from '../../../styles/imports/typography.module.scss'
 
@@ -18,7 +17,7 @@ const Platform = () => {
   return (
     <section className={styles.section}>
       <Container>
-        <h2 className={titleClass}>La plateforme unique pour ton futur</h2>
+        <h2 data-appear="single-left" className={titleClass}>La plateforme unique pour ton futur</h2>
         <div className={styles.wrapper}>
           <div  data-appear="visual" className={styles.visual}>
             <img src={window} alt=""/>
@@ -26,7 +25,7 @@ const Platform = () => {
             <div className={styles.triangle}/>
             <div className={styles.rectangle}/>
           </div>
-          <div className={styles.content}>
+          <div data-appear="slide-right" className={styles.content}>
             <h3 className={typography.h3}>
               Des tests efficaces et un algorithme conçu pour toi.
             </h3>

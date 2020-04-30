@@ -28,8 +28,8 @@ const Platform = () => {
   return (
     <section className={styles.section}>
       <Container>
-        <h2 className={titleClass}>Notre différence</h2>
-        <div className={styles.wrapper}>
+        <h2 data-appear="single-left" className={titleClass}>Notre différence</h2>
+        <div data-appear="slide-up" className={styles.wrapper}>
           <div onMouseMove={e => {handleMove(e)}} className={styles.item}>
             <img className={styles.image} src={circle} alt=""/>
             <div className={itemTitleClass}>
