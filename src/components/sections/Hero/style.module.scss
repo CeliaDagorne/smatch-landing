@@ -35,7 +35,7 @@
   position: absolute;
   right: 0;
   text-align: center;
-  top: 30vh;
+  top: 250px;
   transition: font-size 1s ease-in-out 2s, transform 1s ease-in-out 2s;
 
   @include respond-to(mobile) {

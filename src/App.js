@@ -26,7 +26,7 @@ function App() {
     const scrollY = container.scrollTop + window.innerHeight
     let titleFixed = false
 
-    if (!titleFixed && container.scrollTop >= 130 && window.innerWidth >= 920) {
+    if (!titleFixed && container.scrollTop >= 110 && window.innerWidth >= 920) {
       title.style.position = 'fixed'
       title.style.top = '140px'
       titleFixed = true
