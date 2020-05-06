@@ -21,7 +21,6 @@ function App() {
 
   const handleScroll = () => {
     const sections = document.querySelectorAll('[data-appear]')
-    const PB = document.querySelector('[data-appear="slide-up-LEPROBLEME"]')
     const title = document.querySelector('[data-title]')
     const container = App.current
     const scrollY = container.scrollTop + window.innerHeight
@@ -34,10 +33,9 @@ function App() {
     }
 
     for (let i = 0; i < sections.length; i++) {
-      if (scrollY - 200 >= sections[i].offsetTop && !sections[i].classList.contains('is-visible')) {
-        console.log(sections[i])
+      const offsetTop = sections[i].offsetParent === document.body ? sections[i].offsetTop : sections[i].offsetParent.offsetTop
+      if (scrollY - 200 >= offsetTop && !sections[i].classList.contains('is-visible')) {
         sections[i].classList.add('is-visible')
-        console.log(sections[i])
       }
     }
   }

@@ -14,7 +14,7 @@ const Construct = () => {
     <section className={styles.section}>
       <Container>
         <div>
-          <div className={styles.wrapper} data-appear="slide-up-LEPROBLEME">
+          <div className={styles.wrapper} data-appear="slide-up">
             <h2 className={titleClass}>
               Prêt.e à construire ton futur ?
             </h2>

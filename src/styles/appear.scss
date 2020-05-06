@@ -44,6 +44,30 @@
   }
 }
 
+[data-appear="slide-right"] {
+  > * {
+    opacity: 0;
+    transform: translateX(50px);
+
+    @for $i from 1 through 6 {
+      &:nth-child(#{$i}) {
+        transition: transform .5s ease-in-out .3s + .1s * $i, opacity .5s ease-in-out .3s + .1s * $i;
+      }
+    }
+  }
+
+  a {
+    display: inline-block;
+  }
+
+  &.is-visible {
+    > * {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
 [data-appear="slide-up"] {
   > * {
     opacity: 0;
