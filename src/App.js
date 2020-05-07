@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import './styles/app.scss'
 
 // Sections
@@ -18,6 +18,7 @@ import Footer from './components/elements/Footer'
 
 function App() {
   const App = useRef(null)
+  const [visual, setVisual] = useState(false);
 
   const handleScroll = () => {
     const sections = document.querySelectorAll('[data-appear]')
@@ -36,6 +37,11 @@ function App() {
       const offsetTop = sections[i].offsetParent === document.body ? sections[i].offsetTop : sections[i].offsetParent.offsetTop
       if (scrollY - 200 >= offsetTop && !sections[i].classList.contains('is-visible')) {
         sections[i].classList.add('is-visible')
+        if (sections[i].dataset.appear === 'visual') {
+          setTimeout(() => {
+            setVisual(true)
+          }, 600);
+        }
       }
     }
   }
@@ -46,7 +52,7 @@ function App() {
       <Accessible />
       <Inspiration />
       <Instructions />
-      <Platform />
+      <Platform appeared={visual} />
       <Difference />
       <Trust />
       <Testimonial />

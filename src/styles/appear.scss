@@ -69,6 +69,8 @@
 }
 
 [data-appear="slide-up"] {
+  pointer-events: none;
+
   > * {
     opacity: 0;
     transform: translateY(50px);
@@ -85,6 +87,8 @@
   }
 
   &.is-visible {
+    pointer-events: all;
+
     > * {
       opacity: 1;
       transform: translateX(0);

@@ -42,8 +42,8 @@
 }
 
 .visual {
-  // height: 680px;
-  height: 37px;
+  height: 680px;
+  // height: 37px;
   overflow: hidden;
   position: relative;
   transition: height .5s ease-in-out .4s;
@@ -56,6 +56,7 @@
   > img {
     height: 680px;
     left: 0;
+    pointer-events: none;
     position: absolute;
     top: 0;
     width: 530px;
@@ -65,10 +66,14 @@
     }
   }
 
-  div {
-    position: absolute;
-    transform: scale(0);
-  }
+  // div {
+  //   position: absolute;
+  //   transform: scale(0);
+  // }
+}
+
+.canvas {
+  margin-top: 38px;
 }
 
 .circle {
