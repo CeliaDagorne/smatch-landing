@@ -24,26 +24,27 @@
   }
 }
 
+.image {
+  opacity: 0!important;
+  pointer-events: none;
+  position: fixed;
+  right: 23px;
+  top: -55px;
+  transition: opacity .3s ease-in-out!important;
+  width: 163px;
+  z-index: 0;
+
+  @include respond-to(mobile) {
+    opacity: 1;
+    position: absolute;
+  }
+}
+
 .item {
   cursor: none;
   max-width: 320px;
   position: relative;
-
-  .image {
-    opacity: 0;
-    pointer-events: none;
-    position: fixed;
-    right: 23px;
-    top: -55px;
-    transition: opacity .3s ease-in-out;
-    width: 163px;
-    z-index: 0;
-
-    @include respond-to(mobile) {
-      opacity: 1;
-      position: absolute;
-    }
-  }
+  z-index: 10;
 
   &:not(:last-child) {
     @include respond-to(mobile) {
@@ -52,8 +53,8 @@
   }
 
   &:hover {
-    .image {
-      opacity: 1;
+    + img {
+      opacity: 1!important;
     }
 
     .itemTitle:after {

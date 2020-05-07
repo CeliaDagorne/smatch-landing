@@ -81,7 +81,6 @@ const Platform = ({ appeared }) => {
       })
 
       World.add(engine.world, [ball, rect, triangle])
-      console.log('appeared')
       World.add(engine.world, mouseConstraint)
 
       Engine.run(engine)

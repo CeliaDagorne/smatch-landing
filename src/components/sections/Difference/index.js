@@ -19,8 +19,7 @@ const Platform = () => {
 
   const handleMove = e => {
     e.persist()
-    const img = e.target.querySelector('img')
-    console.log(e)
+    const img = e.target.nextSibling
     img.style.left = `${e.clientX - 80}px`
     img.style.top = `${e.clientY - 80}px`
   }
@@ -31,7 +30,6 @@ const Platform = () => {
         <h2 data-appear="single-left" className={titleClass}>Notre différence</h2>
         <div data-appear="slide-up" className={styles.wrapper}>
           <div onMouseMove={e => {handleMove(e)}} className={styles.item}>
-            <img className={styles.image} src={circle} alt=""/>
             <div className={itemTitleClass}>
               <h3>Des critères justes</h3>
             </div>
@@ -39,8 +37,8 @@ const Platform = () => {
               Tes critères de sélection ne devraient pas être restreints par ta filière ou par tes notes. Ce qui nous intéresse, c’est toi et tes compétences.
             </p>
           </div>
+          <img className={styles.image} src={circle} alt=""/>
           <div onMouseMove={e => {handleMove(e)}} className={styles.item}>
-            <img className={styles.image} src={rectangle} alt=""/>
             <div className={itemTitleClass}>
               <h3>Renforcer l’égalité</h3>
             </div>
@@ -48,8 +46,8 @@ const Platform = () => {
               Nous agissons pour assurer l'égalité, soutenir et favoriser l'ambition de tous les jeunes et futurs étudiants grâce à un outil accessible à tous.
             </p>
           </div>
+          <img className={styles.image} src={rectangle} alt=""/>
           <div onMouseMove={e => {handleMove(e)}} className={styles.item}>
-            <img className={styles.image} src={triangle} alt=""/>
             <div className={itemTitleClass}>
               <h3>Inspirer</h3>
             </div>
@@ -57,6 +55,7 @@ const Platform = () => {
               Nous mettons à ta disposition des conseils et des inspirations afin de t’inspirer et te guider.
             </p>
           </div>
+          <img className={styles.image} src={triangle} alt=""/>
         </div>
       </Container>
     </section>
