@@ -10,7 +10,14 @@
   position: relative;
 
   @include respond-to(mobile) {
+    height: unset;
     padding: 20px 0 100px;
+  }
+}
+
+.container {
+  @include respond-to(mobile) {
+    height: calc(100vh - 120px);
   }
 }
 

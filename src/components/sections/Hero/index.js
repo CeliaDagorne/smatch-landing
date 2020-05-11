@@ -29,7 +29,7 @@ const Hero = () => {
   return (
     <section ref={section} className={styles.section}>
       <h1 data-title className={titleClass}>Smatch</h1>
-      <Container>
+      <Container extraClassName={styles.container}>
         <Menu />
         <div className={styles.wrapper}>
           <div className={headlineClass}>

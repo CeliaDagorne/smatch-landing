@@ -14,6 +14,12 @@ import window from '../../../assets/images/window.svg'
 const Platform = ({ appeared }) => {
   const titleClass = classNames(styles.title, typography.h2)
   const bodyTextClass = classNames(styles.textBody, typography.eyebrow)
+  const isMobile = document.body.offsetWidth <= 920
+
+  const canvasWidth = isMobile ? document.body.offsetWidth - 50 : 530
+  const canvasHeight = isMobile ? canvasWidth * 1.28 : 640
+
+  console.log('canvasHeight', canvasHeight)
 
   const scene = useRef(null)
 
@@ -36,37 +42,48 @@ const Platform = ({ appeared }) => {
         engine: engine,
         options: {
           background: 'transparent',
-          width: 530,
-          height: 640,
+          width: canvasWidth,
+          height: canvasHeight,
           wireframes: false
         }
       })
 
-      const ball = Bodies.circle(100, 20, 70, { restitution: 0.5, render: {
+      let ball = Bodies.circle(100, 20, 70, { restitution: 0.5, render: {
         fillStyle: '#F8CA36'
       }})
-      const rect = Bodies.rectangle(100, 130, 180, 180, { restitution: 0.5, render: {
+      let rect = Bodies.rectangle(100, 130, 180, 180, { restitution: 0.5, render: {
         fillStyle: '#4ABC86'
       }})
-      const triangle = Bodies.polygon(265, 130, 3, 140, { restitution: 0.5, render: {
+      let triangle = Bodies.polygon(265, 130, 3, 140, { restitution: 0.5, render: {
         fillStyle: '#FFB4C8'
       }})
 
-      World.add(engine.world, [
-        // walls
-        Bodies.rectangle(200, 0, 600, 1, { isStatic: true, render: {
-          fillStyle: 'transparent'
-        } }),
-        Bodies.rectangle(0, 640, 1100, 5, { isStatic: true, render: {
-          fillStyle: 'transparent'
-        } }),
-        Bodies.rectangle(530, 300, 10, 670, { isStatic: true, render: {
-          fillStyle: 'transparent'
-        } }),
-        Bodies.rectangle(0, 300, 1, 600, { isStatic: true, render: {
-          fillStyle: 'transparent'
-        } })
-      ])
+      if (isMobile) {
+        ball = Bodies.circle(100, 20, 40, { restitution: 0.5, render: {
+          fillStyle: '#F8CA36'
+        }})
+        rect = Bodies.rectangle(100, 130, 120, 120, { restitution: 0.5, render: {
+          fillStyle: '#4ABC86'
+        }})
+        triangle = Bodies.polygon(265, 130, 3, 70, { restitution: 0.5, render: {
+          fillStyle: '#FFB4C8'
+        }})
+        console.log('hello', ball)
+      }
+
+      const topWall = Bodies.rectangle(200, 0, canvasHeight, 10, { isStatic: true, render: {
+        fillStyle: 'none'
+      } })
+      const bottomWall = Bodies.rectangle(0, canvasHeight, 1100, 5, { isStatic: true, render: {
+        fillStyle: 'none'
+      } })
+      const rightWall = Bodies.rectangle(canvasWidth, 300, 10, 670, { isStatic: true, render: {
+        fillStyle: 'none'
+      } })
+      const leftWall = Bodies.rectangle(0, 300, 10, 670, { isStatic: true, render: {
+        fillStyle: 'none'
+      } })
+      World.add(engine.world, [topWall, bottomWall, rightWall, leftWall])
 
       // add mouse control
       const mouse = Mouse.create(render.canvas),
