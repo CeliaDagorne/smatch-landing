@@ -6,6 +6,7 @@
   color: $color-white;
   display: flex;
   height: 100vh;
+  overflow: hidden;
   position: relative;
 
   @include respond-to(mobile) {
