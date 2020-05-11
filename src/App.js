@@ -21,29 +21,30 @@ function App() {
   const [visual, setVisual] = useState(false);
 
   const handleScroll = () => {
-    const sections = document.querySelectorAll('[data-appear]')
-    const title = document.querySelector('[data-title]')
-    const container = App.current
-    const scrollY = container.scrollTop + window.innerHeight
-    let titleFixed = false
+    console.log('handle scroll removed')
+    // const sections = document.querySelectorAll('[data-appear]')
+    // const title = document.querySelector('[data-title]')
+    // const container = App.current
+    // const scrollY = container.scrollTop + window.innerHeight
+    // let titleFixed = false
 
-    if (!titleFixed && container.scrollTop >= 110 && window.innerWidth >= 920) {
-      title.style.position = 'fixed'
-      title.style.top = '140px'
-      titleFixed = true
-    }
+    // if (!titleFixed && container.scrollTop >= 110 && window.innerWidth >= 920) {
+    //   title.style.position = 'fixed'
+    //   title.style.top = '140px'
+    //   titleFixed = true
+    // }
 
-    for (let i = 0; i < sections.length; i++) {
-      const offsetTop = sections[i].offsetParent === document.body ? sections[i].offsetTop : sections[i].offsetParent.offsetTop
-      if (scrollY - 200 >= offsetTop && !sections[i].classList.contains('is-visible')) {
-        sections[i].classList.add('is-visible')
-        if (sections[i].dataset.appear === 'visual') {
-          setTimeout(() => {
-            setVisual(true)
-          }, 600);
-        }
-      }
-    }
+    // for (let i = 0; i < sections.length; i++) {
+    //   const offsetTop = sections[i].offsetParent === document.body ? sections[i].offsetTop : sections[i].offsetParent.offsetTop
+    //   if (scrollY - 200 >= offsetTop && !sections[i].classList.contains('is-visible')) {
+    //     sections[i].classList.add('is-visible')
+    //     if (sections[i].dataset.appear === 'visual') {
+    //       setTimeout(() => {
+    //         setVisual(true)
+    //       }, 600);
+    //     }
+    //   }
+    // }
   }
 
   return (
