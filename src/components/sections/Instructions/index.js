@@ -46,7 +46,7 @@ const Instructions = () => {
   const getCoordinate = e => {
     const cursor = document.querySelector('[data-cursor]')
     cursor.style.top = `${e.clientY - 20}px`
-    cursor.style.left = `${e.clientX - 30}px`
+    cursor.style.left = `${e.clientX - 75}px`
   }
 
   const showCursor = () => {
