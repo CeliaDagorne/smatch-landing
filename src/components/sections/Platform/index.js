@@ -19,9 +19,33 @@ const Platform = ({ appeared }) => {
   const canvasWidth = isMobile ? document.body.offsetWidth - 50 : 530
   const canvasHeight = isMobile ? canvasWidth * 1.28 : 640
 
-  console.log('canvasHeight', canvasHeight)
-
   const scene = useRef(null)
+
+  const getCoordinate = e => {
+    const cursor = document.querySelector('[data-cursor]')
+    cursor.style.top = `${e.clientY - 20}px`
+    cursor.style.left = `${e.clientX - 30}px`
+  }
+
+  const showCursor = () => {
+    document.querySelector('[data-cursor]').style.opacity = 1;
+  }
+
+  const hideCursor = () => {
+    document.querySelector('[data-cursor]').style.opacity = 0;
+  }
+
+  useEffect(() => {
+    scene.current.addEventListener('mousemove', getCoordinate)
+    scene.current.addEventListener('mouseenter', showCursor)
+    scene.current.addEventListener('mouseleave', hideCursor)
+
+    return () => {
+      scene.current.removeEventListener('mousemove', getCoordinate)
+      scene.current.removeEventListener('mouseenter', showCursor)
+      scene.current.removeEventListener('mouseleave', hideCursor)
+    }
+  }, [])
 
   useEffect(() => {
     const Engine = Matter.Engine
@@ -68,7 +92,6 @@ const Platform = ({ appeared }) => {
         triangle = Bodies.polygon(265, 130, 3, 70, { restitution: 0.5, render: {
           fillStyle: '#FFB4C8'
         }})
-        console.log('hello', ball)
       }
 
       const topWall = Bodies.rectangle(200, 0, canvasHeight, 10, { isStatic: true, render: {

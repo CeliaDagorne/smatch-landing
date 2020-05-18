@@ -21,12 +21,13 @@
 
 .content {
   border-bottom: 1px solid $color-white;
+  cursor: none;
   position: relative;
 }
 
 .line {
   border-top: 1px solid $color-white;
-  cursor: pointer;
+  cursor: none;
   padding: 40px 0;
 }
 

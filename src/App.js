@@ -59,6 +59,7 @@ function App() {
       <Press />
       <Construct />
       <Footer />
+      <img data-cursor src="/images/stickers/cursor.svg" alt="Curseur"/>
     </div>
   )
 }

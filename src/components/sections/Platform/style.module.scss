@@ -74,6 +74,7 @@
 }
 
 .canvas {
+  cursor: none;
   margin-top: 38px;
 
   @include respond-to(mobile) {

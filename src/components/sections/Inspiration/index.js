@@ -41,14 +41,20 @@ const Inspiration = () => {
   const getCoordinate = e => {
     setX(e.clientX)
     setY(e.clientY)
+
+    const cursor = document.querySelector('[data-cursor]')
+    cursor.style.top = `${e.clientY - 20}px`
+    cursor.style.left = `${e.clientX - 30}px`
   }
 
   const showGif = () => {
     setGifVisibility(true)
+    document.querySelector('[data-cursor]').style.opacity = 1;
   }
 
   const hideGif = () => {
     setGifVisibility(false)
+    document.querySelector('[data-cursor]').style.opacity = 0;
   }
 
   useEffect(() => {

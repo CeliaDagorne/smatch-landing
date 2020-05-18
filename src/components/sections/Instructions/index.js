@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import classNames from 'classnames'
 import Container from '../../elements/Container'
 import Link from '../../elements/Link'
@@ -42,6 +42,32 @@ const Instructions = () => {
     line.classList.toggle('active')
     line.querySelector(`.${styles.cross}`).classList.toggle(styles.activeCross)
   }
+
+  const getCoordinate = e => {
+    const cursor = document.querySelector('[data-cursor]')
+    cursor.style.top = `${e.clientY - 20}px`
+    cursor.style.left = `${e.clientX - 30}px`
+  }
+
+  const showCursor = () => {
+    document.querySelector('[data-cursor]').style.opacity = 1;
+  }
+
+  const hideCursor = () => {
+    document.querySelector('[data-cursor]').style.opacity = 0;
+  }
+
+  useEffect(() => {
+    accordion.current.addEventListener('mousemove', getCoordinate)
+    accordion.current.addEventListener('mouseenter', showCursor)
+    accordion.current.addEventListener('mouseleave', hideCursor)
+
+    return () => {
+      accordion.current.removeEventListener('mousemove', getCoordinate)
+      accordion.current.removeEventListener('mouseenter', showCursor)
+      accordion.current.removeEventListener('mouseleave', hideCursor)
+    }
+  }, [])
 
   return (
     <section className={styles.section}>

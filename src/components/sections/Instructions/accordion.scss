@@ -3,15 +3,17 @@
 .accordion {
   border-bottom: 1px solid $color-white;
   color: $color-white;
+  cursor: none;
 
   .accordion-item {
     border-top: 1px solid $color-white;
+    cursor: none;
 
     .title {
       background: none;
       border: none;
       color: $color-white;
-      cursor: pointer;
+      cursor: none;
       padding: 59px 60px 59px 0;
       transition: .4s;
       width: 100%;
