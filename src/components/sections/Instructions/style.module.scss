@@ -42,7 +42,7 @@
     margin: auto;
     opacity: 1;
     position: absolute;
-    transition: opacity .3s ease-in-out;
+    transition: opacity .2s ease-in-out;
 
     &:first-child {
       bottom: 0;
@@ -115,13 +115,13 @@
   }
 
   .start {
-    bottom: 0;
-    left: 5%;
+    left: 11%;
+    top: 57%;
   }
 
   .free {
     right: 0;
-    top: 14%;
+    top: 17%;
     width: 43%;
   }
 }

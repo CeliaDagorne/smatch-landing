@@ -7,6 +7,14 @@
   color: $color-black;
   cursor: pointer;
   padding: 12px 55px;
+  position: relative;
+  top: 0;
+  transform: translateY(0);
+  transition: top .2s ease-in-out;
+
+  &:hover {
+    top: -5px;
+  }
 
   &.dark {
     background: $color-black;
