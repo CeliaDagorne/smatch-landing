@@ -1,0 +1,192 @@
+@import '../../../../styles/imports/index.scss';
+
+.section {
+  align-items: center;
+  background-color: $color-red;
+  color: $color-white;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+
+  @include respond-to(mobile) {
+    height: unset;
+    padding: 20px 0 100px;
+  }
+}
+
+.container {
+  @include respond-to(mobile) {
+    height: calc(100vh - 120px);
+  }
+}
+
+.wrapper {
+  display: block;
+  left: 0;
+  margin: auto;
+  max-width: 950px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 230px;
+
+  @include respond-to(mobile) {
+    top: 200px;
+  }
+}
+
+.title {
+  font-size: 23vw;
+  left: 0;
+  margin-bottom: 517px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 250px;
+  transition: font-size 1s ease-in-out 2s, transform 1s ease-in-out 2s;
+
+  @include respond-to(mobile) {
+    margin-bottom: 0;
+  }
+}
+
+.headline {
+
+  @include respond-to(mobile) {
+    font-size: 35px;
+  }
+
+  > div {
+    height: 96px;
+    overflow: hidden;
+    width: 100%;
+
+    @include respond-to(mobile) {
+      height: 40px;
+    }
+
+    h2 {
+      position: relative;
+      top: 100%;
+    }
+
+    &:first-child h2 { transition: top .3s ease-in-out 3s; }
+    &:nth-child(2) h2 { transition: top .3s ease-in-out 3.1s; }
+    &:last-child h2 { transition: top .3s ease-in-out 3.2s; }
+  }
+}
+
+.subtitle {
+  height: 72px;
+  margin: 4vh 0 7vh;
+  overflow: hidden;
+
+  @include respond-to(mobile) {
+    font-size: 16px;
+    height: 104px;
+    margin: 8vh 25px 11vh;
+  }
+
+  span {
+    position: relative;
+    top: 100%;
+    transition: top .3s ease-in-out 3.3s;
+  }
+}
+
+.button {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity .5s ease-in-out 3.4s, transform .5s ease-in-out 3.4s;
+}
+
+.stickers {
+
+  .sticker {
+    height: 115px;
+    opacity: 0;
+    position: absolute;
+    top: 30%;
+    transition: top 1s ease-in-out 3.6s, left 1s ease-in-out 3.6s, right 1s ease-in-out 3.6s, opacity .6s ease-in-out 3.8s;
+
+    @include respond-to(mobile) {
+      height: 98px;
+    }
+
+    &:first-child,
+    &:nth-child(3) {
+      left: 45%;
+    }
+    &:last-child,
+    &:nth-child(2) {
+      right: 45%;
+    }
+  }
+}
+
+.appeared {
+
+  [data-menu],
+  [ data-subscribe] {
+    opacity: 1;
+    top: 0;
+  }
+
+  .title {
+    font-size: 24px;
+    transform: translateY(-100px);
+  }
+
+  .headline h2,
+  .subtitle span {
+    top: 0;
+  }
+
+  .button {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .sticker {
+    opacity: 1;
+
+    &:first-child {
+      left: -60px;
+      top: -60px;
+
+      @include respond-to(mobile) {
+        left: 14px;
+        top: -140px;
+      }
+    }
+    &:nth-child(2) {
+      right: -20px;
+      top: -30px;
+
+      @include respond-to(mobile) {
+        right: 12px;
+        top: -140px;
+      }
+    }
+    &:nth-child(3) {
+      height: 70px;
+      left: 80px;
+      top: 220px;
+
+      @include respond-to(mobile) {
+        left: 3px;
+        top: 100px;
+      }
+    }
+    &:nth-child(4) {
+      right: 80px;
+      top: 200px;
+
+      @include respond-to(mobile) {
+        right: -30px;
+        top: 244px;
+      }
+    }
+  }
+}

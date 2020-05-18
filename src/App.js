@@ -1,4 +1,9 @@
 import React, { useRef, useState } from 'react'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from 'react-router-dom'
 import './styles/app.scss'
 
 // Sections
@@ -12,6 +17,8 @@ import Trust from './components/sections/Trust'
 import Testimonial from './components/sections/Testimonial'
 import Press from './components/sections/Press'
 import Construct from './components/sections/Construct'
+
+import SchoolHero from './components/schools/sections/Hero'
 
 // Elements
 import Footer from './components/elements/Footer'
@@ -47,20 +54,29 @@ function App() {
   }
 
   return (
-    <div className="App" ref={App} onScroll={handleScroll}>
-      <Hero/>
-      <Accessible />
-      <Inspiration />
-      <Instructions />
-      <Platform appeared={visual} />
-      <Difference />
-      <Trust />
-      <Testimonial />
-      <Press />
-      <Construct />
-      <Footer />
-      <img data-cursor src="/images/stickers/cursor.svg" alt="Curseur"/>
-    </div>
+    <Router>
+      <div className="App" ref={App} onScroll={handleScroll}>
+        <Switch>
+          <Route exact path="/">
+            <Hero />
+            <Accessible />
+            <Inspiration />
+            <Instructions />
+            <Platform appeared={visual} />
+            <Difference />
+            <Trust />
+            <Testimonial />
+            <Press />
+            <Construct />
+            <Footer />
+          </Route>
+          <Route exact path="/ecoles">
+            <SchoolHero />
+          </Route>
+        </Switch>
+        <img data-cursor src="/images/stickers/cursor.svg" alt="Curseur"/>
+      </div>
+    </Router>
   )
 }
 

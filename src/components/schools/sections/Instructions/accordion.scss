@@ -1,0 +1,44 @@
+@import '../../../styles/imports/index.scss';
+
+.accordion {
+  border-bottom: 1px solid $color-white;
+  color: $color-white;
+  cursor: none;
+
+  .accordion-item {
+    border-top: 1px solid $color-white;
+    cursor: none;
+
+    .title {
+      background: none;
+      border: none;
+      color: $color-white;
+      cursor: none;
+      padding: 59px 60px 59px 0;
+      transition: .4s;
+      width: 100%;
+
+      @include respond-to(mobile) {
+        padding: 40px 20px 40px 0;
+      }
+    }
+
+    .panel {
+      color: $color-white;
+      display: flex;
+      justify-content: space-between;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .15s ease-out;
+    }
+
+    &.active {
+
+      .panel {
+        max-height: 1000px;
+        overflow: visible;
+        transition: max-height .25s ease-in;
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+@import '../../../styles/imports/index.scss';
+
+.section {
+  background: $color-white;
+  color: $color-black;
+  padding: 22vh 0;
+}
+
+.title {
+  margin-bottom: 18vh;
+  margin-left: auto;
+  max-width: 500px;
+  text-align: right;
+
+  @include respond-to(mobile) {
+    margin-bottom: 80px;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-gap: 80px 10%;
+  grid-template-columns: repeat(3, 1fr);
+
+  @include respond-to(mobile) {
+    grid-gap: 50px 10%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.gridItem {
+  background: $color-blue;
+  opacity: 0;
+  padding-bottom: 100%;
+  position: relative;
+  transform: translateY(50px);
+
+  @for $i from 1 through 6 {
+    &:nth-child(#{$i}) {
+      transition: transform .6s ease-in-out .2s * $i, opacity .6s ease-in-out .2s * $i;
+    }
+  }
+
+  img {
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    max-width: 112px;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    @include respond-to(mobile) {
+      max-width: 65%;
+    }
+  }
+}

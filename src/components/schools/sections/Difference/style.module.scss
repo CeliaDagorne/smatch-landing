@@ -1,0 +1,87 @@
+@import '../../../styles/imports/index.scss';
+
+.section {
+  background: $color-white;
+  color: $color-black;
+  padding: 22vh 0;
+}
+
+.title {
+  margin-bottom: 180px;
+  text-align: center;
+
+  @include respond-to(mobile) {
+    margin-bottom: 100px;
+    text-align: left;
+  }
+}
+
+.wrapper {
+  @include respond-to(above-mobile) {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+  }
+}
+
+.image {
+  opacity: 0!important;
+  pointer-events: none;
+  position: fixed;
+  right: 23px;
+  top: -55px;
+  transition: opacity .3s ease-in-out!important;
+  width: 163px;
+  z-index: 0;
+
+  @include respond-to(mobile) {
+    opacity: 1;
+    position: absolute;
+  }
+}
+
+.item {
+  cursor: none;
+  max-width: 320px;
+  position: relative;
+  z-index: 10;
+
+  &:not(:last-child) {
+    @include respond-to(mobile) {
+      margin-bottom: 80px;
+    }
+  }
+
+  &:hover {
+    + img {
+      opacity: 1!important;
+    }
+
+    .itemTitle:after {
+      width: 100%
+    }
+  }
+}
+
+.itemTitle {
+  display: inline-block;
+  margin-bottom: 30px;
+  pointer-events: none;
+  position: relative;
+
+  &:after {
+    background-color: $color-black;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transition: width .4s ease-in-out;
+    width: 0;
+  }
+}
+
+.bodyText {
+  pointer-events: none;
+  position: relative;
+}
