@@ -142,7 +142,7 @@ const SchoolPlatform = ({ appeared }) => {
           </div>
           <div data-appear="slide-right" className={styles.content}>
             <h3 className={bodyTextClass}>
-              Notre mission est de préparer les étudiants à comprendre, à contribuer et à réussir dans une société en mutation rapide. Nous cherchons à fournir aux étudiants les outils nécessaires pour s'attaquer à la question complexe qu'est l'orientation et pour poursuivre des parcours professionnels plus fluides et plus flexibles.
+              Notre mission est de préparer les étudiants à comprendre, à contribuer et à réussir dans une société en mutation rapide. Grâce à la technologie Smatch, les lycéens peuvent apprendre à se connaître, et ainsi chercher des parcours d’orientation qui leur correspondent, tout en gardant toutes leurs options ouvertes.
             </h3>
             <div className={styles.line} />
             <div className={styles.testimonial}>

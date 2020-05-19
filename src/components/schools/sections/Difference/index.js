@@ -49,10 +49,10 @@ const SchoolDifference = () => {
           <img className={styles.image} src={rectangle} alt=""/>
           <div onMouseMove={e => {handleMove(e)}} className={styles.item}>
             <div className={itemTitleClass}>
-              <h3>Une solution sur mesure</h3>
+              <h3>Vous amener les bons étudiants</h3>
             </div>
             <p className={bodyTextClass}>
-              Nous mettons à ta disposition des conseils et des inspirations afin de t’inspirer et te guider.
+              Smatch met en place des activités d’introspection et de matching, permettant de faire le lien entre les lycéens concernés par votre formation, et vous.
             </p>
           </div>
           <img className={styles.image} src={triangle} alt=""/>

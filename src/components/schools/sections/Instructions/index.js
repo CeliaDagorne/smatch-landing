@@ -21,15 +21,15 @@ const SchoolInstructions = () => {
   const content = [
     {
       "title": "Développez",
-      "text": "Développez et personnalisez l’image de votre marque afin d’adopter une stratégie numérique proactive et attirer de nombreux étudiants.",
+      "text": "Développez et mettez en avant une image de marque qualitative afin d’adopter une stratégie numérique proactive grâce à notre service de production de contenu vidéo et photo.",
     },
     {
       "title": "Analysez",
-      "text": "Crée toi un compte afin d’avoir un profil qui regroupera tes compétences, matchs et programmes qui t'intéressent.",
+      "text": "Obtenez des retours sur votre investissement sur la plateforme et analysez vos prospects depuis votre espace personnel à l’aide du dashboard fourni.",
     },
     {
       "title": "Recrutez",
-      "text": "Crée toi un compte afin d’avoir un profil qui regroupera tes compétences, matchs et programmes qui t'intéressent.",
+      "text": "Découvrez constamment de nouveaux candidats dont les aspirations sont alignées avec vos formations grâce au match de compétences-formation. Smatch propose, par ailleurs, une prise de contact simplifiée pouvant être facilement gérée via notre outil.",
     },
   ]
 
