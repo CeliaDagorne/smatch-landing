@@ -81,7 +81,7 @@ function App() {
           <Route exact path="/ecoles">
             <SchoolHero />
             <SchoolAccessible />
-            <SchoolPlatform />
+            <SchoolPlatform appeared={visual} />
             <SchoolInstructions />
             <SchoolTestimonial />
             <SchoolDifference />

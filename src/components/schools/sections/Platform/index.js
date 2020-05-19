@@ -8,7 +8,7 @@ import styles from './style.module.scss'
 import typography from '../../../../styles/imports/typography.module.scss'
 
 // images
-import window from '../../../../assets/images/window.svg'
+import window from '../../../../assets/images/window-large.svg'
 
 const SchoolPlatform = ({ appeared }) => {
   const titleClass = classNames(styles.title, typography.h2)
@@ -16,7 +16,7 @@ const SchoolPlatform = ({ appeared }) => {
   const isMobile = document.body.offsetWidth <= 920
 
   const canvasWidth = isMobile ? document.body.offsetWidth - 50 : 530
-  const canvasHeight = isMobile ? canvasWidth * 1.28 : 640
+  const canvasHeight = isMobile ? canvasWidth * 1.28 : 470
 
   const scene = useRef(null)
 
@@ -74,8 +74,8 @@ const SchoolPlatform = ({ appeared }) => {
       let ball = Bodies.circle(100, 20, 70, { restitution: 0.5, render: {
         fillStyle: '#F8CA36'
       }})
-      let rect = Bodies.rectangle(100, 130, 180, 180, { restitution: 0.5, render: {
-        fillStyle: '#4ABC86'
+      let rect = Bodies.rectangle(100, 130, 66, 66, { restitution: 0.5, render: {
+        fillStyle: '#3E66D7'
       }})
       let triangle = Bodies.polygon(265, 130, 3, 140, { restitution: 0.5, render: {
         fillStyle: '#FFB4C8'
@@ -85,8 +85,8 @@ const SchoolPlatform = ({ appeared }) => {
         ball = Bodies.circle(100, 20, 40, { restitution: 0.5, render: {
           fillStyle: '#F8CA36'
         }})
-        rect = Bodies.rectangle(100, 130, 120, 120, { restitution: 0.5, render: {
-          fillStyle: '#4ABC86'
+        rect = Bodies.rectangle(100, 130, 50, 50, { restitution: 0.5, render: {
+          fillStyle: '#3E66D7'
         }})
         triangle = Bodies.polygon(265, 130, 3, 70, { restitution: 0.5, render: {
           fillStyle: '#FFB4C8'
