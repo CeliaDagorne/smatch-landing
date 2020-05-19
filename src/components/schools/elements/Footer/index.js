@@ -7,7 +7,7 @@ import Link from '../../elements/Link'
 import styles from './style.module.scss'
 import typography from '../../../../styles/imports/typography.module.scss'
 
-const Footer = () => (
+const SchoolFooter = () => (
   <section className={styles.footer}>
     <Container>
       <h3 className={typography.h3}>Smatch</h3>
@@ -98,4 +98,4 @@ const Footer = () => (
   </section>
 )
 
-export default Footer
+export default SchoolFooter

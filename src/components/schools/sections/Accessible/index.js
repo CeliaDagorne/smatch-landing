@@ -5,9 +5,9 @@ import Link from '../../elements/Link'
 
 // styles
 import styles from './style.module.scss'
-import typography from '../../../styles/imports/typography.module.scss'
+import typography from '../../../../styles/imports/typography.module.scss'
 
-const Accessible = () => {
+const SchoolAccessible = () => {
   const titleClass = classNames(styles.title, typography.h2)
 
   return (
@@ -15,18 +15,20 @@ const Accessible = () => {
       <Container>
         <div>
           <h2 data-appear="single-left" className={titleClass}>
-            Gratuit et accessible à tous.tes
+          Recrutez des
+          étudiants<br/>
+          de tout horizon
           </h2>
         </div>
         <div>
           <div data-appear="slide-left" className={styles.wrapper}>
             <h2 className={typography.h3}>
-              L’équipe de Smart est fière d’offrir un outil gratuit et accessible afin de bâtir le futur de l’orientation.
+              Conçue pour les étudiants, notre plateforme numérique leur offre les outils nécessaires afin de s’orienter en toute sérénité.
             </h2>
             <p className={styles.textBody}>
-              Parce que s'orienter n'est pas une chance mais un droit. Notre mission est d’offrir des outils gratuit afin que tu puisses trouver ta voie et croire en toi.
+              Notre outil facilite aussi la vie des écoles en mettant à leur disposition des informations essentielles aux suivis de leurs futurs étudiants mais aussi la possibilité de renforcer leur visibilité sur internet.
             </p>
-            <Link to="/" button>Découvrir</Link>
+            <Link to="/" button>Découvrir notre outil</Link>
           </div>
         </div>
       </Container>
@@ -34,4 +36,4 @@ const Accessible = () => {
   )
 }
 
-export default Accessible
+export default SchoolAccessible

@@ -4,9 +4,9 @@ import Container from '../../elements/Container'
 
 // styles
 import styles from './style.module.scss'
-import typography from '../../../styles/imports/typography.module.scss'
+import typography from '../../../../styles/imports/typography.module.scss'
 
-const Testimonial = () => {
+const SchoolTestimonial = () => {
   const textClass = classNames(styles.text, typography.h3)
 
   return (
@@ -14,13 +14,13 @@ const Testimonial = () => {
       <Container>
         <div data-appear="slide-up">
           <p className={textClass}>
-            “Je pensais avoir tout vu et que rien ne me correspondait. Smatch m'a ouvert de nombreuses pistes auquel je n'avais pas pensé et m’a aidé à me connaître.”
+            “Nous étions à la recherche d'un outil comme celui de Smatch afin de créer des intéractions plus significatives avec des étudiants aux backgrounds différents.”
           </p>
-          <p className={typography.h4}>Adama, Lycéen en Terminale S</p>
+          <p className={typography.h4}>Denys Chomel, Responsable des Admissions à HETIC</p>
         </div>
       </Container>
     </section>
   )
 }
 
-export default Testimonial
+export default SchoolTestimonial

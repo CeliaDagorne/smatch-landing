@@ -7,8 +7,9 @@ import Link from '../../elements/Link'
 import styles from './style.module.scss'
 import typography from '../../../../styles/imports/typography.module.scss'
 
-const Construct = () => {
+const SchoolConstruct = () => {
   const titleClass = classNames(styles.title, typography.h2)
+  const textClass = classNames(styles.text, typography.h4)
 
   return (
     <section className={styles.section}>
@@ -16,19 +17,12 @@ const Construct = () => {
         <div>
           <div className={styles.wrapper} data-appear="slide-up">
             <h2 className={titleClass}>
-              Prêt.e à construire ton futur ?
+              Prêts à nous rejoindre ?
             </h2>
-            <Link to="/" button>C’est parti !</Link>
-            <div className={styles.footer}>
-              <p>
-                <span><img src="/images/validate.svg" alt=""/></span>
-                100% gratuit
-              </p>
-              <p>
-                <span><img src="/images/validate.svg" alt=""/></span>
-                Garantie sans stress
-              </p>
-            </div>
+            <p className={textClass}>
+              Faites de l’orientation une priorité.
+            </p>
+            <Link to="/" button>Nous contacter</Link>
           </div>
         </div>
       </Container>
@@ -36,4 +30,4 @@ const Construct = () => {
   )
 }
 
-export default Construct
+export default SchoolConstruct

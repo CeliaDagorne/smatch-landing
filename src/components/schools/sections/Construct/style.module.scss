@@ -1,7 +1,7 @@
-@import '../../../styles/imports/index.scss';
+@import '../../../../styles/imports/index.scss';
 
 .section {
-  background: $color-blue;
+  background: $color-red;
   color: $color-white;
   padding: 22vh 0;
   position: relative;
@@ -24,17 +24,6 @@
   }
 }
 
-.wrapper {
-  // position: relative;
-}
-
-.footer {
-  display: flex;
-  justify-content: space-between;
-  margin: 60px auto 0;
-  max-width: 360px;
-
-  span {
-    margin-right: 15px;
-  }
+.text {
+  margin-bottom: 50px;
 }

@@ -6,7 +6,7 @@ import Container from '../../elements/Container'
 import styles from './style.module.scss'
 import typography from '../../../../styles/imports/typography.module.scss'
 
-const Inspiration = () => {
+const SchoolInspiration = () => {
   const titleClass = classNames(styles.title, typography.h2)
   const section = useRef(null)
   const gifContainer = useRef(null)
@@ -105,4 +105,4 @@ const Inspiration = () => {
   )
 }
 
-export default Inspiration
+export default SchoolInspiration

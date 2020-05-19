@@ -8,9 +8,9 @@ import './accordion.scss';
 
 // styles
 import styles from './style.module.scss'
-import typography from '../../../styles/imports/typography.module.scss'
+import typography from '../../../../styles/imports/typography.module.scss'
 
-const Instructions = () => {
+const SchoolInstructions = () => {
   const accordion = useRef(null)
   const titleClass = classNames(styles.title, typography.h2)
   const subtitleClass = classNames(styles.subtitle, typography.h4)
@@ -20,19 +20,15 @@ const Instructions = () => {
 
   const content = [
     {
-      "title": "Créer",
+      "title": "Développez",
+      "text": "Développez et personnalisez l’image de votre marque afin d’adopter une stratégie numérique proactive et attirer de nombreux étudiants.",
+    },
+    {
+      "title": "Analysez",
       "text": "Crée toi un compte afin d’avoir un profil qui regroupera tes compétences, matchs et programmes qui t'intéressent.",
     },
     {
-      "title": "Réveler",
-      "text": "Crée toi un compte afin d’avoir un profil qui regroupera tes compétences, matchs et programmes qui t'intéressent.",
-    },
-    {
-      "title": "Découvrir & Explorer",
-      "text": "Crée toi un compte afin d’avoir un profil qui regroupera tes compétences, matchs et programmes qui t'intéressent.",
-    },
-    {
-      "title": "Construire",
+      "title": "Recrutez",
       "text": "Crée toi un compte afin d’avoir un profil qui regroupera tes compétences, matchs et programmes qui t'intéressent.",
     },
   ]
@@ -74,9 +70,9 @@ const Instructions = () => {
       <Container>
         <div data-appear="slide-left" className={styles.header}>
           <p className={typography.eyebrow}>Comment ça marche ?</p>
-          <h2 className={titleClass}>L'orientation à portée<br/>de mains</h2>
+          <h2 className={titleClass}>Promouvoir et renforcer sa marque</h2>
           <h4 className={subtitleClass}>
-            Crée toi un profil et rélève tes compétences afin de découvrir et explorer le monde professionnel.
+            Smatch permet aux écoles de mettre en place une stratégie numérique proactive pour suivre le marché des étudiants d'aujourd'hui.
           </h4>
         </div>
 
@@ -141,9 +137,9 @@ const Instructions = () => {
         <div className={styles.footer}>
           <div data-appear="slide-up" className={styles.footerContainer}>
             <h3 className={footerLabelClass}>
-              Explore tes possibilités avec  Smatch dès aujourd’hui
+              En savoir plus sur les avantages de Smatch
             </h3>
-            <Link to="/" button>Je me lance</Link>
+            <Link to="/" button>Nous contacter</Link>
           </div>
         </div>
       </Container>
@@ -151,4 +147,4 @@ const Instructions = () => {
   )
 }
 
-export default Instructions
+export default SchoolInstructions

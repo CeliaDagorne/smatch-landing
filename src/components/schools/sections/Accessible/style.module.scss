@@ -1,15 +1,12 @@
-@import '../../../styles/imports/index.scss';
+@import '../../../../styles/imports/index.scss';
 
 .section {
   padding: 25vh 0;
 }
 
 .title {
-  max-width: 550px;
-
-  @include respond-to(mobile) {
-    margin-bottom: 100px;
-  }
+  margin-bottom: 100px;
+  max-width: 720px;
 }
 
 .wrapper {

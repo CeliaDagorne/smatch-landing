@@ -1,14 +1,14 @@
-@import '../../../styles/imports/index.scss';
+@import '../../../../styles/imports/index.scss';
 
 .section {
   background: $color-black;
-  color: $color-blue--light;
+  color: $color-salmon;
   padding: 26vh 0 18vh;
 }
 
 .header {
   margin-bottom: 18vh;
-  max-width: 670px;
+  max-width: 610px;
 }
 
 .title {

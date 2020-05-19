@@ -1,7 +1,6 @@
 import React, { useRef, useEffect } from 'react'
 import classNames from 'classnames'
 import Container from '../../elements/Container'
-import Link from '../../elements/Link'
 import Matter from 'matter-js'
 
 // styles
@@ -9,11 +8,11 @@ import styles from './style.module.scss'
 import typography from '../../../../styles/imports/typography.module.scss'
 
 // images
-import window from '../../../assets/images/window.svg'
+import window from '../../../../assets/images/window.svg'
 
-const Platform = ({ appeared }) => {
+const SchoolPlatform = ({ appeared }) => {
   const titleClass = classNames(styles.title, typography.h2)
-  const bodyTextClass = classNames(styles.textBody, typography.eyebrow)
+  const bodyTextClass = classNames(styles.textBody, typography.h3)
   const isMobile = document.body.offsetWidth <= 920
 
   const canvasWidth = isMobile ? document.body.offsetWidth - 50 : 530
@@ -131,31 +130,27 @@ const Platform = ({ appeared }) => {
   return (
     <section className={styles.section}>
       <Container>
-        <h2 data-appear="single-left" className={titleClass}>La plateforme unique pour ton futur</h2>
+        <h2 data-appear="single-left" className={titleClass}>
+          Offrez<br/>
+          un outil<br/>
+          d’orientation intelligent
+        </h2>
         <div className={styles.wrapper}>
           <div  data-appear="visual" className={styles.visual}>
             <img src={window} alt=""/>
             <div className={styles.canvas} ref={scene} />
-            {/* <div className={styles.circle}/>
-            <div className={styles.triangle}/>
-            <div className={styles.rectangle}/> */}
           </div>
           <div data-appear="slide-right" className={styles.content}>
-            <h3 className={typography.h3}>
-              Des tests efficaces et un algorithme conçu pour toi.
+            <h3 className={bodyTextClass}>
+              Notre mission est de préparer les étudiants à comprendre, à contribuer et à réussir dans une société en mutation rapide. Nous cherchons à fournir aux étudiants les outils nécessaires pour s'attaquer à la question complexe qu'est l'orientation et pour poursuivre des parcours professionnels plus fluides et plus flexibles.
             </h3>
-            <p className={bodyTextClass}>
-              Smatch scanne, compile et analyse l’ensemble de tes caractéristiques et tes envies pour aboutir à un vaste horizon d’opportunités - que tu en connaisses l’intitulé ou pas. Smatch te permet d'obtenir un résultat personnalisé.<br/>
-              La plateforme te guide et te fournit toutes les clés pour mener à bien ton choix d'orientation.
-            </p>
             <div className={styles.line} />
             <div className={styles.testimonial}>
               <p className={typography.body}>
-                “Notre algorithme a été conçu et développé par les meilleurs développeuses et développeurs de La Montreuil Valley ”
+                “Nous voulons renverser le sytème d’orientation actuel en créant un outil accessible pour tous les étudiants.”
               </p>
               <p className={styles.label}><span>Marjorie F,</span> Product Owner</p>
             </div>
-            <Link to="/" button>Faire le test</Link>
           </div>
         </div>
       </Container>
@@ -163,4 +158,4 @@ const Platform = ({ appeared }) => {
   )
 }
 
-export default Platform
+export default SchoolPlatform

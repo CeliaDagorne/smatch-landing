@@ -1,4 +1,4 @@
-@import '../../../styles/imports/index.scss';
+@import '../../../../styles/imports/index.scss';
 
 .section {
   background: $color-white;
@@ -29,7 +29,7 @@
 }
 
 .gridItem {
-  background: $color-blue;
+  background: $color-red;
   opacity: 0;
   padding-bottom: 100%;
   position: relative;
