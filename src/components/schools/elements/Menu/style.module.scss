@@ -15,6 +15,9 @@
 }
 
 .wrapper {
+  position: relative;
+  z-index: 50;
+
   > * {
     margin-right: 45px;
   }
