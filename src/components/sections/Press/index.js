@@ -1,6 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 import Container from '../../elements/Container'
+import Link from '../../elements/Link'
 
 // styles
 import styles from './style.module.scss'
@@ -11,27 +12,27 @@ const Press = () => {
 
   const content = [
     {
+      "img": "konbini.svg",
+      "link": "/",
+    },
+    {
       "img": "brut.svg",
       "link": "/",
     },
     {
-      "img": "/b",
+      "img": "loop.svg",
       "link": "/",
     },
     {
-      "img": "/c",
+      "img": "france-tv.svg",
       "link": "/",
     },
     {
-      "img": "/d",
+      "img": "slate.svg",
       "link": "/",
     },
     {
-      "img": "/e",
-      "link": "/",
-    },
-    {
-      "img": "/f",
+      "img": "nova.svg",
       "link": "/",
     },
   ]
@@ -45,8 +46,10 @@ const Press = () => {
         <div data-appear="logos" className={styles.grid}>
           {content && (
             content.map(item => (
-              <div key={item.img} className={styles.gridItem}>
-                <img src={`/images/logos/${item.img}`} alt=""/>
+              <div key={item.img} to={item.link} className={styles.gridItem}>
+                <Link to={item.link}>
+                  <img src={`/images/logos/${item.img}`} alt=""/>
+                </Link>
               </div>
             ))
           )}

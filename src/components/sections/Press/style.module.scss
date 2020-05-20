@@ -35,6 +35,12 @@
   position: relative;
   transform: translateY(50px);
 
+  a {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
+
   @for $i from 1 through 6 {
     &:nth-child(#{$i}) {
       transition: transform .6s ease-in-out .2s * $i, opacity .6s ease-in-out .2s * $i;
@@ -46,6 +52,7 @@
     left: 0;
     margin: auto;
     max-width: 112px;
+    mix-blend-mode: darken;
     position: absolute;
     right: 0;
     top: 0;

@@ -93,39 +93,9 @@ const SchoolInstructions = () => {
                   </div>
                   <div className={styles.accordionContent}>
                     <img
-                      className={styles.big}
-                      src="/images/stickers/sticker-smatch.svg"
-                      alt="Smatch sticker"
-                    />
-                    <img
-                      className={styles.smiley}
-                      src="/images/stickers/smiley-orange.svg"
-                      alt="Smiley orange"
-                    />
-                    <img
-                      className={styles.smiley}
-                      src="/images/stickers/smiley-yellow.svg"
-                      alt="Smiley jaune"
-                    />
-                    <img
-                      className={styles.smiley}
-                      src="/images/stickers/smiley-blue.svg"
-                      alt="Smiley bleu"
-                    />
-                    <img
-                      className={styles.free}
-                      src="/images/stickers/sticker-free.svg"
-                      alt="Free sticker"
-                    />
-                    <img
-                      className={styles.start}
-                      src="/images/stickers/sticker-start.svg"
-                      alt="Start sticker"
-                    />
-                    <img
-                      className={styles.try}
-                      src="/images/stickers/try.svg"
-                      alt="Try sticker"
+                      className={styles.dashboard}
+                      src="/images/dash.png"
+                      alt="Dashboard école"
                     />
                   </div>
                 </div>

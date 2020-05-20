@@ -31,7 +31,10 @@ const SchoolDifference = () => {
         <div data-appear="slide-up" className={styles.wrapper}>
           <div onMouseMove={e => {handleMove(e)}} className={styles.item}>
             <div className={itemTitleClass}>
-              <h3>Affirmer votre identité</h3>
+              <h3>
+                <span>Affirmer votre</span>
+                <span>identité</span>
+              </h3>
             </div>
             <p className={bodyTextClass}>
               Smatch met à disposition une équipe de tournage et des outils afin de renforcer l’identité visuelle et créer du contenu de qualité afin de renforcer votre image.
@@ -40,7 +43,10 @@ const SchoolDifference = () => {
           <img className={styles.image} src={circle} alt=""/>
           <div onMouseMove={e => {handleMove(e)}} className={styles.item}>
             <div className={itemTitleClass}>
-              <h3>Toujours à votre écoute</h3>
+              <h3>
+                <span>Toujours à votre</span>
+                <span>écoute</span>
+              </h3>
             </div>
             <p className={bodyTextClass}>
               Nous agissons pour assurer l'égalité, soutenir et favoriser l'ambition de tous les jeunes et futurs étudiants grâce à un outil accessible à tous.
@@ -49,7 +55,10 @@ const SchoolDifference = () => {
           <img className={styles.image} src={rectangle} alt=""/>
           <div onMouseMove={e => {handleMove(e)}} className={styles.item}>
             <div className={itemTitleClass}>
-              <h3>Vous amener les bons étudiants</h3>
+              <h3>
+                <span>Une solution sur</span>
+                <span>mesure</span>
+              </h3>
             </div>
             <p className={bodyTextClass}>
               Smatch met en place des activités d’introspection et de matching, permettant de faire le lien entre les lycéens concernés par votre formation, et vous.

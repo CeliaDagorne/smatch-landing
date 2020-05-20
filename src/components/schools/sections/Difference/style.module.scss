@@ -57,7 +57,7 @@
       opacity: 1!important;
     }
 
-    .itemTitle:after {
+    span:after {
       width: 100%
     }
   }
@@ -69,15 +69,21 @@
   pointer-events: none;
   position: relative;
 
-  &:after {
-    background-color: $color-black;
-    bottom: 0;
-    content: "";
-    height: 2px;
-    left: 0;
-    position: absolute;
-    transition: width .4s ease-in-out;
-    width: 0;
+  span {
+    display: inline-block;
+    margin: auto;
+    position: relative;
+
+    &:after {
+      background-color: $color-black;
+      bottom: 0;
+      content: "";
+      height: 2px;
+      left: 0;
+      position: absolute;
+      transition: width .4s ease-in-out;
+      width: 0;
+    }
   }
 }
 
