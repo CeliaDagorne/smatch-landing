@@ -14,6 +14,7 @@ const Instructions = () => {
   const accordion = useRef(null)
   const titleClass = classNames(styles.title, typography.h2)
   const subtitleClass = classNames(styles.subtitle, typography.h4)
+  const accordionItemClass = classNames('accordion-item', styles.accordionItem)
   const footerLabelClass = classNames(styles.footerLabel, typography.h3)
   const accordionTitleClass = classNames('title', styles.accordionTitle, typography.cta)
   const accordionPanelClass = classNames('panel', styles.accordionPanel)
@@ -83,7 +84,7 @@ const Instructions = () => {
         {content && (
           <div data-appear="slide-left" ref={accordion} className="accordion">
             {content.map( (item, index) => (
-              <div className="accordion-item" key={item.title}>
+              <div className={accordionItemClass} key={item.title}>
                 <div className={accordionTitleClass} onClick={() => toggleAccordion(index)}>
                   <p>{item.title}</p>
                   <div className={styles.cross}>
@@ -96,41 +97,7 @@ const Instructions = () => {
                     {item.text}
                   </div>
                   <div className={styles.accordionContent}>
-                    <img
-                      className={styles.big}
-                      src="/images/stickers/sticker-smatch.svg"
-                      alt="Smatch sticker"
-                    />
-                    <img
-                      className={styles.smiley}
-                      src="/images/stickers/smiley-orange.svg"
-                      alt="Smiley orange"
-                    />
-                    <img
-                      className={styles.smiley}
-                      src="/images/stickers/smiley-yellow.svg"
-                      alt="Smiley jaune"
-                    />
-                    <img
-                      className={styles.smiley}
-                      src="/images/stickers/smiley-blue.svg"
-                      alt="Smiley bleu"
-                    />
-                    <img
-                      className={styles.free}
-                      src="/images/stickers/sticker-free.svg"
-                      alt="Free sticker"
-                    />
-                    <img
-                      className={styles.start}
-                      src="/images/stickers/sticker-start.svg"
-                      alt="Start sticker"
-                    />
-                    <img
-                      className={styles.try}
-                      src="/images/stickers/try.svg"
-                      alt="Try sticker"
-                    />
+                    <img className={styles.image} src={`/images/instructions/student/illu-${index}.png`} alt=""/>
                   </div>
                 </div>
               </div>

@@ -43,4 +43,8 @@ a {
   position: fixed;
   transition: opacity .2s ease-in-out;
   width: 70px;
+
+  @include respond-to(mobile) {
+    display: none;
+  }
 }

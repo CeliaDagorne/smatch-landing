@@ -14,6 +14,7 @@ const SchoolInstructions = () => {
   const accordion = useRef(null)
   const titleClass = classNames(styles.title, typography.h2)
   const subtitleClass = classNames(styles.subtitle, typography.h4)
+  const accordionItemClass = classNames('accordion-item', styles.accordionItem)
   const footerLabelClass = classNames(styles.footerLabel, typography.h3)
   const accordionTitleClass = classNames('title', styles.accordionTitle, typography.cta)
   const accordionPanelClass = classNames('panel', styles.accordionPanel)
@@ -79,7 +80,7 @@ const SchoolInstructions = () => {
         {content && (
           <div data-appear="slide-left" ref={accordion} className="accordion">
             {content.map( (item, index) => (
-              <div className="accordion-item" key={item.title}>
+              <div className={accordionItemClass} key={item.title}>
                 <div className={accordionTitleClass} onClick={() => toggleAccordion(index)}>
                   <p>{item.title}</p>
                   <div className={styles.cross}>
@@ -92,11 +93,7 @@ const SchoolInstructions = () => {
                     {item.text}
                   </div>
                   <div className={styles.accordionContent}>
-                    <img
-                      className={styles.dashboard}
-                      src="/images/dash.png"
-                      alt="Dashboard école"
-                    />
+                    <img className={styles.image} src={`/images/instructions/illu-${index}.png`} alt=""/>
                   </div>
                 </div>
               </div>
