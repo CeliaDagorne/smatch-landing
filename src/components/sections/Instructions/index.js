@@ -21,19 +21,19 @@ const Instructions = () => {
   const content = [
     {
       "title": "Créer",
-      "text": "Crée toi un compte afin d’avoir un profil qui regroupera tes compétences, matchs et programmes qui t'intéressent.",
+      "text": "Crée et enrichis ton profil à travers notre programme composé de plusieurs tests d’introspection. Ce profil regroupera tes compétences, tes aspirations, tes matchs ainsi que les formations qui t'intéressent.",
     },
     {
       "title": "Réveler",
-      "text": "Crée toi un compte afin d’avoir un profil qui regroupera tes compétences, matchs et programmes qui t'intéressent.",
+      "text": "Révèle tes compétences, limitants, contraintes et aspirations à travers ces tests. Cela te permettra d’obtenir des propositions de formations et de métiers qui te correspondent le plus.",
     },
     {
       "title": "Découvrir & Explorer",
-      "text": "Crée toi un compte afin d’avoir un profil qui regroupera tes compétences, matchs et programmes qui t'intéressent.",
+      "text": "Découvre d’autres voies d’orientation et explore un grand nombre de formations scolaires repertoriées sur la plateforme.",
     },
     {
-      "title": "Construire",
-      "text": "Crée toi un compte afin d’avoir un profil qui regroupera tes compétences, matchs et programmes qui t'intéressent.",
+      "title": "Concrétiser",
+      "text": "Smatch est un facilitateur qui agit tant sur le plan du conseil d’orientation que dans la mise en relation avec ta future école. Smatch te permet ainsi de prendre contact facilement avec cette dernière via la plateforme afin d’atteindre tes objectifs.",
     },
   ]
 

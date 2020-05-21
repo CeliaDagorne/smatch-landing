@@ -68,8 +68,8 @@ function App() {
           <Route exact path="/">
             <Hero />
             <Accessible />
-            <Inspiration />
             <Instructions />
+            <Inspiration />
             <Platform appeared={visual} />
             <Difference />
             <Trust />
