@@ -24,7 +24,7 @@
   }
 }
 
-.image {
+.shape {
   opacity: 0!important;
   pointer-events: none;
   position: fixed;
@@ -35,10 +35,20 @@
   z-index: 0;
 
   @include respond-to(mobile) {
-    opacity: 1;
-    position: absolute;
+    display: none;
   }
 }
+
+// .shapeMobile {
+//   display: none;
+//   position: absolute;
+//   width: 163px;
+//   z-index: 0;
+
+//   @include respond-to(mobile) {
+//     display: block;
+//   }
+// }
 
 .item {
   cursor: none;

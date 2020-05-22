@@ -85,7 +85,7 @@ const Inspiration = () => {
   return (
     <section ref={section} className={styles.section}>
       <Container>
-        <h2 data-appear="single-left" className={titleClass}>De quoi t’inspirer</h2>
+        <h2 data-appear="single-up" className={titleClass}>De quoi t’inspirer</h2>
         <div data-appear="slide-up" ref={content} className={styles.content}>
           {types.map((type, index) =>
             <div key={type} onMouseEnter={() => setActiveGif(index)} className={styles.line}>

@@ -131,7 +131,7 @@ const Platform = ({ appeared }) => {
   return (
     <section className={styles.section}>
       <Container>
-        <h2 data-appear="single-left" className={titleClass}>La plateforme unique pour ton futur</h2>
+        <h2 data-appear="single-up" className={titleClass}>La plateforme unique pour ton futur</h2>
         <div className={styles.wrapper}>
           <div  data-appear="visual" className={styles.visual}>
             <img src={window} alt=""/>
@@ -140,7 +140,7 @@ const Platform = ({ appeared }) => {
             <div className={styles.triangle}/>
             <div className={styles.rectangle}/> */}
           </div>
-          <div data-appear="slide-right" className={styles.content}>
+          <div data-appear="slide-up" className={styles.content}>
             <h3 className={typography.h3}>
               Des tests efficaces et un algorithme conçu pour toi.
             </h3>

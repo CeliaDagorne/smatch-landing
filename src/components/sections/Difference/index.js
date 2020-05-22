@@ -12,22 +12,25 @@ import styles from './style.module.scss'
 import typography from '../../../styles/imports/typography.module.scss'
 
 const Platform = () => {
+  const isMobile = window.innerWidth <= 920
 
   const titleClass = classNames(styles.title, typography.h2)
   const itemTitleClass = classNames(styles.itemTitle, typography.h3)
   const bodyTextClass = classNames(styles.bodyText, typography.body)
 
   const handleMove = e => {
-    e.persist()
-    const img = e.target.nextSibling
-    img.style.left = `${e.clientX - 80}px`
-    img.style.top = `${e.clientY - 80}px`
+    if (!isMobile) {
+      e.persist()
+      const img = e.target.nextSibling
+      img.style.left = `${e.clientX - 80}px`
+      img.style.top = `${e.clientY - 80}px`
+    }
   }
 
   return (
     <section className={styles.section}>
       <Container>
-        <h2 data-appear="single-left" className={titleClass}>Notre différence</h2>
+        <h2 data-appear="single-up" className={titleClass}>Notre différence</h2>
         <div data-appear="slide-up" className={styles.wrapper}>
           <div onMouseMove={e => {handleMove(e)}} className={styles.item}>
             <div className={itemTitleClass}>

@@ -35,8 +35,7 @@
   z-index: 0;
 
   @include respond-to(mobile) {
-    opacity: 1;
-    position: absolute;
+    display: none;
   }
 }
 

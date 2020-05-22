@@ -25,7 +25,7 @@
   display: block;
   left: 0;
   margin: auto;
-  max-width: 950px;
+  max-width: 1090px;
   position: absolute;
   right: 0;
   text-align: center;
@@ -52,9 +52,13 @@
 }
 
 .headline {
+  letter-spacing: -6px;
 
   @include respond-to(mobile) {
-    font-size: 35px;
+    font-size: 13vw;
+    opacity: 0;
+    padding: 0 25px;
+    transition: opacity .2s ease-in-out 3s;
   }
 
   > div {
@@ -63,23 +67,24 @@
     width: 100%;
 
     @include respond-to(mobile) {
-      height: 40px;
+      height: unset;
     }
 
-    h2 {
+    span {
       position: relative;
       top: 100%;
     }
 
-    &:first-child h2 { transition: top .3s ease-in-out 3s; }
-    &:nth-child(2) h2 { transition: top .3s ease-in-out 3.1s; }
-    &:last-child h2 { transition: top .3s ease-in-out 3.2s; }
+    &:first-child span { transition: top .3s ease-in-out 3s; }
+    &:nth-child(2) span { transition: top .3s ease-in-out 3.1s; }
+    &:last-child span { transition: top .3s ease-in-out 3.2s; }
   }
 }
 
 .subtitle {
   height: 72px;
-  margin: 4vh 0 7vh;
+  margin: 4vh auto 7vh;
+  max-width: 950px;
   overflow: hidden;
 
   @include respond-to(mobile) {
@@ -138,7 +143,13 @@
     transform: translateY(-100px);
   }
 
-  .headline h2,
+  .headline {
+    @include respond-to(mobile) {
+      opacity: 1;
+    }
+  }
+
+  .headline span,
   .subtitle span {
     top: 0;
   }

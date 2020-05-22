@@ -37,16 +37,16 @@ function App() {
 
   const handleScroll = () => {
     const sections = document.querySelectorAll('[data-appear]')
-    // const title = document.querySelector('[data-title]')
+    const title = document.querySelector('[data-title]')
     const container = App.current
     const scrollY = container.scrollTop + window.innerHeight
-    // let titleFixed = false
+    let titleFixed = false
 
-    // if (!titleFixed && container.scrollTop >= 110 && window.innerWidth >= 920) {
-    //   title.style.position = 'fixed'
-    //   title.style.top = '140px'
-    //   titleFixed = true
-    // }
+    if (!titleFixed && container.scrollTop >= 110 && window.innerWidth >= 920) {
+      title.style.position = 'fixed'
+      title.style.top = '140px'
+      titleFixed = true
+    }
 
     for (let i = 0; i < sections.length; i++) {
       const offsetTop = sections[i].offsetParent === document.body ? sections[i].offsetTop : sections[i].offsetParent.offsetTop
@@ -79,10 +79,7 @@ function App() {
             <Footer />
           </Route>
           <Route exact path="/ecoles">
-            {/* <SchoolHero /> */}
-
-            <SchoolInstructions />
-
+            <SchoolHero />
             <SchoolAccessible />
             <SchoolPlatform appeared={visual} />
             <SchoolInstructions />
@@ -94,6 +91,7 @@ function App() {
           </Route>
         </Switch>
         <img data-cursor src="/images/stickers/cursor.svg" alt="Curseur"/>
+        <img data-cursor-smiley src="/images/stickers/smiley-orange.svg" alt="Curseur"/>
       </div>
     </Router>
   )

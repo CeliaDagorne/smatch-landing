@@ -96,14 +96,14 @@
   }
 }
 
-[data-appear="single-left"] {
+[data-appear="single-up"] {
   opacity: 0;
-  transform: translateX(-50px);
+  transform: translateY(50px);
   transition: transform .5s ease-in-out .2s, opacity .5s ease-in-out .2s;
 
   &.is-visible {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
   }
 }
 

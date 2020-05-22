@@ -40,7 +40,7 @@ const Press = () => {
   return (
     <section className={styles.section}>
       <Container>
-        <h2 data-appear="single-right" className={titleClass}>
+        <h2 data-appear="single-up" className={titleClass}>
           Ils parlent de nous
         </h2>
         <div data-appear="logos" className={styles.grid}>

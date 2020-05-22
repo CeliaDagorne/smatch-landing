@@ -130,7 +130,7 @@ const SchoolPlatform = ({ appeared }) => {
   return (
     <section className={styles.section}>
       <Container>
-        <h2 data-appear="single-left" className={titleClass}>
+        <h2 data-appear="single-up" className={titleClass}>
           Offrez<br/>
           un outil<br/>
           d’orientation intelligent
@@ -140,7 +140,7 @@ const SchoolPlatform = ({ appeared }) => {
             <img src={window} alt=""/>
             <div className={styles.canvas} ref={scene} />
           </div>
-          <div data-appear="slide-right" className={styles.content}>
+          <div data-appear="slide-up" className={styles.content}>
             <h3 className={bodyTextClass}>
               Notre mission est de préparer les étudiants à comprendre, à contribuer et à réussir dans une société en mutation rapide. Grâce à la technologie Smatch, les lycéens peuvent apprendre à se connaître, et ainsi chercher des parcours d’orientation qui leur correspondent, tout en gardant toutes leurs options ouvertes.
             </h3>

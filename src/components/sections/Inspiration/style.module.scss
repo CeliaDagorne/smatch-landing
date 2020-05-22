@@ -33,13 +33,15 @@
 }
 
 .gifContainer {
-  opacity: 0;
+  height: 0;
+  overflow: hidden;
   pointer-events: none;
   position: fixed;
-  transition: opacity .3s ease-in-out;
+  transition: height .2s ease-in-out;
+  width: 480px;
 
   &.isVisible {
-    opacity: 1;
+    height: 270px;
   }
 }
 

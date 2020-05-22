@@ -14,14 +14,14 @@ const SchoolAccessible = () => {
     <section className={styles.section}>
       <Container>
         <div>
-          <h2 data-appear="single-left" className={titleClass}>
+          <h2 data-appear="single-up" className={titleClass}>
           Recrutez des
           étudiants<br/>
           de tout horizon
           </h2>
         </div>
         <div>
-          <div data-appear="slide-left" className={styles.wrapper}>
+          <div data-appear="slide-up" className={styles.wrapper}>
             <h2 className={typography.h3}>
               Conçue pour les étudiants, notre plateforme numérique leur offre les outils nécessaires afin de s’orienter en toute sérénité.
             </h2>

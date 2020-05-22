@@ -11,7 +11,7 @@ const SchoolFooter = () => (
   <section className={styles.footer}>
     <Container>
       <h3 className={typography.h3}>Smatch</h3>
-      <div data-appear="slide-up" className={styles.container}>
+      <div className={styles.container}>
         <div className={classNames(styles.row, styles.social)}>
           <div className={styles.line}>
             <Link to="/">
@@ -45,7 +45,7 @@ const SchoolFooter = () => (
           </div>
         </div>
         <div className={styles.row}>
-          <p className={styles.lineTitle}>A propos</p>
+          <p className={styles.lineTitle}>À propos</p>
           <div className={styles.line}>
             <Link to="/">Concept</Link>
           </div>

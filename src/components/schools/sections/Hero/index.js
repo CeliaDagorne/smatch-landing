@@ -26,17 +26,17 @@ const SchoolHero = () => {
       <Container extraClassName={styles.container}>
         <Menu />
         <div className={styles.wrapper}>
-          <div className={headlineClass}>
+          <h2 className={headlineClass}>
             <div>
-              <h2>Ouvrez les portes</h2>
+              <span>Ouvrez les portes</span>
             </div>
             <div>
-              <h2>de votre école à</h2>
+              <span>de votre école à</span>
             </div>
             <div>
-              <h2>des milliers d'étudiants</h2>
+              <span>des milliers d'étudiants</span>
             </div>
-          </div>
+          </h2>
           <h3 className={subtitleClass}>
             <span>
               Smatch est une plateforme qui relie les étudiants et les établissements d'enseignement supérieur afin de faire de l’orientation une priorité.

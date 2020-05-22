@@ -69,7 +69,7 @@ const SchoolInstructions = () => {
   return (
     <section className={styles.section}>
       <Container>
-        <div data-appear="slide-left" className={styles.header}>
+        <div data-appear="slide-up" className={styles.header}>
           <p className={typography.eyebrow}>Comment ça marche ?</p>
           <h2 className={titleClass}>Promouvoir et renforcer sa marque</h2>
           <h4 className={subtitleClass}>

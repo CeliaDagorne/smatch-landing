@@ -11,7 +11,7 @@ const Footer = () => (
   <section className={styles.footer}>
     <Container>
       <h3 className={typography.h3}>Smatch</h3>
-      <div data-appear="slide-up" className={styles.container}>
+      <div className={styles.container}>
         <div className={classNames(styles.row, styles.social)}>
           <div className={styles.line}>
             <Link to="/">

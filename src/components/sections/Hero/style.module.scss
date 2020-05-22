@@ -52,6 +52,7 @@
 }
 
 .headline {
+  letter-spacing: -6px;
 
   @include respond-to(mobile) {
     font-size: 35px;

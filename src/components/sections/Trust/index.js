@@ -20,8 +20,8 @@ const Trust = () => {
     <section className={styles.section}>
       <Container>
         <div className={styles.wrapper}>
-          <h2 data-appear="single-left" className={titleClass}>
-            Ecoles et étudiant.es. Ils nous font confiance.
+          <h2 data-appear="single-up" className={titleClass}>
+            Écoles et étudiant.es. Ils nous font confiance.
           </h2>
           <div data-appear="conversation" className={styles.conversation}>
             <div className={styles.bulle}>

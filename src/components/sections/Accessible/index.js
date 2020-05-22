@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import classNames from 'classnames'
 import Container from '../../elements/Container'
 
@@ -9,16 +9,44 @@ import typography from '../../../styles/imports/typography.module.scss'
 const Accessible = () => {
   const titleClass = classNames(styles.title, typography.h2)
 
+  const section = useRef(null)
+
+  const getCoordinate = e => {
+    const cursor = document.querySelector('[data-cursor-smiley]')
+    cursor.style.top = `${e.clientY + 10}px`
+    cursor.style.left = `${e.clientX - 30}px`
+  }
+
+  const showCursor = () => {
+    document.querySelector('[data-cursor-smiley]').style.opacity = 1;
+  }
+
+  const hideCursor = () => {
+    document.querySelector('[data-cursor-smiley]').style.opacity = 0;
+  }
+
+  useEffect(() => {
+    section.current.addEventListener('mousemove', getCoordinate)
+    section.current.addEventListener('mouseenter', showCursor)
+    section.current.addEventListener('mouseleave', hideCursor)
+
+    return () => {
+      section.current.removeEventListener('mousemove', getCoordinate)
+      section.current.removeEventListener('mouseenter', showCursor)
+      section.current.removeEventListener('mouseleave', hideCursor)
+    }
+  }, [])
+
   return (
-    <section className={styles.section}>
+    <section ref={section} className={styles.section}>
       <Container>
         <div>
-          <h2 data-appear="single-left" className={titleClass}>
+          <h2 data-appear="single-up" className={titleClass}>
             Gratuit et accessible à tous.tes
           </h2>
         </div>
         <div>
-          <div data-appear="slide-left" className={styles.wrapper}>
+          <div data-appear="slide-up" className={styles.wrapper}>
             <h2 className={typography.h3}>
               Bâtissons ensemble le futur de l’orientation scolaire
             </h2>

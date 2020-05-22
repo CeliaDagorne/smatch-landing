@@ -37,7 +37,8 @@ a {
   box-sizing: inherit;
 }
 
-[data-cursor] {
+[data-cursor],
+[data-cursor-smiley] {
   opacity: 0;
   pointer-events: none;
   position: fixed;
@@ -48,3 +49,8 @@ a {
     display: none;
   }
 }
+
+[data-cursor-smiley] {
+  width: 197px;
+}
+
