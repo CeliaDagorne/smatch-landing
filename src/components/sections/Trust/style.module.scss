@@ -47,19 +47,21 @@
       width: 360px;
 
       @include respond-to(mobile) {
-        width: 290px;
+        width: 315px;
       }
     }
   }
 
   &:nth-child(2) {
     transition: opacity .3s ease-in-out .8s, transform .5s ease-in-out .9s;
+    width: 270px;
   }
 
   p {
     background-color: $color-black;
     border-radius: 100px;
     padding: 20px 60px;
+    width: 270px;
 
     @include respond-to(mobile) {
       padding: 20px 40px;
@@ -68,18 +70,17 @@
 
   &:nth-child(even) {
     margin-left: auto;
-    width: 320px;
 
     @include respond-to(mobile) {
-      width: 250px;
+      width: 260px;
     }
 
     p {
       background-color: $color-pink;
-      width: 320px;
+      padding: 20px 40px;
 
       @include respond-to(mobile) {
-        width: 250px;
+        width: 260px;
       }
     }
 
@@ -109,25 +110,25 @@
       width: 370px;
 
       @include respond-to(mobile) {
-        width: 290px;
+        width: 310px;
       }
     }
   }
 
   &:nth-child(4) {
     transition: opacity .3s ease-in-out 1.3s, transform .5s ease-in-out 1.3s;
-    width: 360px;
+    width: 300px;
 
-    @include respond-to(mobile) {
-      width: 280px;
-    }
+    // @include respond-to(mobile) {
+    //   width: 280px;
+    // }
 
     p {
-      width: 360px;
+      width: 300px;
 
-      @include respond-to(mobile) {
-        width: 280px;
-      }
+      // @include respond-to(mobile) {
+      //   width: 280px;
+      // }
     }
   }
 
@@ -148,11 +149,11 @@
 
   .emoji {
     bottom: -30px;
-    right: -5px;
+    right: -25px;
     width: 104px;
 
     @include respond-to(mobile) {
-      right: -25px;
+      right: -40px;
       width: 80px;
     }
   }
