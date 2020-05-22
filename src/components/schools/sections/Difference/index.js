@@ -16,7 +16,7 @@ const SchoolDifference = () => {
 
   const titleClass = classNames(styles.title, typography.h2)
   const itemTitleClass = classNames(styles.itemTitle, typography.h3)
-  const bodyTextClass = classNames(styles.bodyText, typography.body)
+  const bodyTextClass = classNames(styles.bodyText, typography.bodySmall)
 
   const handleMove = e => {
     if (!isMobile) {

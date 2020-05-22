@@ -39,17 +39,17 @@ const Inspiration = () => {
   ]
 
   const getCoordinate = e => {
+    if (!gifVisibility) {
+      setGifVisibility(true)
+      document.querySelector('[data-cursor]').style.opacity = 1;
+    }
+
     setX(e.clientX)
     setY(e.clientY)
 
     const cursor = document.querySelector('[data-cursor]')
     cursor.style.top = `${e.clientY - 20}px`
     cursor.style.left = `${e.clientX - 75}px`
-  }
-
-  const showGif = () => {
-    setGifVisibility(true)
-    document.querySelector('[data-cursor]').style.opacity = 1;
   }
 
   const hideGif = () => {
@@ -59,12 +59,10 @@ const Inspiration = () => {
 
   useEffect(() => {
     content.current.addEventListener('mousemove', getCoordinate)
-    content.current.addEventListener('mouseenter', showGif)
     content.current.addEventListener('mouseleave', hideGif)
 
     return () => {
       content.current.removeEventListener('mousemove', getCoordinate)
-      content.current.removeEventListener('mouseenter', showGif)
       content.current.removeEventListener('mouseleave', hideGif)
     }
   }, [])

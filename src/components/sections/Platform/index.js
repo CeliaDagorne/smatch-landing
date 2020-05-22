@@ -13,7 +13,7 @@ import window from '../../../assets/images/window.svg'
 
 const Platform = ({ appeared }) => {
   const titleClass = classNames(styles.title, typography.h2)
-  const bodyTextClass = classNames(styles.textBody, typography.eyebrow)
+  const bodyTextClass = classNames(styles.textBody, typography.body)
   const isMobile = document.body.offsetWidth <= 920
 
   const canvasWidth = isMobile ? document.body.offsetWidth - 50 : 530
@@ -150,7 +150,7 @@ const Platform = ({ appeared }) => {
             </p>
             <div className={styles.line} />
             <div className={styles.testimonial}>
-              <p className={typography.body}>
+              <p className={typography.bodySmall}>
                 “Notre algorithme a été conçu et développé par les meilleurs développeuses et développeurs de La Montreuil Valley ”
               </p>
               <p className={styles.label}><span>Marjorie F,</span> Product Owner</p>

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import classNames from 'classnames'
 import Container from '../../elements/Container'
 import Link from '../../elements/Link'
@@ -18,6 +18,7 @@ const SchoolInstructions = () => {
   const footerLabelClass = classNames(styles.footerLabel, typography.h3)
   const accordionTitleClass = classNames('title', styles.accordionTitle, typography.cta)
   const accordionPanelClass = classNames('panel', styles.accordionPanel)
+  const [cursorVisibility, setCursorVisibility] = useState(false)
 
   const content = [
     {
@@ -44,24 +45,24 @@ const SchoolInstructions = () => {
     const cursor = document.querySelector('[data-cursor]')
     cursor.style.top = `${e.clientY - 20}px`
     cursor.style.left = `${e.clientX - 75}px`
-  }
 
-  const showCursor = () => {
-    document.querySelector('[data-cursor]').style.opacity = 1;
+    if (!cursorVisibility) {
+      document.querySelector('[data-cursor]').style.opacity = 1;
+      setCursorVisibility(true)
+    }
   }
 
   const hideCursor = () => {
     document.querySelector('[data-cursor]').style.opacity = 0;
+    setCursorVisibility(false)
   }
 
   useEffect(() => {
     accordion.current.addEventListener('mousemove', getCoordinate)
-    accordion.current.addEventListener('mouseenter', showCursor)
     accordion.current.addEventListener('mouseleave', hideCursor)
 
     return () => {
       accordion.current.removeEventListener('mousemove', getCoordinate)
-      accordion.current.removeEventListener('mouseenter', showCursor)
       accordion.current.removeEventListener('mouseleave', hideCursor)
     }
   }, [])

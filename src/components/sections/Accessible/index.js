@@ -8,6 +8,7 @@ import typography from '../../../styles/imports/typography.module.scss'
 
 const Accessible = () => {
   const titleClass = classNames(styles.title, typography.h2)
+  const textBodyClass = classNames(styles.textBody, typography.body)
 
   const section = useRef(null)
 
@@ -50,7 +51,7 @@ const Accessible = () => {
             <h2 className={typography.h3}>
               Bâtissons ensemble le futur de l’orientation scolaire
             </h2>
-            <p className={styles.textBody}>
+            <p className={textBodyClass}>
               Parce que s'orienter n'est pas une chance mais un droit. Notre mission est d’offrir des outils gratuit afin que tu puisses trouver ta voie et croire en toi.
             </p>
           </div>

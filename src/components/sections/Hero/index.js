@@ -20,7 +20,7 @@ const Hero = () => {
 
   const titleClass = classNames(styles.title, typography.title)
   const headlineClass = classNames(styles.headline, typography.h2)
-  const subtitleClass = classNames(styles.subtitle, typography.h4)
+  const subtitleClass = classNames(styles.subtitle, typography.body)
 
   useEffect(() => {
     section.current.classList.add(styles.appeared)

@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import classNames from 'classnames'
 import Container from '../../elements/Container'
 import Matter from 'matter-js'
@@ -14,6 +14,7 @@ const SchoolPlatform = ({ appeared }) => {
   const titleClass = classNames(styles.title, typography.h2)
   const bodyTextClass = classNames(styles.textBody, typography.h3)
   const isMobile = document.body.offsetWidth <= 920
+  const [cursorVisibility, setCursorVisibility] = useState(false)
 
   const canvasWidth = isMobile ? document.body.offsetWidth - 50 : 530
   const canvasHeight = isMobile ? canvasWidth * 1.28 : 470
@@ -24,24 +25,24 @@ const SchoolPlatform = ({ appeared }) => {
     const cursor = document.querySelector('[data-cursor]')
     cursor.style.top = `${e.clientY - 20}px`
     cursor.style.left = `${e.clientX - 30}px`
-  }
 
-  const showCursor = () => {
-    document.querySelector('[data-cursor]').style.opacity = 1;
+    if (!cursorVisibility) {
+      document.querySelector('[data-cursor]').style.opacity = 1;
+      setCursorVisibility(true)
+    }
   }
 
   const hideCursor = () => {
     document.querySelector('[data-cursor]').style.opacity = 0;
+    setCursorVisibility(false)
   }
 
   useEffect(() => {
     scene.current.addEventListener('mousemove', getCoordinate)
-    scene.current.addEventListener('mouseenter', showCursor)
     scene.current.addEventListener('mouseleave', hideCursor)
 
     return () => {
       scene.current.removeEventListener('mousemove', getCoordinate)
-      scene.current.removeEventListener('mouseenter', showCursor)
       scene.current.removeEventListener('mouseleave', hideCursor)
     }
   }, [])
@@ -146,7 +147,7 @@ const SchoolPlatform = ({ appeared }) => {
             </h3>
             <div className={styles.line} />
             <div className={styles.testimonial}>
-              <p className={typography.body}>
+              <p className={typography.bodySmall}>
                 “Nous voulons renverser le sytème d’orientation actuel en créant un outil accessible pour tous les étudiants.”
               </p>
               <p className={styles.label}><span>Marjorie F,</span> Product Owner</p>

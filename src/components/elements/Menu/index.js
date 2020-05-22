@@ -8,7 +8,7 @@ import styles from './style.module.scss'
 import typography from '../../../styles/imports/typography.module.scss'
 
 const Menu = () => (
-  <div data-menu className={classNames(styles.menu, typography.body)}>
+  <div data-menu className={classNames(styles.menu, typography.bodySmall)}>
     <Container>
       <div className={styles.container}>
         <div className={styles.wrapper}>
