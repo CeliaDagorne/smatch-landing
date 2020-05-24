@@ -17,7 +17,7 @@ const SchoolPlatform = ({ appeared }) => {
   const [cursorVisibility, setCursorVisibility] = useState(false)
 
   const canvasWidth = isMobile ? document.body.offsetWidth - 50 : 530
-  const canvasHeight = isMobile ? canvasWidth * 1.28 : 470
+  const canvasHeight = isMobile ? canvasWidth * 0.96 : 470
 
   const scene = useRef(null)
 
@@ -83,6 +83,8 @@ const SchoolPlatform = ({ appeared }) => {
       }})
 
       if (isMobile) {
+        document.querySelector('[data-appear="visual"]').style.height = `${canvasHeight}px`
+
         ball = Bodies.circle(100, 20, 40, { restitution: 0.5, render: {
           fillStyle: '#F8CA36'
         }})

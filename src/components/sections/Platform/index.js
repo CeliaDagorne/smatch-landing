@@ -83,6 +83,8 @@ const Platform = ({ appeared }) => {
       }})
 
       if (isMobile) {
+        document.querySelector('[data-appear="visual"]').style.height = `${canvasHeight}px`
+
         ball = Bodies.circle(100, 20, 40, { restitution: 0.5, render: {
           fillStyle: '#F8CA36'
         }})
