@@ -3,7 +3,7 @@ import classNames from 'classnames'
 import Container from '../../elements/Container'
 import Link from '../../elements/Link'
 import Menu from '../../elements/Menu'
-
+import { AboveSmartphone, Smartphone } from '../../elements/Media'
 
 // styles
 import styles from './style.module.scss'
@@ -32,17 +32,38 @@ const Hero = () => {
       <Container extraClassName={styles.container}>
         <Menu />
         <div className={styles.wrapper}>
-          <div className={headlineClass}>
-            <div>
-              <h2>Match. Explore.</h2>
-            </div>
-            <div>
-              <h2>Construis un avenir</h2>
-            </div>
-            <div>
-              <h2>épanoui.</h2>
-            </div>
-          </div>
+          <AboveSmartphone>
+            <h2 className={headlineClass}>
+              <div>
+                <span>Match. Explore.</span>
+              </div>
+              <div>
+                <span>Construis un avenir</span>
+              </div>
+              <div>
+                <span>épanoui.</span>
+              </div>
+            </h2>
+          </AboveSmartphone>
+          <Smartphone>
+            <h2 className={headlineClass}>
+              <div>
+                <span>Match.</span>
+              </div>
+              <div>
+                <span>Explore.</span>
+              </div>
+              <div>
+                <span>Construis</span>
+              </div>
+              <div>
+                <span>un avenir</span>
+              </div>
+              <div>
+                <span>épanoui.</span>
+              </div>
+            </h2>
+          </Smartphone>
           <h3 className={subtitleClass}>
             <span>
               Nous utilisons des tests inspirés de méthodes de coaching reconnus et une approche personnalisée pour vous accompagner dans votre orientation.

@@ -15,11 +15,11 @@
   }
 }
 
-.container {
-  @include respond-to(mobile) {
-    height: calc(100vh - 120px);
-  }
-}
+// .container {
+//   @include respond-to(mobile) {
+//     height: calc(100vh - 120px);
+//   }
+// }
 
 .wrapper {
   display: block;
@@ -32,7 +32,9 @@
   top: 230px;
 
   @include respond-to(mobile) {
-    top: 200px;
+    margin-top: 100px;
+    position: relative;
+    top: 0;
   }
 }
 
@@ -48,6 +50,7 @@
 
   @include respond-to(mobile) {
     margin-bottom: 0;
+    top: 140px;
   }
 }
 
@@ -55,7 +58,7 @@
   letter-spacing: -6px;
 
   @include respond-to(mobile) {
-    font-size: 35px;
+    font-size: 64px;
   }
 
   > div {
@@ -64,17 +67,19 @@
     width: 100%;
 
     @include respond-to(mobile) {
-      height: 40px;
+      height: 68px;
     }
 
-    h2 {
+    span {
       position: relative;
       top: 100%;
     }
 
-    &:first-child h2 { transition: top .3s ease-in-out 3s; }
-    &:nth-child(2) h2 { transition: top .3s ease-in-out 3.1s; }
-    &:last-child h2 { transition: top .3s ease-in-out 3.2s; }
+    &:first-child span { transition: top .3s ease-in-out 3s; }
+    &:nth-child(2) span { transition: top .3s ease-in-out 3.1s; }
+    &:nth-child(3) span { transition: top .3s ease-in-out 3.2s; }
+    &:nth-child(4) span { transition: top .3s ease-in-out 3.3s; }
+    &:last-child span { transition: top .3s ease-in-out 3.4s; }
   }
 }
 
@@ -84,9 +89,9 @@
   overflow: hidden;
 
   @include respond-to(mobile) {
-    font-size: 16px;
-    height: 104px;
-    margin: 8vh 25px 11vh;
+    font-size: 20px;
+    height: 175px;
+    margin: 40px 25px 50px;
   }
 
   span {
@@ -139,7 +144,7 @@
     transform: translateY(-100px);
   }
 
-  .headline h2,
+  .headline span,
   .subtitle span {
     top: 0;
   }
@@ -157,8 +162,8 @@
       top: -60px;
 
       @include respond-to(mobile) {
-        left: 14px;
-        top: -140px;
+        left: -16px;
+        top: -90px;
       }
     }
     &:nth-child(2) {
@@ -166,8 +171,8 @@
       top: -30px;
 
       @include respond-to(mobile) {
-        right: 12px;
-        top: -140px;
+        right: -28px;
+        top: -40px;
       }
     }
     &:nth-child(3) {
@@ -176,8 +181,8 @@
       top: 220px;
 
       @include respond-to(mobile) {
-        left: 3px;
-        top: 100px;
+        left: -27px;
+        top: 320px;
       }
     }
     &:nth-child(4) {

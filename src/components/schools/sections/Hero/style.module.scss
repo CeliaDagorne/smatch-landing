@@ -15,24 +15,26 @@
   }
 }
 
-.container {
-  @include respond-to(mobile) {
-    height: calc(100vh - 120px);
-  }
-}
+// .container {
+//   @include respond-to(mobile) {
+//     height: calc(100vh - 120px);
+//   }
+// }
 
 .wrapper {
   display: block;
   left: 0;
   margin: auto;
-  max-width: 1090px;
+  max-width: 950px;
   position: absolute;
   right: 0;
   text-align: center;
   top: 230px;
 
   @include respond-to(mobile) {
-    top: 200px;
+    margin-top: 100px;
+    position: relative;
+    top: 0;
   }
 }
 
@@ -48,6 +50,7 @@
 
   @include respond-to(mobile) {
     margin-bottom: 0;
+    top: 140px;
   }
 }
 
@@ -55,10 +58,7 @@
   letter-spacing: -6px;
 
   @include respond-to(mobile) {
-    font-size: 13vw;
-    opacity: 0;
-    padding: 0 25px;
-    transition: opacity .2s ease-in-out 3s;
+    font-size: 64px;
   }
 
   > div {
@@ -67,7 +67,7 @@
     width: 100%;
 
     @include respond-to(mobile) {
-      height: unset;
+      height: 68px;
     }
 
     span {
@@ -77,20 +77,22 @@
 
     &:first-child span { transition: top .3s ease-in-out 3s; }
     &:nth-child(2) span { transition: top .3s ease-in-out 3.1s; }
-    &:last-child span { transition: top .3s ease-in-out 3.2s; }
+    &:nth-child(3) span { transition: top .3s ease-in-out 3.2s; }
+    &:nth-child(4) span { transition: top .3s ease-in-out 3.3s; }
+    &:nth-child(5) span { transition: top .3s ease-in-out 3.4s; }
+    &:last-child span { transition: top .3s ease-in-out 3.5s; }
   }
 }
 
 .subtitle {
   height: 72px;
-  margin: 4vh auto 7vh;
-  max-width: 950px;
+  margin: 4vh 0 7vh;
   overflow: hidden;
 
   @include respond-to(mobile) {
-    font-size: 16px;
-    height: 104px;
-    margin: 8vh 25px 11vh;
+    font-size: 20px;
+    height: 175px;
+    margin: 40px 25px 50px;
   }
 
   span {
@@ -143,12 +145,6 @@
     transform: translateY(-100px);
   }
 
-  .headline {
-    @include respond-to(mobile) {
-      opacity: 1;
-    }
-  }
-
   .headline span,
   .subtitle span {
     top: 0;
@@ -167,8 +163,8 @@
       top: -60px;
 
       @include respond-to(mobile) {
-        left: 14px;
-        top: -140px;
+        left: -16px;
+        top: -90px;
       }
     }
     &:nth-child(2) {
@@ -176,8 +172,8 @@
       top: -30px;
 
       @include respond-to(mobile) {
-        right: 12px;
-        top: -140px;
+        right: -28px;
+        top: -40px;
       }
     }
     &:nth-child(3) {
@@ -186,8 +182,8 @@
       top: 220px;
 
       @include respond-to(mobile) {
-        left: 3px;
-        top: 100px;
+        left: -27px;
+        top: 320px;
       }
     }
     &:nth-child(4) {
