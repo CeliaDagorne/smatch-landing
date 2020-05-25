@@ -15,12 +15,6 @@
   }
 }
 
-// .container {
-//   @include respond-to(mobile) {
-//     height: calc(100vh - 120px);
-//   }
-// }
-
 .wrapper {
   display: block;
   left: 0;
@@ -41,12 +35,11 @@
 .title {
   font-size: 23vw;
   left: 0;
-  margin-bottom: 517px;
   position: absolute;
   right: 0;
   text-align: center;
-  top: 250px;
-  transition: font-size 1s ease-in-out 2s, transform 1s ease-in-out 2s;
+  transition: transform 1s ease-in-out 3s;
+  z-index: 100;
 
   @include respond-to(mobile) {
     margin-bottom: 0;
@@ -141,8 +134,7 @@
   }
 
   .title {
-    font-size: 24px;
-    transform: translateY(-290px) scale(.15);
+    transform: translateY(-35vh) scale(.15);
   }
 
   .headline span,

@@ -3,7 +3,6 @@ import classNames from 'classnames'
 import Container from '../../elements/Container'
 import Link from '../../elements/Link'
 import Menu from '../../elements/Menu'
-// import lottie from 'lottie-web'
 import Lottie from 'react-lottie'
 import data from './title.json'
 import { AboveSmartphone, Smartphone } from '../../elements/Media'
@@ -36,15 +35,6 @@ const Hero = () => {
 
   useEffect(() => {
     section.current.classList.add(styles.appeared)
-    // console.log(lottie, data)
-
-    // lottie.loadAnimation({
-    //   container: document.querySelector('.bodymovin'), // the dom element that will contain the animation
-    //   renderer: 'svg',
-    //   loop: true,
-    //   autoplay: true,
-    //   animationData: data // the path to the animation json
-    // })
   })
 
   return (
@@ -52,7 +42,6 @@ const Hero = () => {
     <div data-title className={titleClass}>
       <Lottie options={defaultOptions} />
     </div>
-      {/* <h1 data-title className={titleClass}>Smatch</h1> */}
       <Container extraClassName={styles.container}>
         <Menu />
         <div className={styles.wrapper}>

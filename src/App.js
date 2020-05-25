@@ -41,10 +41,12 @@ function App() {
     const container = App.current
     const scrollY = container.scrollTop + window.innerHeight
     let titleFixed = false
+    const offset = window.innerHeight / 12.3
 
-    if (!titleFixed && container.scrollTop >= 110 && window.innerWidth >= 920) {
+    if (!titleFixed && container.scrollTop >= offset && window.innerWidth >= 920) {
       title.style.position = 'fixed'
-      title.style.top = '140px'
+      title.style.transition = 'none'
+      title.style.transform = 'translateY(-43.3vh) scale(0.15)'
       titleFixed = true
     }
 

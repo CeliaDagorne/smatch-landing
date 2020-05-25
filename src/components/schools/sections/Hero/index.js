@@ -4,6 +4,8 @@ import Container from '../../elements/Container'
 import Link from '../../elements/Link'
 import Menu from '../../elements/Menu'
 import { AboveSmartphone, Smartphone } from '../../elements/Media'
+import data from './title.json'
+import Lottie from 'react-lottie'
 
 // styles
 import styles from './style.module.scss'
@@ -16,13 +18,24 @@ const SchoolHero = () => {
   const headlineClass = classNames(styles.headline, typography.h2)
   const subtitleClass = classNames(styles.subtitle, typography.h4)
 
+  const defaultOptions = {
+    loop: false,
+    autoplay: true,
+    animationData: data,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  }
+
   useEffect(() => {
     section.current.classList.add(styles.appeared)
   })
 
   return (
     <section ref={section} className={styles.section}>
-      <h1 data-title className={titleClass}>Smatch</h1>
+      <div data-title className={titleClass}>
+        <Lottie options={defaultOptions} />
+      </div>
       <Container extraClassName={styles.container}>
         <Menu />
         <div className={styles.wrapper}>
