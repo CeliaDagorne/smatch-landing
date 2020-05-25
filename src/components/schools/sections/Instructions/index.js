@@ -23,7 +23,7 @@ const SchoolInstructions = () => {
   const accordionTitleClass = classNames('title', styles.accordionTitle, typography.cta)
   const accordionPanelClass = classNames('panel', styles.accordionPanel)
   const [cursorVisibility, setCursorVisibility] = useState(false)
-  const [animIndex, setAnimIndex] = useState([])
+  const [animIndex, setAnimIndex] = useState(null)
 
   const content = [
     {
@@ -108,7 +108,6 @@ const SchoolInstructions = () => {
                     {item.text}
                   </div>
                   <div className={styles.accordionContent}>
-                    {/* <img className={styles.image} src={`/images/instructions/illu-${index}.png`} alt=""/> */}
                     {animIndex === 0 && <Anim1 />}
                     {animIndex === 1 && <Anim2 />}
                     {animIndex === 2 && <Anim3 />}

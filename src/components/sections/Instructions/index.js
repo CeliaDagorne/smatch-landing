@@ -3,6 +3,11 @@ import classNames from 'classnames'
 import Container from '../../elements/Container'
 import Link from '../../elements/Link'
 
+import Anim1 from './animations/anim01'
+import Anim2 from './animations/anim02'
+import Anim3 from './animations/anim03'
+import Anim4 from './animations/anim04'
+
 // Accordion
 import './accordion.scss';
 
@@ -19,6 +24,7 @@ const Instructions = () => {
   const accordionTitleClass = classNames('title', styles.accordionTitle, typography.cta)
   const accordionPanelClass = classNames('panel', styles.accordionPanel)
   const [cursorVisibility, setCursorVisibility] = useState(false)
+  const [animIndex, setAnimIndex] = useState(null)
 
   const content = [
     {
@@ -43,6 +49,11 @@ const Instructions = () => {
     const line = accordion.current.children[index]
     line.classList.toggle('active')
     line.querySelector(`.${styles.cross}`).classList.toggle(styles.activeCross)
+
+    if (line.classList.contains('active')) {
+      setAnimIndex(index)
+    }
+    console.log(animIndex)
   }
 
   const getCoordinate = e => {
@@ -98,7 +109,10 @@ const Instructions = () => {
                     {item.text}
                   </div>
                   <div className={styles.accordionContent}>
-                    <img className={styles.image} src={`/images/instructions/student/illu-${index}.png`} alt=""/>
+                    {animIndex === 0 && <Anim1 />}
+                    {animIndex === 1 && <Anim2 />}
+                    {animIndex === 2 && <Anim3 />}
+                    {animIndex === 3 && <Anim4 />}
                   </div>
                 </div>
               </div>
