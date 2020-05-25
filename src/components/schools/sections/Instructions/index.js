@@ -3,6 +3,10 @@ import classNames from 'classnames'
 import Container from '../../elements/Container'
 import Link from '../../elements/Link'
 
+import Anim1 from './animations/anim01'
+import Anim2 from './animations/anim02'
+import Anim3 from './animations/anim03'
+
 // Accordion
 import './accordion.scss';
 
@@ -19,6 +23,7 @@ const SchoolInstructions = () => {
   const accordionTitleClass = classNames('title', styles.accordionTitle, typography.cta)
   const accordionPanelClass = classNames('panel', styles.accordionPanel)
   const [cursorVisibility, setCursorVisibility] = useState(false)
+  const [animIndex, setAnimIndex] = useState([])
 
   const content = [
     {
@@ -39,6 +44,11 @@ const SchoolInstructions = () => {
     const line = accordion.current.children[index]
     line.classList.toggle('active')
     line.querySelector(`.${styles.cross}`).classList.toggle(styles.activeCross)
+
+    if (line.classList.contains('active')) {
+      setAnimIndex(index)
+    }
+    console.log(animIndex)
   }
 
   const getCoordinate = e => {
@@ -56,6 +66,10 @@ const SchoolInstructions = () => {
     document.querySelector('[data-cursor]').style.opacity = 0;
     setCursorVisibility(false)
   }
+
+  useEffect(() => {
+    console.log(animIndex)
+  }, [animIndex])
 
   useEffect(() => {
     accordion.current.addEventListener('mousemove', getCoordinate)
@@ -94,7 +108,10 @@ const SchoolInstructions = () => {
                     {item.text}
                   </div>
                   <div className={styles.accordionContent}>
-                    <img className={styles.image} src={`/images/instructions/illu-${index}.png`} alt=""/>
+                    {/* <img className={styles.image} src={`/images/instructions/illu-${index}.png`} alt=""/> */}
+                    {animIndex === 0 && <Anim1 />}
+                    {animIndex === 1 && <Anim2 />}
+                    {animIndex === 2 && <Anim3 />}
                   </div>
                 </div>
               </div>
