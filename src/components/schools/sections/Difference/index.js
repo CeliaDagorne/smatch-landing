@@ -41,7 +41,7 @@ const SchoolDifference = () => {
               </h3>
             </div>
             <p className={bodyTextClass}>
-              Smatch met à disposition une équipe de tournage et des outils afin de renforcer l’identité visuelle et créer du contenu de qualité afin de renforcer votre image.
+              Smatch met à disposition une équipe de tournage et des outils pour renforcer votre identité visuelle et créer du contenu de qualité, afin de renforcer votre image.
             </p>
           </div>
           <img className={styles.shape} src={circle} alt=""/>
@@ -62,8 +62,8 @@ const SchoolDifference = () => {
             {/* <img className={styles.shapeMobile} src={rectangle} alt=""/> */}
             <div className={itemTitleClass}>
               <h3>
-                <span>Une solution sur</span>
-                <span>mesure</span>
+                <span>Vous amener les</span>
+                <span>bons étudiants</span>
               </h3>
             </div>
             <p className={bodyTextClass}>
