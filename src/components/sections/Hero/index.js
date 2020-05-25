@@ -3,6 +3,9 @@ import classNames from 'classnames'
 import Container from '../../elements/Container'
 import Link from '../../elements/Link'
 import Menu from '../../elements/Menu'
+// import lottie from 'lottie-web'
+import Lottie from 'react-lottie'
+import data from './title.json'
 import { AboveSmartphone, Smartphone } from '../../elements/Media'
 
 // styles
@@ -22,13 +25,34 @@ const Hero = () => {
   const headlineClass = classNames(styles.headline, typography.h2)
   const subtitleClass = classNames(styles.subtitle, typography.body)
 
+  const defaultOptions = {
+    loop: false,
+    autoplay: true,
+    animationData: data,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  }
+
   useEffect(() => {
     section.current.classList.add(styles.appeared)
+    // console.log(lottie, data)
+
+    // lottie.loadAnimation({
+    //   container: document.querySelector('.bodymovin'), // the dom element that will contain the animation
+    //   renderer: 'svg',
+    //   loop: true,
+    //   autoplay: true,
+    //   animationData: data // the path to the animation json
+    // })
   })
 
   return (
     <section ref={section} className={styles.section}>
-      <h1 data-title className={titleClass}>Smatch</h1>
+    <div data-title className={titleClass}>
+      <Lottie options={defaultOptions} />
+    </div>
+      {/* <h1 data-title className={titleClass}>Smatch</h1> */}
       <Container extraClassName={styles.container}>
         <Menu />
         <div className={styles.wrapper}>

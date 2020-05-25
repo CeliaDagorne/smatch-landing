@@ -45,8 +45,9 @@
   position: absolute;
   right: 0;
   text-align: center;
-  top: 250px;
-  transition: font-size 1s ease-in-out 2s, transform 1s ease-in-out 2s;
+  top: 0;
+  transition: transform 1s ease-in-out 3s;
+  z-index: 100;
 
   @include respond-to(mobile) {
     margin-bottom: 0;
@@ -75,11 +76,11 @@
       top: 100%;
     }
 
-    &:first-child span { transition: top .3s ease-in-out 3s; }
-    &:nth-child(2) span { transition: top .3s ease-in-out 3.1s; }
-    &:nth-child(3) span { transition: top .3s ease-in-out 3.2s; }
-    &:nth-child(4) span { transition: top .3s ease-in-out 3.3s; }
-    &:nth-child(5) span { transition: top .3s ease-in-out 3.4s; }
+    &:first-child span { transition: top .3s ease-in-out 4s; }
+    &:nth-child(2) span { transition: top .3s ease-in-out 4.1s; }
+    &:nth-child(3) span { transition: top .3s ease-in-out 4.2s; }
+    &:nth-child(4) span { transition: top .3s ease-in-out 4.3s; }
+    &:nth-child(5) span { transition: top .3s ease-in-out 4.4s; }
   }
 }
 
@@ -97,14 +98,14 @@
   span {
     position: relative;
     top: 100%;
-    transition: top .3s ease-in-out 3.3s;
+    transition: top .3s ease-in-out 4.3s;
   }
 }
 
 .button {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity .5s ease-in-out 3.4s, transform .5s ease-in-out 3.4s;
+  transition: opacity .5s ease-in-out 4.4s, transform .5s ease-in-out 4.4s;
 }
 
 .stickers {
@@ -114,7 +115,7 @@
     opacity: 0;
     position: absolute;
     top: 30%;
-    transition: top 1s ease-in-out 3.6s, left 1s ease-in-out 3.6s, right 1s ease-in-out 3.6s, opacity .6s ease-in-out 3.8s;
+    transition: top 1s ease-in-out 4.6s, left 1s ease-in-out 4.6s, right 1s ease-in-out 4.6s, opacity .6s ease-in-out 4.8s;
 
     @include respond-to(mobile) {
       height: 98px;
@@ -141,7 +142,8 @@
 
   .title {
     font-size: 24px;
-    transform: translateY(-100px);
+    transform: translateY(-290px) scale(.15);
+
   }
 
   .headline span,
