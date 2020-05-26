@@ -48,9 +48,7 @@ const Hero = () => {
         <AboveSmartphone>
           <Menu />
         </AboveSmartphone>
-        <Smartphone>
-          <Burger />
-        </Smartphone>
+
         <div className={styles.wrapper}>
           <AboveSmartphone>
             <h2 className={headlineClass}>
