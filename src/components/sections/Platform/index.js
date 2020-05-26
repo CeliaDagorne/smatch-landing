@@ -166,7 +166,7 @@ const Platform = ({ appeared }) => {
       <Container>
         <h2 data-appear="single-up" className={titleClass}>La plateforme unique pour ton futur</h2>
         <div className={styles.wrapper}>
-          <div  data-appear="visual" className={styles.visual}>
+          <div data-appear="visual" className={styles.visual}>
             <img src={window} alt=""/>
             <div className={styles.canvas} ref={scene} />
             {/* <div className={styles.circle}/>
