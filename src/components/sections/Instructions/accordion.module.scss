@@ -60,12 +60,22 @@
 			width: calc(100vw - 50px);
 		}
 	}
-	&:last-child .text + div {
-		@include respond-to(mobile) {
-			height: 100vw;
-			margin-top: -10vw;
-			right: 8vw;
-			width: calc(100vw - 50px);
+
+	&:last-child {
+
+		.text {
+			@include respond-to(mobile) {
+				margin-bottom: 12vw;
+			}
+
+			+ div {
+				@include respond-to(mobile) {
+					height: 100vw;
+					margin-top: -10vw;
+					right: 8vw;
+					width: calc(100vw - 50px);
+				}
+			}
 		}
 	}
 }
@@ -134,7 +144,7 @@
 		font-size: 36px;
 		line-height: 1.2;
 		max-width: 470px;
-		padding-bottom: 100px;
+		padding-bottom: 80px;
 
 		@include respond-to(mobile) {
 			font-size: 20px;
