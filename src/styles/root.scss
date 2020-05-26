@@ -37,7 +37,8 @@ a {
 }
 
 [data-cursor],
-[data-cursor-smiley] {
+[data-cursor-smiley],
+[data-cursor-smiley-blue] {
   opacity: 0;
   pointer-events: none;
   position: fixed;
@@ -49,7 +50,8 @@ a {
   }
 }
 
-[data-cursor-smiley] {
+[data-cursor-smiley],
+[data-cursor-smiley-blue] {
   width: 197px;
 }
 

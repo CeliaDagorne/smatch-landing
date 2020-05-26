@@ -68,6 +68,7 @@
 
   &:nth-child(even) {
     margin-left: auto;
+    text-align: right;
     width: 320px;
 
     @include respond-to(mobile) {

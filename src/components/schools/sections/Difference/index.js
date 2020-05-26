@@ -4,7 +4,7 @@ import Container from '../../elements/Container'
 
 // shapes
 import circle from '../../../../assets/images/circle-yellow.svg'
-import rectangle from '../../../../assets/images/rectangle.svg'
+import rectangle from '../../../../assets/images/rectangle-blue.svg'
 import triangle from '../../../../assets/images/triangle.svg'
 
 // styles
@@ -70,7 +70,7 @@ const SchoolDifference = () => {
               Smatch met en place des activités d’introspection et de matching, permettant de faire le lien entre les lycéens concernés par votre formation, et vous.
             </p>
           </div>
-          <img className={styles.shape} src={triangle} alt=""/>
+          <img className={styles.shape} src={rectangle} alt=""/>
         </div>
       </Container>
     </section>

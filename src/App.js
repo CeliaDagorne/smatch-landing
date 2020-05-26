@@ -94,6 +94,7 @@ function App() {
         </Switch>
         <img data-cursor src="/images/stickers/cursor.svg" alt="Curseur"/>
         <img data-cursor-smiley src="/images/stickers/smiley-orange.svg" alt="Curseur"/>
+        <img data-cursor-smiley-blue src="/images/stickers/smiley-blue-light.svg" alt="Curseur"/>
       </div>
     </Router>
   )

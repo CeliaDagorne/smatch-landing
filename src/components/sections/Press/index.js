@@ -12,27 +12,27 @@ const Press = () => {
 
   const content = [
     {
-      "img": "konbini.svg",
+      "img": "konbini.png",
       "link": "/",
     },
     {
-      "img": "brut.svg",
+      "img": "brut.png",
       "link": "/",
     },
     {
-      "img": "loop.svg",
+      "img": "loop.png",
       "link": "/",
     },
     {
-      "img": "france-tv.svg",
+      "img": "france-tv.png",
       "link": "/",
     },
     {
-      "img": "slate.svg",
+      "img": "slate.png",
       "link": "/",
     },
     {
-      "img": "nova.svg",
+      "img": "nova.png",
       "link": "/",
     },
   ]

@@ -152,7 +152,6 @@ const Platform = ({ appeared }) => {
       scene.current.addEventListener('click', () => {
         World.add(engine.world, addCircle())
       })
-      console.log('event', scene.current)
 
       World.add(engine.world, [ball, rect, triangle])
       World.add(engine.world, mouseConstraint)
