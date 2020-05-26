@@ -50,10 +50,13 @@ const Instructions = () => {
     line.classList.toggle('active')
     line.querySelector(`.${styles.cross}`).classList.toggle(styles.activeCross)
 
-    if (line.classList.contains('active')) {
-      setAnimIndex(index)
-    }
-    console.log(animIndex)
+    // if (line.classList.contains('active')) {
+    //   setAnimIndex(index)
+    //   console.log('opened')
+    // }
+    setAnimIndex(index)
+
+    console.log(animIndex, index)
   }
 
   const getCoordinate = e => {
@@ -109,10 +112,10 @@ const Instructions = () => {
                     {item.text}
                   </div>
                   <div className={styles.accordionContent}>
-                    {index === 0 && <Anim1 />}
-                    {index === 1 && <Anim2 />}
-                    {index === 2 && <Anim3 />}
-                    {index === 3 && <Anim4 />}
+                    {index === 0 && <Anim1 play={animIndex === 0} />}
+                    {index === 1 && <Anim2 play={animIndex === 1} />}
+                    {index === 2 && <Anim3 play={animIndex === 2} />}
+                    {index === 3 && <Anim4 play={animIndex === 3} />}
                   </div>
                 </div>
               </div>

@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Lottie from 'react-lottie'
-import anim04 from './anim-03.json'
+import anim04 from './anim-04.json'
 
-const Anim3 = () => {
+const Anim4 = ({ play }) => {
 
   const defaultOptions = {
     loop: false,
@@ -11,9 +11,12 @@ const Anim3 = () => {
   }
 
   return (
-    <Lottie options={defaultOptions}
-/>
+    <Lottie
+      options={defaultOptions}
+      isStopped={!play}
+      isPaused={!play}
+    />
   )
 }
 
-export default Anim3
+export default Anim4
