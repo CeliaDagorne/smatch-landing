@@ -43,7 +43,7 @@ const Accessible = () => {
       <Container>
         <div>
           <h2 data-appear="single-up" className={titleClass}>
-            Gratuit et accessible à tous.te.s
+            Gratuit et accessible à tou.te.s
           </h2>
         </div>
         <div>

@@ -10,10 +10,83 @@ import Anim4 from './animations/anim04'
 
 // Accordion
 import './accordion.scss';
+import accordionStyles from './accordion.module.scss';
 
 // styles
 import styles from './style.module.scss'
 import typography from '../../../styles/imports/typography.module.scss'
+
+const Panel = ({ label, content, activeTab, index, activateTab }) => {
+  const [height, setHeight] = useState(0)
+  const panelRef = useRef(null)
+
+  const isActive = activeTab === index;
+  const innerStyle = {
+    height:  `${isActive ? height : 0}px`
+  }
+
+  useEffect(() => {
+		window.setTimeout(() => {
+      const el = panelRef.current
+			const newHeight = el.querySelector(`.${accordionStyles.inner}`).scrollHeight
+			setHeight(newHeight)
+		}, 333)
+  })
+
+  return (
+    <div ref={panelRef} className={accordionStyles.panel}
+      role="tabpanel"
+      aria-expanded={ isActive }
+    >
+      <button
+        className={accordionStyles.label}
+        role="tab"
+        onClick={activateTab}>
+        {label}
+      </button>
+      <div
+        className={accordionStyles.inner}
+        style={innerStyle}
+        aria-hidden={!isActive}
+      >
+        <div className={accordionStyles.content}>
+          <div className={accordionStyles.text}>
+            {content}
+          </div>
+          <div className={styles.accordionContent}>
+            {index === 0 && <Anim1 play={activeTab === 0} />}
+            {index === 1 && <Anim2 play={activeTab === 1} />}
+            {index === 2 && <Anim3 play={activeTab === 2} />}
+            {index === 3 && <Anim4 play={activeTab === 3} />}
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+const Accordion = ({ panels }) => {
+  const [activeTab, setActiveTab] = useState(null)
+
+	const activateTab = index => {
+    const newActiveTab = activeTab === index ? -1 : index
+    setActiveTab(newActiveTab)
+	}
+
+  return (
+    <div data-appear="slide-left" className={accordionStyles.accordion} role="tablist">
+      {panels.map((panel, index) =>
+        <Panel
+          key={ index }
+          activeTab={ activeTab }
+          index={ index }
+          { ...panel }
+          activateTab={ () => { activateTab(index) } }
+        />
+      )}
+    </div>
+  )
+}
 
 const Instructions = () => {
   const accordion = useRef(null)
@@ -26,41 +99,24 @@ const Instructions = () => {
   const [cursorVisibility, setCursorVisibility] = useState(false)
   const [animIndex, setAnimIndex] = useState(null)
 
-  const content = [
+  const panels = [
     {
-      "title": "Créer",
-      "text": "Crée et enrichis ton profil à travers notre programme composé de plusieurs tests d’introspection. Ce profil regroupera tes compétences, tes aspirations, tes matchs ainsi que les formations qui t'intéressent.",
+      label: "Créer",
+      content: "Crée et enrichis ton profil à travers notre programme composé de plusieurs tests d’introspection. Ce profil regroupera tes compétences, tes aspirations, tes matchs ainsi que les formations qui t'intéressent.",
     },
     {
-      "title": "Réveler",
-      "text": "Révèle tes compétences, limitants, contraintes et aspirations à travers ces tests. Cela te permettra d’obtenir des propositions de formations et de métiers qui te correspondent le plus.",
+      label: "Révéler",
+      content: "Révèle tes compétences, limitants, contraintes et aspirations à travers ces tests. Cela te permettra d’obtenir des propositions de formations et de métiers qui te correspondent le plus.",
     },
     {
-      "title": "Découvrir & Explorer",
-      "text": "Découvre d’autres voies d’orientation et explore un grand nombre de formations scolaires repertoriées sur la plateforme.",
+      label: "Découvrir & Explorer",
+      content: "Découvre d’autres voies d’orientation et explore un grand nombre de formations scolaires repertoriées sur la plateforme.",
     },
     {
-      "title": "Concrétiser",
-      "text": "Smatch est un facilitateur qui agit tant sur le plan du conseil d’orientation que dans la mise en relation avec ta future école. Smatch te permet ainsi de prendre contact facilement avec cette dernière via la plateforme afin d’atteindre tes objectifs.",
+      "label": "Concrétiser",
+      "content": "Smatch est un facilitateur qui agit tant sur le plan du conseil d’orientation que dans la mise en relation avec ta future école. Smatch te permet ainsi de prendre contact facilement avec cette dernière via la plateforme afin d’atteindre tes objectifs.",
     },
   ]
-
-  const toggleAccordion = index => {
-    const line = accordion.current.children[index]
-
-    if (accordion.current.querySelector('.active')) {
-      if (accordion.current.querySelector('.active') !== line) {
-        const activeLine = accordion.current.querySelector('.active')
-        activeLine.classList.remove('active')
-        activeLine.querySelector(`.${styles.cross}`).classList.toggle(styles.activeCross)
-      }
-    }
-
-    line.classList.toggle('active')
-    line.querySelector(`.${styles.cross}`).classList.toggle(styles.activeCross)
-
-    setAnimIndex(index)
-  }
 
   const getCoordinate = e => {
     const cursor = document.querySelector('[data-cursor]')
@@ -78,15 +134,15 @@ const Instructions = () => {
     document.querySelector('[data-cursor]').style.opacity = 0;
   }
 
-  useEffect(() => {
-    accordion.current.addEventListener('mousemove', getCoordinate)
-    accordion.current.addEventListener('mouseleave', hideCursor)
+  // useEffect(() => {
+  //   accordion.current.addEventListener('mousemove', getCoordinate)
+  //   accordion.current.addEventListener('mouseleave', hideCursor)
 
-    return () => {
-      accordion.current.removeEventListener('mousemove', getCoordinate)
-      accordion.current.removeEventListener('mouseleave', hideCursor)
-    }
-  }, [])
+  //   return () => {
+  //     accordion.current.removeEventListener('mousemove', getCoordinate)
+  //     accordion.current.removeEventListener('mouseleave', hideCursor)
+  //   }
+  // }, [])
 
   return (
     <section className={styles.section}>
@@ -99,32 +155,7 @@ const Instructions = () => {
           </h4>
         </div>
 
-        {content && (
-          <div data-appear="slide-left" ref={accordion} className="accordion">
-            {content.map( (item, index) => (
-              <div className={accordionItemClass} key={item.title}>
-                <div className={accordionTitleClass} onClick={() => toggleAccordion(index)}>
-                  <p>{item.title}</p>
-                  <div className={styles.cross}>
-                    <div/>
-                    <div/>
-                  </div>
-                </div>
-                <div className={accordionPanelClass}>
-                  <div className={styles.accordionText}>
-                    {item.text}
-                  </div>
-                  <div className={styles.accordionContent}>
-                    {index === 0 && <Anim1 play={animIndex === 0} />}
-                    {index === 1 && <Anim2 play={animIndex === 1} />}
-                    {index === 2 && <Anim3 play={animIndex === 2} />}
-                    {index === 3 && <Anim4 play={animIndex === 3} />}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
+        <Accordion panels={panels}/>
 
         <div className={styles.footer}>
           <div data-appear="slide-up" className={styles.footerContainer}>

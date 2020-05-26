@@ -41,6 +41,10 @@
   transition: height .2s ease-in-out;
   width: 480px;
 
+  @include respond-to(mobile) {
+    display: none;
+  }
+
   &.isVisible {
     height: 270px;
   }

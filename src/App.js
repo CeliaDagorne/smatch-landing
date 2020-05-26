@@ -33,7 +33,7 @@ import Footer from './components/elements/Footer'
 
 function App() {
   const App = useRef(null)
-  const [visual, setVisual] = useState(false);
+  const [visual, setVisual] = useState(false)
 
   const handleScroll = () => {
     const sections = document.querySelectorAll('[data-appear]')
