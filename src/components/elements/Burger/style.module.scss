@@ -96,14 +96,14 @@ li {
     letter-spacing: -6px;
     transition: color .3s ease-in-out;
 
-    &:hover {
+    &.active {
       color: $color-blue--light;
     }
   }
 }
 
 .school {
-  .item a:hover {
+  .item a.active {
     color: $color-salmon;
   }
 }

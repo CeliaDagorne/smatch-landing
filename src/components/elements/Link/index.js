@@ -5,8 +5,8 @@ import classNames from 'classnames'
 import styles from './style.module.scss'
 import typography from '../../../styles/imports/typography.module.scss'
 
-const Link = ({ button, to, innerRef, children, dark }) => {
-  const style = classNames({ [styles.button]: button }, typography.button, { [styles.dark]: dark })
+const Link = ({ button, extraClassName, to, innerRef, children, dark }) => {
+  const style = classNames({ [styles.button]: button }, typography.button, { [styles.dark]: dark }, { [extraClassName]: extraClassName })
 
   const handleKeypress = event => {
     if (event.key === 'Enter') {

@@ -34,10 +34,10 @@ const Burger = ({ school }) => {
         <nav>
           <ul>
             <li className={styles.item}>
-              <Link to="/">Étudiants</Link>
+              <Link extraClassName={!school ? styles.active : null} to="/">Étudiants</Link>
             </li>
             <li className={styles.item}>
-              <Link to="/ecoles">Écoles</Link>
+              <Link extraClassName={school ? styles.active : null} to="/ecoles">Écoles</Link>
             </li>
             <li className={styles.item}>
               <Link to="/" href="">Smatch.fr</Link>
