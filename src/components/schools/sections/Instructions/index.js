@@ -44,7 +44,11 @@ const SchoolInstructions = () => {
     const line = accordion.current.children[index]
 
     if (accordion.current.querySelector('.active')) {
-      accordion.current.querySelector('.active').classList.remove('active')
+      if (accordion.current.querySelector('.active') !== line) {
+        const activeLine = accordion.current.querySelector('.active')
+        activeLine.classList.remove('active')
+        activeLine.querySelector(`.${styles.cross}`).classList.toggle(styles.activeCross)
+      }
     }
 
     line.classList.toggle('active')
