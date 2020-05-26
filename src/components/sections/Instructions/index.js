@@ -47,16 +47,15 @@ const Instructions = () => {
 
   const toggleAccordion = index => {
     const line = accordion.current.children[index]
+
+    if (accordion.current.querySelector('.active')) {
+      accordion.current.querySelector('.active').classList.remove('active')
+    }
+
     line.classList.toggle('active')
     line.querySelector(`.${styles.cross}`).classList.toggle(styles.activeCross)
 
-    // if (line.classList.contains('active')) {
-    //   setAnimIndex(index)
-    //   console.log('opened')
-    // }
     setAnimIndex(index)
-
-    console.log(animIndex, index)
   }
 
   const getCoordinate = e => {
