@@ -137,7 +137,7 @@
     transform: translateY(-35vh) scale(.15);
 
     @include respond-to(mobile) {
-      transform: translateY(calc(-33vh + 50px)) scale(.45);
+      transform: translateY(calc(-33vh + 40px)) scale(.45);
     }
   }
 
