@@ -122,6 +122,38 @@ const SchoolPlatform = ({ appeared }) => {
         }
       })
 
+      const addCircle = function () {
+        const colorsArray = ['#4ABC86', '#F8CA36', '#FFB4C8']
+        const shapeArray = ['triangle', 'rectangle', 'circle']
+        const randomIndex = Math.floor(Math.random() * colorsArray.length)
+
+        switch (shapeArray[randomIndex]) {
+          case 'triangle':
+            console.log('triangla')
+            return Bodies.polygon(Math.random() * 400 + 30, 40, 3, 80, { restitution: 0.5, render: {
+              fillStyle: colorsArray[Math.floor(Math.random() * colorsArray.length)]
+            }})
+          case 'rectangle':
+            console.log('rect')
+            return Bodies.rectangle(Math.random() * 400 + 30, 30, 80, 80, { restitution: 0.5, render: {
+              fillStyle: colorsArray[Math.floor(Math.random() * colorsArray.length)]
+            }})
+          case 'circle':
+            console.log('circ')
+            return Bodies.circle(Math.random() * 400 + 30, 30, 60, { restitution: 0.5, render: {
+              fillStyle: colorsArray[Math.floor(Math.random() * colorsArray.length)]
+            }})
+          default:
+            return Bodies.circle(Math.random() * 400 + 30, 80, 80, { restitution: 0.5, render: {
+              fillStyle: colorsArray[Math.floor(Math.random() * colorsArray.length)]
+            }})
+        }
+      }
+
+      scene.current.addEventListener('click', () => {
+        World.add(engine.world, addCircle())
+      })
+
       World.add(engine.world, [ball, rect, triangle])
       World.add(engine.world, mouseConstraint)
 
