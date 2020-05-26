@@ -24,7 +24,14 @@
   font-size: 36px;
   line-height: 1.2;
   max-width: 470px;
-  padding-bottom: 100px
+  padding-bottom: 100px;
+
+  @include respond-to(mobile) {
+    font-size: 20px;
+    max-width: unset;
+    padding-bottom: 50px;
+    width: 100%;
+  }
 }
 
 .accordionTitle {
@@ -96,6 +103,10 @@
   margin-bottom: 50px;
   position: relative;
   width: calc(100% - 640px);
+
+  @include respond-to(mobile) {
+    width: 100%;
+  }
 
   img {
     position: absolute;

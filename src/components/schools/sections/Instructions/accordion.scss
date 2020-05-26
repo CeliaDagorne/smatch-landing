@@ -30,6 +30,10 @@
       max-height: 0;
       overflow: hidden;
       transition: max-height .15s ease-out;
+
+      @include respond-to(mobile) {
+        display: block;
+      }
     }
 
     &.active {
