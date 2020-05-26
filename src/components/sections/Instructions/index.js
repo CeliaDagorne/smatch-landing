@@ -109,10 +109,10 @@ const Instructions = () => {
                     {item.text}
                   </div>
                   <div className={styles.accordionContent}>
-                    {animIndex === 0 && <Anim1 />}
-                    {animIndex === 1 && <Anim2 />}
-                    {animIndex === 2 && <Anim3 />}
-                    {animIndex === 3 && <Anim4 />}
+                    {index === 0 && <Anim1 />}
+                    {index === 1 && <Anim2 />}
+                    {index === 2 && <Anim3 />}
+                    {index === 3 && <Anim4 />}
                   </div>
                 </div>
               </div>

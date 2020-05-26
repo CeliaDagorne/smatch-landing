@@ -11,8 +11,7 @@ const Anim1 = () => {
   }
 
   return (
-    <Lottie options={defaultOptions}
-/>
+    <Lottie options={defaultOptions} />
   )
 }
 
