@@ -134,7 +134,7 @@
   }
 
   .title {
-    transform: translateY(-35vh) scale(.15);
+    transform: translateY(calc(-30vh + 50px)) scale(.45);
   }
 
   .headline span,
