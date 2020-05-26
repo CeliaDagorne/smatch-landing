@@ -91,7 +91,7 @@ const Instructions = () => {
           <p className={typography.eyebrow}>Comment ça marche ?</p>
           <h2 className={titleClass}>L'orientation à portée<br/>de mains</h2>
           <h4 className={subtitleClass}>
-            Crée toi un profil et rélève tes compétences afin de découvrir et explorer le monde professionnel.
+            Crée toi un profil et révèle tes compétences afin de découvrir et explorer le monde professionnel.
           </h4>
         </div>
 

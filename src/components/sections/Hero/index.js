@@ -6,6 +6,7 @@ import Menu from '../../elements/Menu'
 import Lottie from 'react-lottie'
 import data from './title.json'
 import { AboveSmartphone, Smartphone } from '../../elements/Media'
+import Burger from '../../elements/Burger'
 
 // styles
 import styles from './style.module.scss'
@@ -16,6 +17,7 @@ import cursor from '../../../assets/images/stickers/cursor-pink.svg'
 import globe from '../../../assets/images/stickers/globe.svg'
 import smiley from '../../../assets/images/stickers/smiley-yellow.svg'
 import validate from '../../../assets/images/stickers/validate.svg'
+
 
 const Hero = () => {
   const section = useRef(null)
@@ -39,11 +41,16 @@ const Hero = () => {
 
   return (
     <section ref={section} className={styles.section}>
-    <div data-title className={titleClass}>
-      <Lottie options={defaultOptions} />
-    </div>
+      <div data-title className={titleClass}>
+        <Lottie options={defaultOptions} />
+      </div>
       <Container extraClassName={styles.container}>
-        <Menu />
+        <AboveSmartphone>
+          <Menu />
+        </AboveSmartphone>
+        <Smartphone>
+          <Burger />
+        </Smartphone>
         <div className={styles.wrapper}>
           <AboveSmartphone>
             <h2 className={headlineClass}>

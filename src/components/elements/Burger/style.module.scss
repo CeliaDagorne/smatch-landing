@@ -1,0 +1,109 @@
+@import '../../../styles/imports/index.scss';
+
+.menu {
+  background: #242424;
+  box-sizing: border-box;
+  height: 100vh;
+  left: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 30% 10% 16%;
+  pointer-events: none;
+  position: absolute;
+  position: fixed;
+  top: 0;
+  transition: opacity .5s ease-in-out;
+  width: 100%;
+  z-index: 20;
+
+  &.open {
+    display: block;
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+.wrap {
+  position: absolute;
+  transition: 300ms 700ms transform ease-in;
+  z-index: 40;
+
+  &.reappearBurger {
+    animation: .5s 2s fadeAppear ease-out forwards;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeAppear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.burger {
+  cursor: pointer;
+  height: 27px;
+  position: fixed;
+  right: 8vw;
+  top: 30px;
+  transition: transform 1s ease-in;
+  width: 30px;
+  z-index: 30;
+
+  span {
+    background: $color-white;
+    display: block;
+    height: 4px;
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+    width: 100%;
+
+    &:nth-child(1) {
+      top: 0px;
+    }
+    &:nth-child(2) {
+      top: 10px;
+    }
+  }
+
+  &.active {
+    span:nth-child(1) {
+      top: 12px;
+      transform: rotate(135deg);
+      width: 100%;
+    }
+
+    span:nth-child(2) {
+      top: 12px;
+      transform: rotate(-135deg);
+    }
+  }
+}
+
+li {
+  margin-bottom: 6vh;
+}
+
+.item {
+  a {
+    font-size: 64px;
+    letter-spacing: -6px;
+    transition: color .3s ease-in-out;
+
+    &:hover {
+      color: $color-blue--light;
+    }
+  }
+}
+
+.school {
+  .item a:hover {
+    color: $color-salmon;
+  }
+}

@@ -6,6 +6,7 @@ import Menu from '../../elements/Menu'
 import { AboveSmartphone, Smartphone } from '../../elements/Media'
 import data from './title.json'
 import Lottie from 'react-lottie'
+import Burger from '../../../elements/Burger'
 
 // styles
 import styles from './style.module.scss'
@@ -37,7 +38,12 @@ const SchoolHero = () => {
         <Lottie options={defaultOptions} />
       </div>
       <Container extraClassName={styles.container}>
-        <Menu />
+        <AboveSmartphone>
+          <Menu />
+        </AboveSmartphone>
+        <Smartphone>
+          <Burger school />
+        </Smartphone>
         <div className={styles.wrapper}>
           <AboveSmartphone>
             <h2 className={headlineClass}>
