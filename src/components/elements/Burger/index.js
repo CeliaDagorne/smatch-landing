@@ -11,9 +11,15 @@ const Burger = ({ school }) => {
   const menu = useRef(null)
 
   const toggle = () => {
+    const title = document.querySelector('[data-title]')
     burger.current.classList.toggle(styles.active)
     menu.current.classList.toggle(styles.open)
-    console.log(burger, menu)
+
+    if (menu.current.classList.contains(styles.open)) {
+      title.style.filter = 'brightness(0) invert(1)'
+    } else {
+      title.style.filter = 'none'
+    }
   }
 
   return (

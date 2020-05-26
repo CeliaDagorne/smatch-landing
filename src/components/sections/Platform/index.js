@@ -128,17 +128,14 @@ const Platform = ({ appeared }) => {
 
         switch (shapeArray[randomIndex]) {
           case 'triangle':
-            console.log('triangla')
             return Bodies.polygon(Math.random() * 400 + 30, 40, 3, 80, { restitution: 0.5, render: {
               fillStyle: colorsArray[Math.floor(Math.random() * colorsArray.length)]
             }})
           case 'rectangle':
-            console.log('rect')
             return Bodies.rectangle(Math.random() * 400 + 30, 30, 80, 80, { restitution: 0.5, render: {
               fillStyle: colorsArray[Math.floor(Math.random() * colorsArray.length)]
             }})
           case 'circle':
-            console.log('circ')
             return Bodies.circle(Math.random() * 400 + 30, 30, 60, { restitution: 0.5, render: {
               fillStyle: colorsArray[Math.floor(Math.random() * colorsArray.length)]
             }})

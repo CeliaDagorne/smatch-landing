@@ -74,10 +74,6 @@ const SchoolInstructions = () => {
   }
 
   useEffect(() => {
-    console.log(animIndex)
-  }, [animIndex])
-
-  useEffect(() => {
     accordion.current.addEventListener('mousemove', getCoordinate)
     accordion.current.addEventListener('mouseleave', hideCursor)
 
