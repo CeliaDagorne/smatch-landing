@@ -36,6 +36,24 @@
 	}
 
 	&:first-child .text + div {
+		@include respond-to(desktop) {
+			margin-top: -7vh;
+		}
+		@include respond-to(mobile) {
+			height: 100vw;
+			margin-top: -10vw;
+			width: calc(100vw - 50px);
+		}
+	}
+	&:nth-child(2) .text + div {
+		@include respond-to(desktop) {
+			margin-top: -10vh;
+		}
+	}
+	&:nth-child(3) .text + div {
+		@include respond-to(desktop) {
+			margin-top: -7vh;
+		}
 		@include respond-to(mobile) {
 			height: 100vw;
 			margin-top: -10vw;
