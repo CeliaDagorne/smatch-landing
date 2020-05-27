@@ -92,10 +92,7 @@ const Instructions = () => {
   const accordion = useRef(null)
   const titleClass = classNames(styles.title, typography.h2)
   const subtitleClass = classNames(styles.subtitle, typography.body)
-  const accordionItemClass = classNames('accordion-item', styles.accordionItem)
   const footerLabelClass = classNames(styles.footerLabel, typography.h3)
-  const accordionTitleClass = classNames('title', styles.accordionTitle, typography.cta)
-  const accordionPanelClass = classNames('panel', styles.accordionPanel)
   const [cursorVisibility, setCursorVisibility] = useState(false)
   const [animIndex, setAnimIndex] = useState(null)
 
@@ -134,15 +131,15 @@ const Instructions = () => {
     document.querySelector('[data-cursor]').style.opacity = 0;
   }
 
-  // useEffect(() => {
-  //   accordion.current.addEventListener('mousemove', getCoordinate)
-  //   accordion.current.addEventListener('mouseleave', hideCursor)
+  useEffect(() => {
+    accordion.current.addEventListener('mousemove', getCoordinate)
+    accordion.current.addEventListener('mouseleave', hideCursor)
 
-  //   return () => {
-  //     accordion.current.removeEventListener('mousemove', getCoordinate)
-  //     accordion.current.removeEventListener('mouseleave', hideCursor)
-  //   }
-  // }, [])
+    return () => {
+      accordion.current.removeEventListener('mousemove', getCoordinate)
+      accordion.current.removeEventListener('mouseleave', hideCursor)
+    }
+  }, [])
 
   return (
     <section className={styles.section}>
@@ -154,9 +151,9 @@ const Instructions = () => {
             Crée toi un profil et révèle tes compétences afin de découvrir et explorer le monde professionnel.
           </h4>
         </div>
-
-        <Accordion panels={panels}/>
-
+        <div className={styles.noCursor} ref={accordion}>
+          <Accordion panels={panels}/>
+        </div>
         <div className={styles.footer}>
           <div data-appear="slide-up" className={styles.footerContainer}>
             <h3 className={footerLabelClass}>

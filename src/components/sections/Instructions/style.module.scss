@@ -183,3 +183,11 @@
     margin-bottom: 80px;
   }
 }
+
+.noCursor {
+  cursor: none;
+
+  * {
+    cursor: none;
+  }
+}
