@@ -3,6 +3,7 @@
 .h2 {
   font-size: 96px;
   font-weight: 600;
+  letter-spacing: -6px;
 
   @include respond-to(mobile) {
     font-size: 54px;
