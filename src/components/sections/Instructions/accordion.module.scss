@@ -22,7 +22,7 @@
 			opacity: 1;
 		}
 		button span {
-			@include respond-to(mobile) {
+			@include respond-to(desktop) {
 				opacity: 0;
 			}
 		}
