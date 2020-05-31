@@ -8,6 +8,7 @@
 
 .title {
   margin-bottom: 190px;
+  max-width: 600px;
 
   @include respond-to(mobile) {
     margin-bottom: 80px;
