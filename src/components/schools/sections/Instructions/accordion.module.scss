@@ -9,6 +9,16 @@
   border-top: 1px solid $color-white;
 	color: $color-white;
 
+	&:nth-child(1) [data-marquee] span {
+		width: 300px;
+	}
+	&:nth-child(2) [data-marquee] span {
+		width: 250px;
+	}
+	&:nth-child(3) [data-marquee] span {
+		width: 300px;
+	}
+
 	button {
 		color: $color-white;
 		font-size: 48px;
@@ -20,9 +30,30 @@
 		}
 	}
 
+	&:hover {
+
+		[data-marquee] {
+			opacity: 1;
+		}
+
+		button span {
+			@include respond-to(desktop) {
+				opacity: 0;
+			}
+		}
+	}
+
 	&[aria-expanded='true'] {
 		.content {
 			opacity: 1;
+		}
+
+		button span {
+			opacity: 1;
+		}
+
+		[data-marquee] {
+			display: none;
 		}
 
 		.label {

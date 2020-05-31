@@ -20,7 +20,7 @@ const Panel = ({ label, content, activeTab, index, activateTab }) => {
   const [height, setHeight] = useState(0)
   const panelRef = useRef(null)
 
-  const isActive = activeTab === index;
+  const isActive = activeTab === index
   const innerStyle = {
     height:  `${isActive ? height : 0}px`
   }
@@ -82,7 +82,7 @@ const Panel = ({ label, content, activeTab, index, activateTab }) => {
 }
 
 const Accordion = ({ panels }) => {
-  const [activeTab, setActiveTab] = useState(null)
+  const [activeTab, setActiveTab] = useState(0)
 
 	const activateTab = index => {
     const newActiveTab = activeTab === index ? -1 : index

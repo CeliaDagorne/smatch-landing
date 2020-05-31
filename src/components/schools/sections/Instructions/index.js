@@ -41,8 +41,24 @@ const Panel = ({ label, content, activeTab, index, activateTab }) => {
         className={accordionStyles.label}
         role="tab"
         onClick={activateTab}>
-        {label}
+        <span>
+          {label}
+        </span>
       </button>
+      <div data-marquee className={styles.marquee}>
+        <div>
+          <span>{label}</span>
+          <span>{label}</span>
+          <span>{label}</span>
+          <span>{label}</span>
+          <span>{label}</span>
+          <span>{label}</span>
+          <span>{label}</span>
+          <span>{label}</span>
+          <span>{label}</span>
+          <span>{label}</span>
+        </div>
+      </div>
       <div
         className={accordionStyles.inner}
         style={innerStyle}
@@ -64,7 +80,7 @@ const Panel = ({ label, content, activeTab, index, activateTab }) => {
 }
 
 const Accordion = ({ panels }) => {
-  const [activeTab, setActiveTab] = useState(null)
+  const [activeTab, setActiveTab] = useState(0)
 
 	const activateTab = index => {
     const newActiveTab = activeTab === index ? -1 : index
