@@ -9,10 +9,34 @@
   border-top: 1px solid $color-white;
 	color: $color-white;
 
+	&:nth-child(3) [data-marquee] span {
+		width: 500px;
+	}
+	&:nth-child(4) [data-marquee] span {
+		width: 30px;
+	}
+
+	&:hover {
+
+		[data-marquee] {
+			opacity: 1;
+		}
+		button span {
+			@include respond-to(mobile) {
+				opacity: 0;
+			}
+		}
+	}
+
 	button {
 		color: $color-white;
 		font-size: 48px;
 		font-weight: 400;
+
+		span {
+			opacity: 1;
+			transition: opacity .2s linear;
+		}
 
 		@include respond-to(mobile) {
 			font-size: 36px;
@@ -21,6 +45,15 @@
 	}
 
 	&[aria-expanded='true'] {
+
+		button span {
+			opacity: 1;
+		}
+
+		[data-marquee] {
+			display: none;
+		}
+
 		.content {
 			opacity: 1;
 		}

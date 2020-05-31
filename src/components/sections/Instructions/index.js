@@ -42,8 +42,24 @@ const Panel = ({ label, content, activeTab, index, activateTab }) => {
         className={accordionStyles.label}
         role="tab"
         onClick={activateTab}>
-        {label}
+        <span>
+          {label}
+        </span>
       </button>
+      <div data-marquee className={styles.marquee}>
+        <div>
+          <span>{label}</span>
+          <span>{label}</span>
+          <span>{label}</span>
+          <span>{label}</span>
+          <span>{label}</span>
+          <span>{label}</span>
+          <span>{label}</span>
+          <span>{label}</span>
+          <span>{label}</span>
+          <span>{label}</span>
+        </div>
+      </div>
       <div
         className={accordionStyles.inner}
         style={innerStyle}

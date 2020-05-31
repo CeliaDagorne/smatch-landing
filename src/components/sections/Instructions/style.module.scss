@@ -191,3 +191,42 @@
     cursor: none;
   }
 }
+
+.marquee {
+  font-size: 48px;
+  height: 100%;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  transition: opacity .3s linear;
+  width: calc(100% - 120px);
+
+  @include respond-to(mobile) {
+    display: none;
+  }
+
+  div {
+    animation: marquee 20s linear infinite;
+    bottom: 0;
+    display: block;
+    height: 45px;
+    margin: auto;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 200%;
+  }
+
+  span {
+    float: left;
+    width: 10.5%;
+  }
+}
+
+
+@keyframes marquee {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
