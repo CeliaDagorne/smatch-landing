@@ -175,7 +175,7 @@ const Instructions = () => {
             <h3 className={footerLabelClass}>
               Explore tes possibilités avec  Smatch dès aujourd’hui
             </h3>
-            <Link to="/" button>Je me lance</Link>
+            <Link to="https://smatch.netlify.app/inscription" button>Je me lance</Link>
           </div>
         </div>
       </Container>

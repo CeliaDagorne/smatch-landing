@@ -56,7 +56,7 @@ const SchoolAccessible = () => {
             <p className={styles.textBody}>
               Notre outil facilite aussi la vie des écoles en mettant à leur disposition des informations essentielles aux suivis de leurs futurs étudiants mais aussi la possibilité de renforcer leur visibilité sur internet.
             </p>
-            <Link to="/" button>Découvrir notre outil</Link>
+            <Link to="https://smatch.netlify.app/contact" button>Découvrir notre outil</Link>
           </div>
         </div>
       </Container>

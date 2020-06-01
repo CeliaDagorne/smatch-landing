@@ -22,7 +22,7 @@ const SchoolConstruct = () => {
             <p className={textClass}>
               Faites de l’orientation une priorité.
             </p>
-            <Link to="/" button>Nous contacter</Link>
+            <Link to="https://smatch.netlify.app/contact" button>Nous contacter</Link>
           </div>
         </div>
       </Container>

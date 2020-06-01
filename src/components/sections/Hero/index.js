@@ -90,7 +90,7 @@ const Hero = () => {
             </span>
           </h3>
           <div className={styles.button}>
-            <Link to="/" button>Je m'oriente</Link>
+            <Link to="https://smatch.netlify.app/inscription" button>Je m'oriente</Link>
           </div>
           <div className={styles.stickers}>
             <img

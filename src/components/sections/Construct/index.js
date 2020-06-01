@@ -18,7 +18,7 @@ const Construct = () => {
             <h2 className={titleClass}>
               Prêt.e à construire ton futur ?
             </h2>
-            <Link to="/" button>C’est parti !</Link>
+            <Link to="https://smatch.netlify.app/inscription" button>C’est parti !</Link>
             <div className={styles.footer}>
               <p>
                 <span><img src="/images/validate.svg" alt=""/></span>

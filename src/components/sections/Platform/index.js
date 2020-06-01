@@ -185,7 +185,7 @@ const Platform = ({ appeared }) => {
               </p>
               <p className={styles.label}><span>Marjorie F,</span> Product Owner</p>
             </div>
-            <Link to="/" button>Faire le test</Link>
+            <Link to="https://smatch.netlify.app/inscription" button>Faire le test</Link>
           </div>
         </div>
       </Container>

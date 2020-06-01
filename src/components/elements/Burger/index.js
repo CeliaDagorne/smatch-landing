@@ -40,10 +40,10 @@ const Burger = ({ school }) => {
               <Link extraClassName={school ? styles.active : null} to="/ecoles">Écoles</Link>
             </li>
             <li className={styles.item}>
-              <Link to="/" href="">Smatch.fr</Link>
+              <Link to="https://smatch.netlify.app/inscription" href="">Smatch.fr</Link>
             </li>
             <li className={styles.item}>
-              <Link to="/" href="">S’inscrire</Link>
+              <Link to="https://smatch.netlify.app/inscription" href="">S’inscrire</Link>
             </li>
           </ul>
         </nav>

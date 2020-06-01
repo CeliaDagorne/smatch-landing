@@ -86,7 +86,7 @@ const SchoolHero = () => {
             </span>
           </h3>
           <div className={styles.button}>
-            <Link to="/" button>Nous rejoindre</Link>
+            <Link to="https://smatch.netlify.app/contact" button>Nous rejoindre</Link>
           </div>
         </div>
       </Container>

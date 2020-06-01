@@ -169,7 +169,7 @@ const SchoolInstructions = () => {
             <h3 className={footerLabelClass}>
               En savoir plus sur les avantages de Smatch
             </h3>
-            <Link to="/" button>Nous contacter</Link>
+            <Link to="https://smatch.netlify.app/contact" button>Nous contacter</Link>
           </div>
         </div>
       </Container>
