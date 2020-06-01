@@ -13,27 +13,27 @@ const Press = () => {
   const content = [
     {
       "img": "konbini.png",
-      "link": "/",
+      "link": "https://www.konbini.com/fr",
     },
     {
       "img": "brut.png",
-      "link": "/",
+      "link": "https://www.brut.media/fr",
     },
     {
       "img": "loop.png",
-      "link": "/",
+      "link": "https://loopsider.com/fr",
     },
     {
       "img": "france-tv.png",
-      "link": "/",
+      "link": "https://www.france.tv/",
     },
     {
       "img": "slate.png",
-      "link": "/",
+      "link": "http://www.slate.fr/",
     },
     {
       "img": "nova.png",
-      "link": "/",
+      "link": "https://www.nova.fr/",
     },
   ]
 
