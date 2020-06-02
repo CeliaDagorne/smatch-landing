@@ -30,7 +30,7 @@ const SchoolDifference = () => {
   return (
     <section className={styles.section}>
       <Container>
-        <h2 data-appear="single-up" className={titleClass}>À vos côtés pour vous accompager</h2>
+        <h2 data-appear="single-up" className={titleClass}>À vos côtés pour vous accompagner</h2>
         <div data-appear="slide-up" className={styles.wrapper}>
           <div onMouseMove={e => {handleMove(e)}} className={styles.item}>
             {/* <img className={styles.shapeMobile} src={circle} alt=""/> */}
