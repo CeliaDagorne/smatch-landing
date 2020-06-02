@@ -17,7 +17,7 @@ const Menu = () => (
         </div>
         <Link to="https://smatch.netlify.app/inscription">Accéder à smatch.fr</Link>
         <div data-subscribe className={styles.fixedButton}>
-          <Link to="https://smatch.netlify.app/inscription" button dark>S’inscrire</Link>
+          <Link to="https://smatch.netlify.app/contact" button dark>Nous contacter</Link>
         </div>
       </div>
     </Container>
