@@ -138,6 +138,7 @@ const Instructions = () => {
 
     if (!cursorVisibility) {
       document.querySelector('[data-cursor]').style.opacity = 1;
+      document.querySelector('[data-cursor]').style.visibility = 'visible';
       setCursorVisibility(true)
     }
   }
@@ -145,6 +146,7 @@ const Instructions = () => {
   const hideCursor = () => {
     setCursorVisibility(false)
     document.querySelector('[data-cursor]').style.opacity = 0;
+    document.querySelector('[data-cursor]').style.visibility = 'hidden';
   }
 
   useEffect(() => {

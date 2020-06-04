@@ -20,10 +20,12 @@ const Accessible = () => {
 
   const showCursor = () => {
     document.querySelector('[data-cursor-smiley]').style.opacity = 1;
+    document.querySelector('[data-cursor-smiley]').style.visibility = 'visible';
   }
 
   const hideCursor = () => {
     document.querySelector('[data-cursor-smiley]').style.opacity = 0;
+    document.querySelector('[data-cursor-smiley]').style.visibility = 'hidden';
   }
 
   useEffect(() => {

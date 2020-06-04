@@ -29,10 +29,12 @@ const Platform = ({ appeared }) => {
 
   const showCursor = () => {
     document.querySelector('[data-cursor]').style.opacity = 1;
+    document.querySelector('[data-cursor]').style.visibility = 'visible';
   }
 
   const hideCursor = () => {
     document.querySelector('[data-cursor]').style.opacity = 0;
+    document.querySelector('[data-cursor]').style.visibility = 'hidden';
   }
 
   useEffect(() => {

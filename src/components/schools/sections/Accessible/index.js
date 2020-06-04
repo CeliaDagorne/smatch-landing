@@ -20,10 +20,12 @@ const SchoolAccessible = () => {
 
   const showCursor = () => {
     document.querySelector('[data-cursor-smiley-blue]').style.opacity = 1;
+    document.querySelector('[data-cursor-smiley-blue]').style.visibility = 'visible';
   }
 
   const hideCursor = () => {
     document.querySelector('[data-cursor-smiley-blue]').style.opacity = 0;
+    document.querySelector('[data-cursor-smiley-blue]').style.visibility = 'hidden';
   }
 
   useEffect(() => {

@@ -132,12 +132,14 @@ const SchoolInstructions = () => {
 
     if (!cursorVisibility) {
       document.querySelector('[data-cursor]').style.opacity = 1;
+      document.querySelector('[data-cursor]').style.visibility = 'visible';
       setCursorVisibility(true)
     }
   }
 
   const hideCursor = () => {
     document.querySelector('[data-cursor]').style.opacity = 0;
+    document.querySelector('[data-cursor]').style.visibility = 'hidden';
     setCursorVisibility(false)
   }
 
